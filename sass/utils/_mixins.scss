@@ -1,0 +1,106 @@
+
+// Insertion d'une bordure
+
+@mixin borderZ($borderColor) {
+
+  border: 1px solid $borderColor;
+
+}
+
+// ---------------------------------
+// SHADOW
+// ---------------------------------
+
+// Box-shadow 
+
+@mixin boxShadow($borderRadius: 16px) {
+
+  border-radius: $borderRadius;
+
+  box-shadow: 4px 4px 4px #b7b7b7, -4px -4px 4px #ffffff;
+
+}
+
+@mixin boxShadowDark {
+
+  border-radius: 16px;
+
+  background: linear-gradient(145deg, #626c7f, #535b6b);
+
+  box-shadow: 5px 5px 10px #3c424d, -3px -3px 5px #7c88a1;
+
+}
+
+
+// text-shadow
+@mixin text--shadow($text-color: black) {
+
+  text-shadow: 1px 1px 1px $text-color;
+
+}
+
+
+
+
+
+// Transitions
+@mixin blob-transition--all($delay: 10ms) {
+
+  transition: all 700ms $delay ease-in-out;
+
+}
+
+
+@mixin transition--full($delay, $tempo: 100ms) {
+
+  transition: all $delay $tempo ease-in;
+
+}
+
+
+
+@mixin burgerTirets {
+  height: 4px;
+  border-radius: 2px;
+  background-color: $main-color;
+}
+
+@mixin btnActive {
+  box-shadow: inset 4px 4px 4px #ababab, inset -4px -4px 4px #ffffff;
+  transition: box-shadow 300ms linear;
+} 
+
+@mixin flexSpaceBetween {
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+
+
+// ===================================================
+// POSITIONNEMENT RELATIVE / ABSOLU
+
+@mixin position-center {
+
+  top: 50%;
+
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+}
+
+
+@mixin pos--center {
+
+  top: 50%;
+
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+}
+// ===================================================  
+
