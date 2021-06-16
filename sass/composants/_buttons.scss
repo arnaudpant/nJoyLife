@@ -1,15 +1,44 @@
 // BOUTON BURGER
 .header__burger {
     height: 48px;
-    width: 48px;
-    @include border;
+    min-width: 48px;
     cursor: pointer;
+    position: absolute;
+    left: 8px;
+    display: none;
+   
+    @media screen and (max-width: 800px) {
+        display: block;
+    }
 }
 
 
 .burger-tiret {
     width: 100%;
     height: 8px;
-    background: #000;
+    background: $color-white;
     border-radius: 4px;
+    position: absolute;
+    top:50%;
+    transform: translate(0%, -50%);
+}
+
+.burger-tiret::before {
+    content: "";
+    width: 100%;
+    height: 8px;
+    background: $color-white;
+    border-radius: 4px;
+    position: absolute;
+    top:-16px;
+}
+
+.burger-tiret::after {
+    content: "";
+    width: 100%;
+    height: 8px;
+    background: $color-white;
+    border-radius: 4px;
+    position: absolute;
+    top:16px;
 }

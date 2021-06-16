@@ -1,21 +1,26 @@
-// FLEXBOX
+// FLEXBOX (@extend %...)
 
-@mixin f-box--full {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+%flex-full-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  
+%flex-align-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@mixin f-box--allCenter {
-  justify-content: center;
-  align-items: center;
+%flex-space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-@mixin f-box--spaceBetween {
-  justify-content: space-between;
-  align-items: center;
-}
-@mixin f-box--spaceArround {
-  justify-content: space-around;
-  align-items: center;
+
+%flex-space-arround {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }

@@ -1,0 +1,62 @@
+header {
+  height: 64px;
+  width: 100%;
+  background: $color-action;
+  @extend %flex-space-arround; 
+}
+
+
+
+.header__nav__li {
+  display: inline-block;
+  margin: 0 1em;
+  cursor: pointer;
+  a {
+      color: $color-white;
+      text-decoration: none;
+      font-family: $police-title;
+    }
+}
+
+
+.header__title {
+  color: $color-white;
+  font-family: $police-title;
+  font-size: 2em;
+  white-space: nowrap;
+}
+
+
+
+@media screen and (max-width: 800px) {
+    
+  header {
+    justify-content: center;
+  }
+
+
+  // .header__title {
+  //   font-size: 1.5em;
+  // }
+
+
+  .header__nav__ul {
+    display: none;
+}
+
+  .header__nav__ul.active-menu-deroulant {
+      position: absolute;
+      width: 100%;
+      top: 64px;
+      left: 0;
+      display: block;
+      background: $color-action;
+  }
+
+  .header__nav__li {
+    display: block;
+    text-align: center;
+    margin: 1em 0;
+  }
+
+}
