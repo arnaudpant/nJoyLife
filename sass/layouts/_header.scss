@@ -2,22 +2,10 @@ header {
   height: 64px;
   width: 100%;
   background: $color-action;
-  @extend %flex-space-arround; 
+  z-index: 100;
+  @extend %flex-space-arround;
+  position: relative;
 }
-
-
-
-.header__nav__li {
-  display: inline-block;
-  margin: 0 1em;
-  cursor: pointer;
-  a {
-      color: $color-white;
-      text-decoration: none;
-      font-family: $police-title;
-    }
-}
-
 
 .header__title {
   color: $color-white;
@@ -26,37 +14,82 @@ header {
   white-space: nowrap;
 }
 
-
+// Navbar Desktop
+.header__nav__li,
+.navbar-mobile__li {
+  display: inline-block;
+  margin: 0 1em;
+  cursor: pointer;
+  a {
+    color: $color-white;
+    text-decoration: none;
+    font-family: $police-title;
+  }
+}
 
 @media screen and (max-width: 800px) {
-    
   header {
     justify-content: center;
   }
 
   .header__nav__ul {
     display: none;
-}
-
-  .header__nav__ul.active-menu-deroulant {
-      position: absolute;
-      width: 100%;
-      top: 64px;
-      left: 0;
-      display: block;
-      background: $color-action;
   }
+
+  // .header__nav__ul.active-menu-deroulant {
+  //   position: absolute;
+  //   width: 100%;
+  //   // top: 64px;
+  //   display: block;
+  //   background: $color-action;
+  //   transition: transform 1s 0.4s ease-in-out;
+  //   transform: translateY(364px);
+  // }
 
   .header__nav__li {
     display: block;
     text-align: center;
     margin: 1em 0;
   }
-
 }
 
 @media screen and (max-width: 400px) {
   .header__title {
     font-size: 1.5em;
   }
+}
+
+// Navbar mobile
+
+.navbar-mobile {
+  position: absolute;
+  width: 100%;
+  z-index: -2;
+  top: -200px;
+  left: 0;
+  background: $color-action;
+  transition: transform 1s 0.4s ease-in-out;
+}
+
+.navbar-mobile__li {
+  display: block;
+  text-align: center;
+  margin: 1em 1em;
+  a {
+    color: $color-white;
+    text-decoration: none;
+    font-family: $police-title;
+  }
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.navbar-mobile.active-menu-deroulant {
+  transition: transform 1s 0.6s ease-in-out;
+  transform: translateY(264px);
+}
+
+.navbar-mobile.active-menu-deroulant .navbar-mobile__li {
+  opacity: 1;
+  transition: opacity 0.4s 1.2s ease-in-out;
 }

@@ -135,18 +135,8 @@ header {
   height: 64px;
   width: 100%;
   background: #7D3929;
-}
-
-.header__nav__li {
-  display: inline-block;
-  margin: 0 1em;
-  cursor: pointer;
-}
-
-.header__nav__li a {
-  color: #FCFCFF;
-  text-decoration: none;
-  font-family: "Poppins", sans-serif;
+  z-index: 100;
+  position: relative;
 }
 
 .header__title {
@@ -154,6 +144,20 @@ header {
   font-family: "Poppins", sans-serif;
   font-size: 2em;
   white-space: nowrap;
+}
+
+.header__nav__li,
+.navbar-mobile__li {
+  display: inline-block;
+  margin: 0 1em;
+  cursor: pointer;
+}
+
+.header__nav__li a,
+.navbar-mobile__li a {
+  color: #FCFCFF;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
 }
 
 @media screen and (max-width: 800px) {
@@ -164,14 +168,6 @@ header {
   }
   .header__nav__ul {
     display: none;
-  }
-  .header__nav__ul.active-menu-deroulant {
-    position: absolute;
-    width: 100%;
-    top: 64px;
-    left: 0;
-    display: block;
-    background: #7D3929;
   }
   .header__nav__li {
     display: block;
@@ -184,5 +180,48 @@ header {
   .header__title {
     font-size: 1.5em;
   }
+}
+
+.navbar-mobile {
+  position: absolute;
+  width: 100%;
+  z-index: -2;
+  top: -200px;
+  left: 0;
+  background: #7D3929;
+  -webkit-transition: -webkit-transform 1s 0.4s ease-in-out;
+  transition: -webkit-transform 1s 0.4s ease-in-out;
+  transition: transform 1s 0.4s ease-in-out;
+  transition: transform 1s 0.4s ease-in-out, -webkit-transform 1s 0.4s ease-in-out;
+}
+
+.navbar-mobile__li {
+  display: block;
+  text-align: center;
+  margin: 1em 1em;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.navbar-mobile__li a {
+  color: #FCFCFF;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar-mobile.active-menu-deroulant {
+  -webkit-transition: -webkit-transform 1s 0.6s ease-in-out;
+  transition: -webkit-transform 1s 0.6s ease-in-out;
+  transition: transform 1s 0.6s ease-in-out;
+  transition: transform 1s 0.6s ease-in-out, -webkit-transform 1s 0.6s ease-in-out;
+  -webkit-transform: translateY(264px);
+          transform: translateY(264px);
+}
+
+.navbar-mobile.active-menu-deroulant .navbar-mobile__li {
+  opacity: 1;
+  -webkit-transition: opacity 0.4s 1.2s ease-in-out;
+  transition: opacity 0.4s 1.2s ease-in-out;
 }
 /*# sourceMappingURL=style.css.map */
