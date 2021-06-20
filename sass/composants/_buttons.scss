@@ -6,6 +6,7 @@
   position: absolute;
   left: 8px;
   display: none;
+  z-index: 110;
 
   @media screen and (max-width: 800px) {
     display: block;
@@ -26,7 +27,7 @@
   position: absolute;
   width: 100%;
   height: 8px;
-  background: $color-action;
+  background: $color-white;
   border-radius: 4px;
 }
 

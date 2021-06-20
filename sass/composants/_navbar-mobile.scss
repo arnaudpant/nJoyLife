@@ -2,14 +2,15 @@
 
 .navbar-mobile {
   position: absolute;
+  z-index: 105;
   width: 100%;
-  z-index: -2;
   top: -424px;
   left: 0;
   background: $color-bcg2;
   transition: transform 1s 0.4s ease-in-out;
-  // border: 1px solid red;
+  @extend %boxShadow4;
 }
+
 .navbar-mobile__container {
   @extend %flex-full-center;
   opacity: 0;
@@ -52,5 +53,4 @@
 .navbar-mobile__container.active-menu-deroulant {
   opacity: 1;
   transition: opacity 0.4s 1.4s ease-in-out;
-  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
 }
