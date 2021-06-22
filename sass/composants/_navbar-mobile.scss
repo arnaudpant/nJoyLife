@@ -7,7 +7,6 @@
   top: -490px;
   left: 0;
   background: $color-bcg2;
-  border-radius: 0 0 16px 16px;
   transition: all 1s 0.4s ease-out;
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.14);
 }
@@ -39,6 +38,7 @@
   font-size: 2em;
   color: $color-white;
   text-align: center;
+  margin-right: 16px;
 }
 
 .navbar-mobile__ul {
