@@ -8,9 +8,7 @@ header {
   z-index: 4;
 }
 
-.header__title,
-.header__profession {
-  display: block;
+.header__title {
   font-size: 2.5em;
   color: $color-white;
   font-family: $police-title;
@@ -21,6 +19,15 @@ header {
   }
 }
 
+.header__profession {
+  @extend .header__title;
+  display: none;
+  @media screen and (max-width: 800px) {
+    display: block;
+  }
+}
+
+// Affichage Joelle Corda
 .header__title {
   opacity: 1;
   transition: opacity 0.6s 0.6s ease-in-out;
@@ -29,7 +36,6 @@ header {
   opacity: 0;
   transition: all 0.4s 0.2s ease-in-out;
 }
-
 // Affichage titre Naturopathe
 .header__profession {
   opacity: 0;

@@ -249,9 +249,7 @@ header {
   z-index: 4;
 }
 
-.header__title,
-.header__profession {
-  display: block;
+.header__title, .header__profession {
   font-size: 2.5em;
   color: #fcfcff;
   font-family: "Poppins", sans-serif;
@@ -260,19 +258,28 @@ header {
 }
 
 @media screen and (max-width: 800px) {
-  .header__title,
-  .header__profession {
+  .header__title, .header__profession {
     position: absolute;
   }
 }
 
-.header__title {
+.header__profession {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .header__profession {
+    display: block;
+  }
+}
+
+.header__title, .header__profession {
   opacity: 1;
   -webkit-transition: opacity 0.6s 0.6s ease-in-out;
   transition: opacity 0.6s 0.6s ease-in-out;
 }
 
-.header__title.active-menu-deroulant {
+.header__title.active-menu-deroulant, .active-menu-deroulant.header__profession {
   opacity: 0;
   -webkit-transition: all 0.4s 0.2s ease-in-out;
   transition: all 0.4s 0.2s ease-in-out;
@@ -337,7 +344,7 @@ header {
 }
 
 @media screen and (max-width: 400px) {
-  .header__title,
+  .header__title, .header__profession,
   .header__profession {
     font-size: 1.5em;
   }
