@@ -2,24 +2,31 @@
 
 .navbar-mobile {
   position: absolute;
-  z-index: 105;
+  z-index: 4;
   width: 100%;
-  top: -424px;
+  top: -490px;
   left: 0;
   background: $color-bcg2;
-  transition: transform 1s 0.4s ease-in-out;
-  @extend %boxShadow4;
+  border-radius: 0 0 16px 16px;
+  transition: all 1s 0.4s ease-out;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.14);
 }
 
 .navbar-mobile__container {
   @extend %flex-full-center;
   opacity: 0;
   transition: opacity 0.4s ease-in-out;
+  // @include border(red);
 }
 
+.navbar-mobile__bloc1,
+.navbar-mobile__ul {
+  display: flex;
+  align-items: center;
+}
 .navbar-mobile__photo {
-  width: 132px;
-  height: 132px;
+  min-width: 132px;
+  min-height: 132px;
   margin: 16px;
   border-radius: 50%;
   background-image: url(/images/img-profil-joelle.jpg);
@@ -27,15 +34,24 @@
   background-size: cover;
 }
 
-.navbar-mobile__li {
-  display: block;
+.navbar-mobile__name {
+  font-family: $police-title;
+  font-size: 2em;
+  color: $color-white;
   text-align: center;
-  margin: 1em 1em;
-  a {
-    color: $color-white;
-    text-decoration: none;
-    font-family: $police-title;
-  }
+}
+
+.navbar-mobile__ul {
+  flex-direction: column;
+}
+.navbar-mobile__li a {
+  text-align: center;
+  display: block;
+  color: $color-white;
+  text-decoration: none;
+  font-family: $police-title;
+  font-size: 1.5em;
+  margin: 0.5em 0;
 }
 
 .navbar-mobile__plume {
@@ -46,8 +62,10 @@
 
 // Menu qui apparait
 .navbar-mobile.active-menu-deroulant {
-  transition: transform 1s 0.6s ease-in-out;
-  transform: translateY(488px);
+  transition: all 1s 0.6s ease-in-out;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 4px 0 rgba(0, 0, 0, 0.12),
+    0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  transform: translateY(554px);
 }
 
 .navbar-mobile__container.active-menu-deroulant {
