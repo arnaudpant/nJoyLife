@@ -10,35 +10,33 @@ header {
 
 .header__title,
 .header__profession {
-  position: absolute;
   display: block;
+  font-size: 2.5em;
   color: $color-white;
   font-family: $police-title;
   white-space: nowrap;
   z-index: 5;
+  @media screen and (max-width: 800px) {
+    position: absolute;
+  }
 }
 
 .header__title {
-  font-size: 2.5em;
   opacity: 1;
   transition: opacity 0.6s 0.6s ease-in-out;
 }
 .header__title.active-menu-deroulant {
-  // display: none;
   opacity: 0;
   transition: all 0.4s 0.2s ease-in-out;
 }
 
 // Affichage titre Naturopathe
 .header__profession {
-  // display: none;
-  font-size: 1.5em;
   opacity: 0;
   transition: opacity 0.4s 0.2s ease-in-out;
 }
 
 .header__profession.active-menu-deroulant {
-  // display: block;
   opacity: 1;
   transition: opacity 0.6s 0.6s ease-in-out;
 }
@@ -83,7 +81,8 @@ header {
 }
 
 @media screen and (max-width: 400px) {
-  .header__title {
+  .header__title,
+  .header__profession {
     font-size: 1.5em;
   }
 }

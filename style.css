@@ -251,16 +251,22 @@ header {
 
 .header__title,
 .header__profession {
-  position: absolute;
   display: block;
+  font-size: 2.5em;
   color: #fcfcff;
   font-family: "Poppins", sans-serif;
   white-space: nowrap;
   z-index: 5;
 }
 
+@media screen and (max-width: 800px) {
+  .header__title,
+  .header__profession {
+    position: absolute;
+  }
+}
+
 .header__title {
-  font-size: 2.5em;
   opacity: 1;
   -webkit-transition: opacity 0.6s 0.6s ease-in-out;
   transition: opacity 0.6s 0.6s ease-in-out;
@@ -273,7 +279,6 @@ header {
 }
 
 .header__profession {
-  font-size: 1.5em;
   opacity: 0;
   -webkit-transition: opacity 0.4s 0.2s ease-in-out;
   transition: opacity 0.4s 0.2s ease-in-out;
@@ -332,7 +337,8 @@ header {
 }
 
 @media screen and (max-width: 400px) {
-  .header__title {
+  .header__title,
+  .header__profession {
     font-size: 1.5em;
   }
 }
