@@ -2,9 +2,16 @@
 
 %flex-full-center {
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+%flex-full-end {
+    display: flex;
+    // flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
 }
   
 %flex-align-center {

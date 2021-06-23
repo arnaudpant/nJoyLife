@@ -1,11 +1,7 @@
-.navbar-mobile__container {
+section, .navbar-mobile__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -154,6 +150,35 @@ body {
   transition: top 0.4s ease-in-out, -webkit-transform 0.4s 0.4s ease-in-out;
   transition: top 0.4s ease-in-out, transform 0.4s 0.4s ease-in-out;
   transition: top 0.4s ease-in-out, transform 0.4s 0.4s ease-in-out, -webkit-transform 0.4s 0.4s ease-in-out;
+}
+
+section {
+  height: 100%;
+  border: 1px solid red;
+}
+
+.section-accueil__bloc {
+  text-align: center;
+  height: 100%;
+  width: 50%;
+  border: 1px solid blue;
+}
+
+.section-accueil__bloc svg {
+  position: relative;
+  height: 100%;
+  max-width: 100%;
+}
+
+.section-accueil__bloc h1 {
+  color: #040f0f;
+  font-size: 3em;
+  font-family: "Poppins", sans-serif;
+}
+
+.section-accueil__bloc p {
+  color: #040f0f;
+  font-family: "Lora", serif;
 }
 
 .navbar-mobile {
