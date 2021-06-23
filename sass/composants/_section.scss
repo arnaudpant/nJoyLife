@@ -1,0 +1,30 @@
+section {
+    height: 100%;
+    @include border(red);
+    @extend %flex-full-center;
+
+}
+
+.section-accueil__bloc {
+    text-align: center;
+    height: 100%;
+    width: 50%;
+    @include border(blue);
+    
+    svg {
+        position: relative;
+        height: 100%;
+        max-width: 100%;
+    }
+
+    h1 {
+        color: $color-black;
+        font-size: 3em;
+        font-family: $police-title;
+    }
+    p {
+        color: $color-black;
+        font-family: $police-text;
+    }
+}
+
