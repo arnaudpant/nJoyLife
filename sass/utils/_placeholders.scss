@@ -1,34 +1,4 @@
 // ===================================================
-// FLEXBOX
-
-%flex-full-center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-  
-%flex-align-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-%flex-space-between {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-%flex-space-arround {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-// ===================================================
-
-
-// ===================================================
  // POSITIONNEMENT RELATIVE / ABSOLU
   
 %position-center {
