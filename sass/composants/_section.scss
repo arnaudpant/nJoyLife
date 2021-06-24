@@ -1,30 +1,117 @@
 section {
-    height: 100%;
-    @include border(red);
-    @extend %flex-full-center;
-
+  height: 100%;
+  //   @include border(red);
+  @extend %flex-full-center;
 }
 
-.section-accueil__bloc {
-    text-align: center;
-    height: 100%;
-    width: 50%;
-    @include border(blue);
-    
+// ===========================
+// Page 1 Accueil
+// ===========================
+.section-accueil__bloc1,
+.section-accueil__bloc2 {
+  text-align: center;
+  height: 100%;
+  width: 50%;
+  position: relative;
+}
+.section-accueil__bloc1 svg {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  height: 85%;
+}
+
+.section-accueil__bloc2 {
+  @extend %flex-full-start;
+  flex-direction: column;
+
+  h1 {
+    color: $color-black;
+    font-size: 3em;
+    font-family: $police-title;
+    margin: 40px 16px 24px 16px;
+  }
+  .section-accueil__bloc__location {
+    display: flex;
+    margin: 0 0 24px 0;
+    img {
+      margin: 0 4px;
+    }
+  }
+  p {
+    color: $color-black;
+    font-family: $police-text;
+    em {
+      display: block;
+      font-size: 1.5em;
+      margin: 16px;
+    }
+  }
+  .section-accueil__bloc__logo {
+    margin: 16px;
     svg {
-        position: relative;
-        height: 100%;
-        max-width: 100%;
+      height: 120px;
+    }
+  }
+  .section-accueil__bloc__plume {
+    margin: 16px;
+    svg {
+      height: 80px;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  section {
+    flex-direction: column-reverse;
+  }
+  .section-accueil__bloc1,
+  .section-accueil__bloc2 {
+    width: 100%;
+  }
+  .section-accueil__bloc1 {
+    height: 60%;
+    svg {
+      height: 100%;
+      max-width: 100%;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  .section-accueil__bloc2 {
+    height: 40%;
+    justify-content: center;
+    h1 {
+      font-size: 2em;
+      margin: 8px;
     }
 
-    h1 {
-        color: $color-black;
-        font-size: 3em;
-        font-family: $police-title;
+    .section-accueil__bloc__location {
+      margin: 0 0 8px 0;
     }
     p {
-        color: $color-black;
-        font-family: $police-text;
+      font-size: 1em;
+      margin: 0 0 8px 0;
+      em {
+        font-size: 1em;
+        margin: 0;
+      }
     }
+    .section-accueil__bloc__logo {
+      margin: 0;
+      svg {
+        height: 70px;
+      }
+    }
+    .section-accueil__bloc__plume {
+      position: absolute;
+      left: 75%;
+      top: 105%;
+      margin: 0;
+      svg {
+        height: 40px;
+      }
+    }
+  }
 }
-

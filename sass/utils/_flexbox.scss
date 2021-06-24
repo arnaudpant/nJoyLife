@@ -1,33 +1,40 @@
 // FLEXBOX (@extend %...)
 
 %flex-full-center {
-    display: flex;
-    // flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  // flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+%flex-full-start {
+  display: flex;
+  // flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 %flex-full-end {
-    display: flex;
-    // flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
+  display: flex;
+  // flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
 }
-  
+
 %flex-align-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 %flex-space-between {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 %flex-space-arround {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
