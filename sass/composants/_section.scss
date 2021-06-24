@@ -14,6 +14,7 @@ section {
   width: 50%;
   position: relative;
 }
+// Bloc personnage
 .section-accueil__bloc1 svg {
   position: absolute;
   bottom: 0px;
@@ -21,6 +22,7 @@ section {
   height: 85%;
 }
 
+// Bloc Infos
 .section-accueil__bloc2 {
   @extend %flex-full-start;
   flex-direction: column;
@@ -55,9 +57,22 @@ section {
   }
   .section-accueil__bloc__plume {
     margin: 16px;
+    animation: plumevent 4s ease-in-out infinite;
     svg {
       height: 80px;
     }
+  }
+}
+
+@keyframes plumevent {
+  0% {
+    transform: rotate(40deg);
+  }
+  50% {
+    transform: rotate(-40deg);
+  }
+  100% {
+    transform: rotate(40deg);
   }
 }
 
@@ -98,12 +113,14 @@ section {
         margin: 0;
       }
     }
+
     .section-accueil__bloc__logo {
       margin: 0;
       svg {
         height: 70px;
       }
     }
+
     .section-accueil__bloc__plume {
       position: absolute;
       left: 75%;

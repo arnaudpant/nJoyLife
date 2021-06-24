@@ -19,3 +19,11 @@ btnBurgerElt.addEventListener("click", () => {
   navbarTitleElt.classList.toggle("active-menu-deroulant");
   navbarProfessionElt.classList.toggle("active-menu-deroulant");
 });
+
+// *********************************
+// SECTION 1
+// *********************************
+
+const accueilPlumeMoveElt = document.querySelector(
+  ".section-accueil__bloc__plume"
+);
