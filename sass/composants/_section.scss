@@ -1,6 +1,5 @@
-section {
-  height: 100%;
-  //   @include border(red);
+.section-accueil {
+  min-height: 100%;
   @extend %flex-full-center;
 }
 
@@ -11,8 +10,9 @@ section {
 .section-accueil__bloc2 {
   text-align: center;
   height: 100%;
+  // min-height: 710px;
   width: 50%;
-  position: relative;
+  // position: relative;
 }
 // Bloc personnage
 .section-accueil__bloc1 svg {
@@ -26,7 +26,6 @@ section {
 .section-accueil__bloc2 {
   @extend %flex-full-start;
   flex-direction: column;
-
   h1 {
     color: $color-black;
     font-size: 3em;
@@ -77,7 +76,7 @@ section {
 }
 
 @media screen and (max-width: 800px) {
-  section {
+  .section-accueil {
     flex-direction: column-reverse;
   }
   .section-accueil__bloc1,
@@ -130,5 +129,25 @@ section {
         height: 40px;
       }
     }
+  }
+}
+
+// ===========================
+// Page 2 Cards
+// ===========================
+
+.section-cards {
+  background: $color-bcg2;
+  @extend %flex-full-start;
+  flex-direction: column;
+  position: relative;
+
+  h2 {
+    color: $color-white;
+    font-family: $police-title;
+  }
+  p {
+    color: $color-white;
+    font-family: $police-text;
   }
 }

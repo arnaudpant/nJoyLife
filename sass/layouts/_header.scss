@@ -1,10 +1,10 @@
 header {
   height: $height-header;
   width: 100%;
+  height: 64px;
   background: $color-bcg2;
   @extend %flex-space-arround;
   @extend %boxShadow4;
-  position: relative;
   z-index: 4;
 }
 
