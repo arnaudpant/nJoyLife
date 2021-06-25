@@ -10,16 +10,15 @@
 .section-accueil__bloc2 {
   text-align: center;
   height: 100%;
-  // min-height: 710px;
   width: 50%;
-  // position: relative;
+  position: relative;
 }
 // Bloc personnage
 .section-accueil__bloc1 svg {
-  position: absolute;
-  bottom: 0px;
+  position: relative;
+  top: 80px;
   left: 0;
-  height: 85%;
+  height: 90%;
 }
 
 // Bloc Infos
@@ -77,6 +76,7 @@
 
 @media screen and (max-width: 800px) {
   .section-accueil {
+    height: 100%;
     flex-direction: column-reverse;
   }
   .section-accueil__bloc1,
@@ -145,9 +145,11 @@
   h2 {
     color: $color-white;
     font-family: $police-title;
+    text-align: center;
   }
   p {
     color: $color-white;
     font-family: $police-text;
+    text-align: center;
   }
 }
