@@ -57,7 +57,7 @@ section {
   }
   .section-accueil__bloc__plume {
     margin: 16px;
-    animation: plumevent 4s ease-in-out infinite;
+    animation: plumevent 5s ease-in-out infinite;
     svg {
       height: 80px;
     }
@@ -66,13 +66,13 @@ section {
 
 @keyframes plumevent {
   0% {
-    transform: rotate(40deg);
+    transform: rotate(30deg);
   }
   50% {
-    transform: rotate(-40deg);
+    transform: rotate(-50deg);
   }
   100% {
-    transform: rotate(40deg);
+    transform: rotate(30deg);
   }
 }
 
