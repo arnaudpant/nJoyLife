@@ -4,26 +4,26 @@
 
 // Affichage menu sur mobile
 const btnBurgerElt = document.querySelector(".header-burger");
-const navbarMobileElt = document.querySelector(".navbar-mobile");
+// const navbarMobileElt = document.querySelector(".header-mobile");
 const burgerTiretElt = document.querySelector(".burger-tiret");
-const navbarMobileContainerElt = document.querySelector(
-  ".navbar-mobile__container"
-);
-const navbarTitleElt = document.querySelector(".header__title");
-const navbarProfessionElt = document.querySelector(".header__profession");
+// const navbarMobileContainerElt = document.querySelector(
+//   ".navbar-mobile__container"
+// );
+const headerNameElt = document.querySelector(".header-name");
+const headerProfessionElt = document.querySelector(".header-profession");
 
 btnBurgerElt.addEventListener("click", () => {
   burgerTiretElt.classList.toggle("burger-tiret--anim");
-  navbarMobileElt.classList.toggle("active-menu-deroulant");
-  navbarMobileContainerElt.classList.toggle("active-menu-deroulant");
-  navbarTitleElt.classList.toggle("active-menu-deroulant");
-  navbarProfessionElt.classList.toggle("active-menu-deroulant");
+  // navbarMobileElt.classList.toggle("active-menu-deroulant");
+  // navbarMobileContainerElt.classList.toggle("active-menu-deroulant");
+  headerNameElt.classList.toggle("active-menu-deroulant");
+  headerProfessionElt.classList.toggle("active-menu-deroulant");
 });
 
 // *********************************
 // SECTION 1
 // *********************************
 
-const accueilPlumeMoveElt = document.querySelector(
-  ".section-accueil__bloc__plume"
-);
+// const accueilPlumeMoveElt = document.querySelector(
+//   ".section-accueil__bloc__plume"
+// );

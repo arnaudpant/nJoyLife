@@ -4,109 +4,177 @@ header {
   background: $color-bcg2;
   position: fixed;
   z-index: 4;
-  @extend %flex-center-center;
+  @extend %flex-between-center;
   @extend %boxShadow4;
 }
 
 // ===========================
 // Bouton burger
 // ===========================
-// .header-burger {
-//   height: 48px;
-//   min-width: 48px;
-//   cursor: pointer;
-//   position: absolute;
-//   top: 8px;
-//   left: 8px;
-  
-//   @media screen and (min-width: 800px) {
-//     display: none;
-//   }
-// }
+.header-burger {
+  height: 48px;
+  min-width: 48px;
+  margin-left: 8px;
+  cursor: pointer;
+  position: relative;
+  z-index: 110;
 
-// .header-burger__tirets {
-//   width: 100%;
-//   height: 100%;
-//   pointer-events: none;
-//   // @include border;
-//   transition: transform 0.6s ease-in-out;
-// }
-// .header-burger__tiret {
-//   width: 100%;
-//   height: 8px;
-//   background: $color-action;
-//   border-radius: 4px;
-//   position: absolute;
-// }
+  @media screen and (min-width: 800px) {
+    display: none;
+  }
+}
 
-// .header-burger__tirets .header-burger__tiret:nth-child(1) {
-//   top: 4px;
-// }
-// .header-burger__tirets .header-burger__tiret:nth-child(2) {
-//   top: 20px;
-// }
-// .header-burger__tirets .header-burger__tiret:nth-child(3) {
-//   top: 36px;
-// }
+.burger-tiret {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+  pointer-events: none;
+  transition: transform 0.4s ease-in-out;
+}
 
-// // ------- ANIMATIONS ---------
+.burger-tiret__ligne {
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  background: $color-action;
+  border-radius: 4px;
+}
 
-// // Rotation du bouton
-// .header-burger__tirets.burger-tiret--anim {
-//   transition: transform 0.6s 0.4s ease-in-out;
-//   transform: rotate(360deg);
-// }
+.burger-tiret .burger-tiret__ligne:nth-child(1) {
+  top: 4px;
+}
 
+.burger-tiret .burger-tiret__ligne:nth-child(2) {
+  top: 20px;
+}
 
-// .header-burger__tirets .header-burger__tiret:nth-child(1),
-// .header-burger__tiret:nth-child(3) {
-//   transform: rotate(0deg);
-//   transition: transform 0.4s ease-in-out, top 0.4s 0.4s ease-in-out;
-// }
-// .header-burger__tiret:nth-child(2) {
-//   opacity: 1;
-//   transition: opacity 0.1s 0.4s ease;
-// }
+.burger-tiret .burger-tiret__ligne:nth-child(3) {
+  top: 36px;
+}
 
-// .header-burger__tirets.burger-tiret--anim .burger-tiret__ligne:nth-child(1) {
-//   top: 20px;
-//   transform: rotate(45deg);
-//   transition: top 0.4s ease-in-out, transform 0.4s 0.4s ease-in-out;
-// }
-// .header-burger__tirets.burger-tiret--anim .burger-tiret__ligne:nth-child(2) {
-//   opacity: 0;
-//   transition: opacity 0.1s 0.4s ease;
-// }
-// .header-burger__tirets.burger-tiret--anim .burger-tiret__ligne:nth-child(3) {
-//   top: 20px;
-//   transform: rotate(-45deg);
-//   transition: top 0.4s ease-in-out, transform 0.4s 0.4s 
-// }
+// *** ANIMATIONS ***
+
+.burger-tiret.burger-tiret--anim {
+  transition: transform 0.4s 0.4s ease-in-out;
+  transform: translateY(-50%) rotate(360deg);
+}
+
+.burger-tiret__ligne:nth-child(1),
+.burger-tiret__ligne:nth-child(3) {
+  transform: rotate(0deg);
+  transition: transform 0.4s ease-in-out, top 0.4s 0.4s ease-in-out;
+}
+
+.burger-tiret__ligne:nth-child(2) {
+  opacity: 1;
+  transition: opacity 0.1s 0.4s ease;
+}
+
+.burger-tiret.burger-tiret--anim .burger-tiret__ligne:nth-child(1) {
+  top: 20px;
+  transform: rotate(45deg);
+  transition: top 0.4s ease-in-out, transform 0.4s 0.4s ease-in-out;
+}
+
+.burger-tiret.burger-tiret--anim .burger-tiret__ligne:nth-child(2) {
+  opacity: 0;
+  transition: opacity 0.1s 0.4s ease;
+}
+
+.burger-tiret.burger-tiret--anim .burger-tiret__ligne:nth-child(3) {
+  top: 20px;
+  transform: rotate(-45deg);
+  transition: top 0.4s ease-in-out, transform 0.4s 0.4s ease-in-out;
+}
 
 
 
 // ===========================
-.header-profession {
-  display: none;
+// NOM ou Profession
+// ===========================
+
+.header-name,
+.header-profession{
+  font-size: 2em;
+  color: $color-white;
+  font-family: $police-title;
+  white-space: nowrap;
+  @media screen and (max-width: 350px) {
+    font-size: 1.5em;
+  }
+
 }
+.header-name {
+  opacity: 1;
+  transition: opacity 0.4s 0.5s ease-in-out;
+}
+
+
+// *** ANIMATION ***
+.header-name.active-menu-deroulant {
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+.header-profession {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+.header-profession.active-menu-deroulant {
+  opacity: 1;
+  transition: opacity 0.4s 0.5s ease-in-out;
+}
+
+// ===========================
+.header-plume {
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+  background-image: url(/images/plume.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  @media screen and (min-width: 800px) {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+// ===========================
+
+
+
+
 .header-menu {
   display: none;
+   @media screen and (min-width: 800px) {
+    display: block;
+  }
 }
 
+// // Affichage Joelle Corda
 
-
-
-
-// .header-name {
-//   font-size: 3em;
-//   color: $color-white;
-//   font-family: $police-title;
-//   white-space: nowrap;
-//   z-index: 5;
-//   @media screen and (max-width: 800px) {
-//     position: absolute;
-//   }
+// // Affichage titre Naturopathe
+// .header__profession {
+//   opacity: 0;
+//   transition: opacity 0.4s 0.2s ease-in-out;
 // }
+
+
+
+
+
 
 // .header-profession {
 //   font-size: 3em;
@@ -176,25 +244,5 @@ header {
 
 
 
-// // Affichage Joelle Corda
-
-// .header__title {
-//   opacity: 1;
-//   transition: opacity 0.6s 0.6s ease-in-out;
-// }
-// .header__title.active-menu-deroulant {
-//   opacity: 0;
-//   transition: all 0.4s 0.2s ease-in-out;
-// }
-// // Affichage titre Naturopathe
-// .header__profession {
-//   opacity: 0;
-//   transition: opacity 0.4s 0.2s ease-in-out;
-// }
-
-// .header__profession.active-menu-deroulant {
-//   opacity: 1;
-//   transition: opacity 0.6s 0.6s ease-in-out;
-// }
 
 
