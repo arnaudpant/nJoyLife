@@ -3,7 +3,7 @@ header {
   width: 100%;
   background: $color-bcg2;
   position: fixed;
-  z-index: 4;
+  z-index: 100;
   @extend %flex-between-center;
   @extend %boxShadow4;
 }
@@ -101,6 +101,7 @@ header {
   color: $color-white;
   font-family: $police-title;
   white-space: nowrap;
+  z-index: 110;
   @media screen and (max-width: 350px) {
     font-size: 1.5em;
   }
@@ -131,26 +132,94 @@ header {
 }
 
 // ===========================
+.header-plume,
+.header-mobile-plume {
+  background-image: url(/images/plume.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .header-plume {
   width: 40px;
   height: 40px;
   margin-right: 8px;
-  background-image: url(/images/plume.svg);
-  background-position: center;
-  background-repeat: no-repeat;
+  
+  z-index: 110;
   @media screen and (min-width: 800px) {
     display: none;
   }
 }
 
 
+// ===========================
+// MENU DEROULANT
+// ===========================
+.header-mobile {
+  position: absolute;
+  width: 100%;
+  background: $color-bcg2;
+  top: 64px;
+  z-index: 50;
+  @extend %flex-center-start;
+  flex-direction: column;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12);
+}
+
+.header-mobile__avatar,
+.header-mobile__liens {
+  width: 100%;
+  @extend %flex-center-center;
+}
+
+.header-mobile__avatar__photo{
+  background-image: url(/images/img-profil-joelle.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 120px;
+  min-width: 120px;
+  border-radius: 50%;
+  margin: 8px 8px 16px 16px;
+
+  @media screen and (min-width: 350px) {
+    height: 140px;
+  min-width: 140px;
+  }
+}
+
+.header-mobile__avatar__infos h3 {
+  text-align: center;
+  font-size: 2em;
+  color: $color-white;
+  font-family: $police-title;
+  margin-right: 8px;
+  letter-spacing: 3px;
+  font-weight: normal;
+
+  @media screen and (min-width: 350px) {
+    font-size: 3em;
+  }
+}
 
 
+.header-mobile__liens li {
+  display: block;
+  text-align: center;
+  margin: 8px 0;
+}
 
+.header-mobile__liens li a {
+  color: $color-white;
+  text-decoration: none;
+  font-family: $police-title;
+  font-size: 1.5em;
+}
 
-
-
-
+.header-mobile-plume {
+  width: 56px;
+  height: 56px;
+  margin: 24px auto;
+}
 // ===========================
 
 
@@ -163,30 +232,6 @@ header {
   }
 }
 
-// // Affichage Joelle Corda
-
-// // Affichage titre Naturopathe
-// .header__profession {
-//   opacity: 0;
-//   transition: opacity 0.4s 0.2s ease-in-out;
-// }
-
-
-
-
-
-
-// .header-profession {
-//   font-size: 3em;
-//   color: $color-white;
-//   font-family: $police-title;
-//   z-index: 5;
-//   display: none;
-
-//   // @media screen and (max-width: 800px) {
-//   //   display: block;
-//   // }
-// }
 
 // // Navbar Desktop
 // .header-menu li {
@@ -196,11 +241,6 @@ header {
 //   cursor: pointer;
 // }
 
-// li a {
-//   color: $color-white;
-//   text-decoration: none;
-//   font-family: $police-title;
-// }
 
 
 

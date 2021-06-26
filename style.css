@@ -1,4 +1,17 @@
-.section-accueil {
+.header-mobile__avatar,
+.header-mobile__liens {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-accueil, .header-mobile {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -253,7 +266,7 @@ header {
   width: 100%;
   background: #36b3a2;
   position: fixed;
-  z-index: 4;
+  z-index: 100;
 }
 
 .header-burger {
@@ -362,6 +375,7 @@ header {
   color: #fcfcff;
   font-family: "Poppins", sans-serif;
   white-space: nowrap;
+  z-index: 110;
 }
 
 @media screen and (max-width: 350px) {
@@ -399,19 +413,96 @@ header {
   transition: opacity 0.4s 0.5s ease-in-out;
 }
 
+.header-plume,
+.header-mobile-plume {
+  background-image: url(/images/plume.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .header-plume {
   width: 40px;
   height: 40px;
   margin-right: 8px;
-  background-image: url(/images/plume.svg);
-  background-position: center;
-  background-repeat: no-repeat;
+  z-index: 110;
 }
 
 @media screen and (min-width: 800px) {
   .header-plume {
     display: none;
   }
+}
+
+.header-mobile {
+  position: absolute;
+  width: 100%;
+  background: #36b3a2;
+  top: 64px;
+  z-index: 50;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12);
+}
+
+.header-mobile__avatar,
+.header-mobile__liens {
+  width: 100%;
+}
+
+.header-mobile__avatar__photo {
+  background-image: url(/images/img-profil-joelle.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 120px;
+  min-width: 120px;
+  border-radius: 50%;
+  margin: 8px 8px 16px 16px;
+}
+
+@media screen and (min-width: 350px) {
+  .header-mobile__avatar__photo {
+    height: 140px;
+    min-width: 140px;
+  }
+}
+
+.header-mobile__avatar__infos h3 {
+  text-align: center;
+  font-size: 2em;
+  color: #fcfcff;
+  font-family: "Poppins", sans-serif;
+  margin-right: 8px;
+  letter-spacing: 3px;
+  font-weight: normal;
+}
+
+@media screen and (min-width: 350px) {
+  .header-mobile__avatar__infos h3 {
+    font-size: 3em;
+  }
+}
+
+.header-mobile__liens li {
+  display: block;
+  text-align: center;
+  margin: 8px 0;
+}
+
+.header-mobile__liens li a {
+  color: #fcfcff;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5em;
+}
+
+.header-mobile-plume {
+  width: 56px;
+  height: 56px;
+  margin: 24px auto;
 }
 
 .header-menu {
