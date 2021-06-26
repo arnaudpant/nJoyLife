@@ -50,6 +50,11 @@ header {
 /* Shadow 0dp */
 /* Shadow 1dp */
 /* Shadow 2dp */
+.header-mobile__avatar__photo {
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
 /* Shadow 3dp */
 /* Shadow 4dp */
 header {
@@ -437,19 +442,24 @@ header {
   position: absolute;
   width: 100%;
   background: #36b3a2;
-  top: 64px;
+  top: -500px;
   z-index: 50;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12);
-          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: all 1s 0.4s ease-out;
+  transition: all 1s 0.4s ease-out;
 }
 
 .header-mobile__avatar,
 .header-mobile__liens {
   width: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
 }
 
 .header-mobile__avatar__photo {
@@ -500,9 +510,29 @@ header {
 }
 
 .header-mobile-plume {
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
   width: 56px;
   height: 56px;
   margin: 24px auto;
+}
+
+.header-mobile.active-menu-deroulant {
+  -webkit-transition: all 1s 0.6s ease-in-out;
+  transition: all 1s 0.6s ease-in-out;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12);
+  -webkit-transform: translateY(564px);
+          transform: translateY(564px);
+}
+
+.header-mobile.active-menu-deroulant .header-mobile__avatar,
+.header-mobile.active-menu-deroulant .header-mobile__liens,
+.header-mobile.active-menu-deroulant .header-mobile-plume {
+  opacity: 1;
+  -webkit-transition: opacity 0.4s 1.4s ease-in-out;
+  transition: opacity 0.4s 1.4s ease-in-out;
 }
 
 .header-menu {
