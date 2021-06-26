@@ -1,4 +1,4 @@
-.navbar-mobile__container {
+header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,17 +34,6 @@ section {
           align-items: center;
 }
 
-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 /* Shadow 0dp */
 /* Shadow 1dp */
 /* Shadow 2dp */
@@ -74,7 +63,7 @@ body {
   background-color: #d2f7fa;
 }
 
-.header__burger {
+.header-burger {
   height: 48px;
   min-width: 48px;
   cursor: pointer;
@@ -85,7 +74,7 @@ body {
 }
 
 @media screen and (max-width: 800px) {
-  .header__burger {
+  .header-burger {
     display: block;
   }
 }
@@ -368,77 +357,12 @@ header {
   z-index: 4;
 }
 
-.header-name {
-  font-size: 3em;
-  color: #fcfcff;
-  font-family: "Poppins", sans-serif;
-  white-space: nowrap;
-  z-index: 5;
-}
-
-@media screen and (max-width: 800px) {
-  .header-name {
-    position: absolute;
-  }
-}
-
 .header-profession {
-  font-size: 3em;
-  color: #fcfcff;
-  font-family: "Poppins", sans-serif;
-  z-index: 5;
   display: none;
 }
 
-.header-menu li {
-  display: inline-block;
-  position: relative;
-  margin: 0 0.5em;
-  cursor: pointer;
-}
-
-li a {
-  color: #fcfcff;
-  text-decoration: none;
-  font-family: "Poppins", sans-serif;
-}
-
-.header__nav__li::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  background-color: #fcfcff;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-}
-
-.header__nav__li:hover::after {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-
-@media screen and (max-width: 800px) {
-  header {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .header__nav__ul {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .header__title,
-  .header__profession {
-    font-size: 1.5em;
-  }
+.header-menu {
+  display: none;
 }
 
 footer {

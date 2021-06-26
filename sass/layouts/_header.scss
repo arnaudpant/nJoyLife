@@ -4,80 +4,169 @@ header {
   background: $color-bcg2;
   position: fixed;
   z-index: 4;
-  @extend %flex-space-arround;
+  @extend %flex-center-center;
   @extend %boxShadow4;
 }
 
-.header-name {
-  font-size: 3em;
-  color: $color-white;
-  font-family: $police-title;
-  white-space: nowrap;
-  z-index: 5;
-  @media screen and (max-width: 800px) {
-    position: absolute;
-  }
-}
+// ===========================
+// Bouton burger
+// ===========================
+// .header-burger {
+//   height: 48px;
+//   min-width: 48px;
+//   cursor: pointer;
+//   position: absolute;
+//   top: 8px;
+//   left: 8px;
+  
+//   @media screen and (min-width: 800px) {
+//     display: none;
+//   }
+// }
 
+// .header-burger__tirets {
+//   width: 100%;
+//   height: 100%;
+//   pointer-events: none;
+//   // @include border;
+//   transition: transform 0.6s ease-in-out;
+// }
+// .header-burger__tiret {
+//   width: 100%;
+//   height: 8px;
+//   background: $color-action;
+//   border-radius: 4px;
+//   position: absolute;
+// }
+
+// .header-burger__tirets .header-burger__tiret:nth-child(1) {
+//   top: 4px;
+// }
+// .header-burger__tirets .header-burger__tiret:nth-child(2) {
+//   top: 20px;
+// }
+// .header-burger__tirets .header-burger__tiret:nth-child(3) {
+//   top: 36px;
+// }
+
+// // ------- ANIMATIONS ---------
+
+// // Rotation du bouton
+// .header-burger__tirets.burger-tiret--anim {
+//   transition: transform 0.6s 0.4s ease-in-out;
+//   transform: rotate(360deg);
+// }
+
+
+// .header-burger__tirets .header-burger__tiret:nth-child(1),
+// .header-burger__tiret:nth-child(3) {
+//   transform: rotate(0deg);
+//   transition: transform 0.4s ease-in-out, top 0.4s 0.4s ease-in-out;
+// }
+// .header-burger__tiret:nth-child(2) {
+//   opacity: 1;
+//   transition: opacity 0.1s 0.4s ease;
+// }
+
+// .header-burger__tirets.burger-tiret--anim .burger-tiret__ligne:nth-child(1) {
+//   top: 20px;
+//   transform: rotate(45deg);
+//   transition: top 0.4s ease-in-out, transform 0.4s 0.4s ease-in-out;
+// }
+// .header-burger__tirets.burger-tiret--anim .burger-tiret__ligne:nth-child(2) {
+//   opacity: 0;
+//   transition: opacity 0.1s 0.4s ease;
+// }
+// .header-burger__tirets.burger-tiret--anim .burger-tiret__ligne:nth-child(3) {
+//   top: 20px;
+//   transform: rotate(-45deg);
+//   transition: top 0.4s ease-in-out, transform 0.4s 0.4s 
+// }
+
+
+
+// ===========================
 .header-profession {
-  font-size: 3em;
-  color: $color-white;
-  font-family: $police-title;
-  z-index: 5;
   display: none;
-
-  // @media screen and (max-width: 800px) {
-  //   display: block;
-  // }
 }
-
-// Navbar Desktop
-.header-menu li {
-  display: inline-block;
-  position: relative;
-  margin: 0 0.5em;
-  cursor: pointer;
-}
-
-li a {
-  color: $color-white;
-  text-decoration: none;
-  font-family: $police-title;
+.header-menu {
+  display: none;
 }
 
 
 
-.header__nav__li::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  background-color: $color-white;
-  transform: scale(0);
-  transition: transform 0.3s ease-in-out;
-}
-.header__nav__li:hover::after {
-  transform: scale(1);
-}
 
-// Media query
-@media screen and (max-width: 800px) {
-  header {
-    justify-content: center;
-  }
 
-  .header__nav__ul {
-    display: none;
-  }
-}
+// .header-name {
+//   font-size: 3em;
+//   color: $color-white;
+//   font-family: $police-title;
+//   white-space: nowrap;
+//   z-index: 5;
+//   @media screen and (max-width: 800px) {
+//     position: absolute;
+//   }
+// }
 
-@media screen and (max-width: 400px) {
-  .header__title,
-  .header__profession {
-    font-size: 1.5em;
-  }
-}
+// .header-profession {
+//   font-size: 3em;
+//   color: $color-white;
+//   font-family: $police-title;
+//   z-index: 5;
+//   display: none;
+
+//   // @media screen and (max-width: 800px) {
+//   //   display: block;
+//   // }
+// }
+
+// // Navbar Desktop
+// .header-menu li {
+//   display: inline-block;
+//   position: relative;
+//   margin: 0 0.5em;
+//   cursor: pointer;
+// }
+
+// li a {
+//   color: $color-white;
+//   text-decoration: none;
+//   font-family: $police-title;
+// }
+
+
+
+// .header__nav__li::after {
+//   content: "";
+//   display: block;
+//   position: absolute;
+//   width: 100%;
+//   height: 1px;
+//   background-color: $color-white;
+//   transform: scale(0);
+//   transition: transform 0.3s ease-in-out;
+// }
+// .header__nav__li:hover::after {
+//   transform: scale(1);
+// }
+
+// // Media query
+// @media screen and (max-width: 800px) {
+//   header {
+//     justify-content: center;
+//   }
+
+//   .header__nav__ul {
+//     display: none;
+//   }
+// }
+
+// @media screen and (max-width: 400px) {
+//   .header__title,
+//   .header__profession {
+//     font-size: 1.5em;
+//   }
+// }
 
 
 

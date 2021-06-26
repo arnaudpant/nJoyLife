@@ -1,6 +1,5 @@
 // BOUTON BURGER
-.header__burger {
-  // background: $color-bcg1;
+.header-burger {
   height: 48px;
   min-width: 48px;
   cursor: pointer;
@@ -44,7 +43,7 @@
   top: 36px;
 }
 
-// ANIM
+// // ANIM
 
 .burger-tiret.burger-tiret--anim {
   transition: transform 0.4s 0.4s ease-in-out;

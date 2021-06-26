@@ -3,7 +3,7 @@
 // *********************************
 
 // Affichage menu sur mobile
-const btnBurgerElt = document.querySelector(".header__burger");
+const btnBurgerElt = document.querySelector(".header-burger");
 const navbarMobileElt = document.querySelector(".navbar-mobile");
 const burgerTiretElt = document.querySelector(".burger-tiret");
 const navbarMobileContainerElt = document.querySelector(

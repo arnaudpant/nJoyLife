@@ -1,6 +1,6 @@
 // FLEXBOX (@extend %...)
 
-%flex-full-center {
+%flex-center-center {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,19 +24,14 @@
   align-items: flex-end;
 }
 
-%flex-align-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-%flex-space-between {
+%flex-between-center {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-%flex-space-arround {
+%flex-around-center {
   display: flex;
   justify-content: space-around;
   align-items: center;
