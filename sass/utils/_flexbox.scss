@@ -2,21 +2,24 @@
 
 %flex-full-center {
   display: flex;
-  // flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-%flex-full-start {
+%flex-center-start {
   display: flex;
-  // flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+%flex-start-center {
+  display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
 %flex-full-end {
   display: flex;
-  // flex-direction: column;
   justify-content: center;
   align-items: flex-end;
 }

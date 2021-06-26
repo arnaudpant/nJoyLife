@@ -13,9 +13,16 @@ Noir: #040f0f
 Titre: Poppins
 Texte: Lora
 
+
+## Body
+Body en couleur arriere plan #d2f7fa
+min-height: 100vh
+
+
 ## Header
 
 Hauteur: 64px
+Position fixed
 Couleur: #36b3a2
 Box-Shadow4:
 0 3px 4px 0 rgba(0, 0, 0, 0.14),
