@@ -5,7 +5,7 @@ header {
   position: fixed;
   z-index: 100;
   @extend %flex-between-center;
-  @extend %boxShadow4;
+  @extend %boxShadow6;
   
   @media screen and (min-width: $break1) {
     justify-content: space-around;

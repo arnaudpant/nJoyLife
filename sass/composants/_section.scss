@@ -132,20 +132,45 @@ section {
 // ===========================
 .section-cards {
   background: $color-bcg2;
+  @extend %boxShadow2;
 }
 
 .section-cards__text {
   text-align: center;
-  height: 150px;
   width: 90%;
-  background: lightgrey
+  background: $color-bcg1;
+  margin: 16px;
+  @extend %boxShadow4;
+  
+  h2 {
+    font-family: $police-title;
+    color: $color-black;
+    padding: 4px;
+  }
+  p {
+    font-family: $police-text;
+    color: $color-black;
+    padding: 4px 4px 8px;
+  }
 }
 
 .section-cards__cards {
-  height: 800px;
-  width: 90%;
-  background: grey;
+  width: 100%;
+  background: $color-bcg2;
+  @extend %flex-center-center;
+  flex-direction: column;
 }
+
+.section-cards__card {
+  height: 200px;
+  width: 90%;
+  background: $color-bcg1;
+  border-radius: 16px;
+  @extend %boxShadow2;
+  margin: 8px 0;
+  position: relative;
+}
+
 
 // ===========================
 // Section About
