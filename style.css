@@ -1,4 +1,4 @@
-.section-accueil__box-text__localisation, .header-mobile__avatar,
+.section-accueil, .section-accueil__box-text, .section-accueil__box-text__localisation, .header-mobile__avatar,
 .header-mobile__liens {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -35,7 +35,7 @@ section {
           align-items: center;
 }
 
-.section-accueil, header {
+header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -99,8 +99,12 @@ section {
 }
 
 .section-accueil__box-text {
+  height: 40%;
   width: 100%;
-  margin: 8px 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .section-accueil__box-text h1 {
@@ -108,6 +112,7 @@ section {
   font-size: 2em;
   font-family: "Poppins", sans-serif;
   color: #040f0f;
+  margin: 8px 0 0 0;
 }
 
 .section-accueil__box-text__localisation {
@@ -133,12 +138,18 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 70px;
-  margin: 8px;
+  height: 33%;
+  margin: 16px;
+}
+
+.section-accueil__box-text__slogan p {
+  font-family: "Lora", serif;
+  color: #040f0f;
+  letter-spacing: 2px;
 }
 
 .section-accueil__box-woman {
-  height: calc(100vh - 64px);
+  height: 60%;
   width: 100%;
   background-image: url("/images/Accueil-woman.svg");
   background-position: center;
