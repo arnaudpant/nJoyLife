@@ -274,6 +274,13 @@ header {
   z-index: 100;
 }
 
+@media screen and (min-width: 800px) {
+  header {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
 .header-burger {
   height: 48px;
   min-width: 48px;
@@ -412,6 +419,12 @@ header {
   transition: opacity 0.4s ease-in-out;
 }
 
+@media screen and (min-width: 800px) {
+  .header-profession {
+    display: none;
+  }
+}
+
 .header-profession.active-menu-deroulant {
   opacity: 1;
   -webkit-transition: opacity 0.4s 0.5s ease-in-out;
@@ -543,6 +556,40 @@ header {
   .header-menu {
     display: block;
   }
+}
+
+.header-menu li {
+  display: inline-block;
+  position: relative;
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+.header-menu li::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #fcfcff;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.header-menu li:hover::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.header-menu a {
+  color: #fcfcff;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
 }
 
 footer {

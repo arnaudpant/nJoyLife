@@ -6,6 +6,10 @@ header {
   z-index: 100;
   @extend %flex-between-center;
   @extend %boxShadow4;
+  
+  @media screen and (min-width: $break1) {
+    justify-content: space-around;
+  }
 }
 
 // ===========================
@@ -19,7 +23,7 @@ header {
   position: relative;
   z-index: 110;
 
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: $break1) {
     display: none;
   }
 }
@@ -102,7 +106,7 @@ header {
   font-family: $police-title;
   white-space: nowrap;
   z-index: 110;
-  @media screen and (max-width: 350px) {
+  @media screen and (max-width: $break2) {
     font-size: 1.5em;
   }
 
@@ -125,6 +129,10 @@ header {
   transform: translateX(-50%);
   opacity: 0;
   transition: opacity 0.4s ease-in-out;
+
+  @media screen and (min-width: $break1) {
+    display: none;
+  }
 }
 .header-profession.active-menu-deroulant {
   opacity: 1;
@@ -132,6 +140,7 @@ header {
 }
 
 // ===========================
+// Logo plume
 .header-plume,
 .header-mobile-plume {
   background-image: url(/images/plume.svg);
@@ -144,7 +153,8 @@ header {
   margin-right: 8px;
   
   z-index: 110;
-  @media screen and (min-width: 800px) {
+
+  @media screen and (min-width: $break1) {
     display: none;
   }
 }
@@ -184,7 +194,7 @@ header {
   margin: 8px 8px 16px 16px;
   @extend %boxShadow2;
 
-  @media screen and (min-width: 350px) {
+  @media screen and (min-width: $break2) {
     height: 140px;
   min-width: 140px;
   }
@@ -199,7 +209,7 @@ header {
   letter-spacing: 3px;
   font-weight: normal;
 
-  @media screen and (min-width: 350px) {
+  @media screen and (min-width: $break2) {
     font-size: 3em;
   }
 }
@@ -252,36 +262,40 @@ header {
 
 .header-menu {
   display: none;
-   @media screen and (min-width: 800px) {
+
+   @media screen and (min-width: $break1) {
     display: block;
   }
 }
 
+.header-menu li {
+  display: inline-block;
+  position: relative;
+  margin: 0 4px;
+  cursor: pointer;
 
-// // Navbar Desktop
-// .header-menu li {
-//   display: inline-block;
-//   position: relative;
-//   margin: 0 0.5em;
-//   cursor: pointer;
-// }
+  &::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: $color-white;
+  transform: scale(0);
+  transition: transform 0.3s ease-in-out;
+  }
+  &:hover::after {
+    transform: scale(1);
+  }
+}
 
+.header-menu a {
+  color: $color-white;
+  text-decoration: none;
+  font-family: $police-title;
+  font-size: 1em;
+}
 
-
-
-// .header__nav__li::after {
-//   content: "";
-//   display: block;
-//   position: absolute;
-//   width: 100%;
-//   height: 1px;
-//   background-color: $color-white;
-//   transform: scale(0);
-//   transition: transform 0.3s ease-in-out;
-// }
-// .header__nav__li:hover::after {
-//   transform: scale(1);
-// }
 
 // // Media query
 // @media screen and (max-width: 800px) {
