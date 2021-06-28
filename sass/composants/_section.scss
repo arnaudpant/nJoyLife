@@ -4,36 +4,72 @@ section {
   flex-direction: column;
   position: relative;
 }
+
 // ===========================
 // Section Accueil
+// ===========================
 .section-accueil {
-  min-height: calc(100vh - 64px);
-  @extend %flex-center-start;
-  flex-direction: row;
+  height: calc(100vh - 64px);
+  @extend %flex-between-center;
+  flex-direction: column;
   // @include border(red);
   
-  @media screen and (max-width: 800px) {
-    flex-direction: column-reverse;
-    justify-content: flex-end;
-    align-items: center;
+}
+.section-accueil__box-text {
+  // height: calc(100vh - 64px);
+  width: 100%;
+  margin: 8px 0;
+}
+
+.section-accueil__box-text h1 {
+  text-align: center;
+  font-size: 2em;
+  font-family: $police-title;
+  color: $color-black;
+}
+
+.section-accueil__box-text__localisation {
+  @extend %flex-center-center;
+  width: 100%;
+  
+  .localisation-svg-gps {
+    height: 24px;
+    width: 24px;
+    background-image: url('/images/gps.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  p{
+    text-align: center;
+    font-size: 1em;
+    font-family: $police-title;
   }
 }
 
+.section-accueil__box-text__logo {
+  background-image: url('/images/NJoy\ Logo.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 70px;
+  margin: 8px;
+}
+
+
 .section-accueil__box-woman {
   height: calc(100vh - 64px);
-  width: 40%;
-  background: grey;
-  margin: 0 8px;
-}
-.section-accueil__box-text {
-  height: calc(100vh - 64px);
-  width: 40%;
-  background: lightgrey;
+  width: 100%;
+  background-image: url('/images/Accueil-woman.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  // background-size: cover;
   margin: 0 8px;
 }
 
 // ===========================
 // Section cards
+// ===========================
 .section-cards {
   background: $color-bcg2;
 }
@@ -53,6 +89,7 @@ section {
 
 // ===========================
 // Section About
+// ===========================
 .section-about__text {
   height: 800px;
   width: 90%;
@@ -67,6 +104,7 @@ section {
 
 // ===========================
 // Section Why Me
+// ===========================
 .section-whyme {
   background: $color-bcg2;
 }
@@ -78,6 +116,7 @@ section {
 
 // ===========================
 // Section Call To Action
+// ===========================
 .section-cta__text {
   height: 200px;
   width: 90%;

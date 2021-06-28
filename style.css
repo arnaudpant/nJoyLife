@@ -1,4 +1,4 @@
-.header-mobile__avatar,
+.section-accueil__box-text__localisation, .header-mobile__avatar,
 .header-mobile__liens {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11,7 +11,7 @@
           align-items: center;
 }
 
-.section-accueil, .header-mobile {
+.header-mobile {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,7 +35,7 @@ section {
           align-items: center;
 }
 
-header {
+.section-accueil, header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -91,39 +91,58 @@ section {
 }
 
 .section-accueil {
-  min-height: calc(100vh - 64px);
-  -webkit-box-orient: horizontal;
+  height: calc(100vh - 64px);
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-@media screen and (max-width: 800px) {
-  .section-accueil {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
+.section-accueil__box-text {
+  width: 100%;
+  margin: 8px 0;
+}
+
+.section-accueil__box-text h1 {
+  text-align: center;
+  font-size: 2em;
+  font-family: "Poppins", sans-serif;
+  color: #040f0f;
+}
+
+.section-accueil__box-text__localisation {
+  width: 100%;
+}
+
+.section-accueil__box-text__localisation .localisation-svg-gps {
+  height: 24px;
+  width: 24px;
+  background-image: url("/images/gps.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.section-accueil__box-text__localisation p {
+  text-align: center;
+  font-size: 1em;
+  font-family: "Poppins", sans-serif;
+}
+
+.section-accueil__box-text__logo {
+  background-image: url("/images/NJoy Logo.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 70px;
+  margin: 8px;
 }
 
 .section-accueil__box-woman {
   height: calc(100vh - 64px);
-  width: 40%;
-  background: grey;
-  margin: 0 8px;
-}
-
-.section-accueil__box-text {
-  height: calc(100vh - 64px);
-  width: 40%;
-  background: lightgrey;
+  width: 100%;
+  background-image: url("/images/Accueil-woman.svg");
+  background-position: center;
+  background-repeat: no-repeat;
   margin: 0 8px;
 }
 
