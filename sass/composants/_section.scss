@@ -10,10 +10,14 @@ section {
 // ===========================
 .section-accueil {
   height: calc(100vh - 64px);
+  width: 100%;
   @extend %flex-center-center;
   flex-direction: column;
   // @include border(red);
-  
+
+  @media screen and (min-width: $break1) {
+    flex-direction: row-reverse;
+  }
 }
 .section-accueil__box-text {
   // height: calc(100vh - 64px);
@@ -22,6 +26,11 @@ section {
   @extend %flex-center-center;
   flex-direction: column;
   // @include border(red);
+  
+  @media screen and (min-width: $break1) {
+    height: 100%;
+    min-width: 50%;
+  }
 }
 
 .section-accueil__box-text h1 {
@@ -30,11 +39,25 @@ section {
   font-family: $police-title;
   color: $color-black;
   margin: 8px 0 0 0;
+
+  @media screen and (min-width: $break1) {
+    font-size: 3em;
+    margin: 16px 0;
+  }
+
+  @media screen and (min-width: $break0) {
+    font-size: 4em;
+    margin: 0 0 24px 0;
+  }
 }
 
 .section-accueil__box-text__localisation {
   @extend %flex-center-center;
   width: 100%;
+  
+  @media screen and (min-width: $break1) { 
+    margin: 0 0 24px 0;
+  }
   
   .localisation-svg-gps {
     height: 24px;
@@ -48,6 +71,10 @@ section {
     text-align: center;
     font-size: 1em;
     font-family: $police-title;
+
+    @media screen and (min-width: $break1) { 
+    font-size: 1.5em;
+  }
   }
 }
 
@@ -58,12 +85,25 @@ section {
   width: 100%;
   height: 33%;
   margin: 16px;
+
+  @media screen and (min-width: $break1) {
+    height: 20%;
+  }
+
+  @media screen and (min-width: $break0) {
+    height: 30%;
+  }
+
 }
 
 .section-accueil__box-text__slogan p {
   font-family: $police-text;
   color: $color-black;
   letter-spacing: 2px;
+
+  @media screen and (min-width: $break0) {
+    font-size: 1.5em;
+  }
 }
 
 //  *** Woman ***
@@ -76,6 +116,10 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   margin: 0 8px;
+
+  @media screen and (min-width: $break1) {
+    height: 80%;
+  }
 }
 
 // ===========================
@@ -139,162 +183,3 @@ section {
   width: 90%;
   background: lightgrey;
 }
-
-
-
-
-
-// ===========================
-// ===========================
-// .section-cards {
-//   // min-height: 100%;
-//   @include border(blue);
-// }
-
-// .section-accueil__bloc1,
-// .section-accueil__bloc2 {
-//   text-align: center;
-//   height: 100%;
-//   width: 50%;
-//   position: relative;
-// }
-// // Bloc personnage
-// .section-accueil__bloc1 svg {
-//   position: relative;
-//   top: 80px;
-//   left: 0;
-//   height: 90%;
-// }
-
-// // Bloc Infos
-// .section-accueil__bloc2 {
-//   @extend %flex-full-start;
-//   flex-direction: column;
-//   h1 {
-//     color: $color-black;
-//     font-size: 3em;
-//     font-family: $police-title;
-//     margin: 40px 16px 24px 16px;
-//   }
-//   .section-accueil__bloc__location {
-//     display: flex;
-//     margin: 0 0 24px 0;
-//     img {
-//       margin: 0 4px;
-//     }
-//   }
-//   p {
-//     color: $color-black;
-//     font-family: $police-text;
-//     em {
-//       display: block;
-//       font-size: 1.5em;
-//       margin: 16px;
-//     }
-//   }
-//   .section-accueil__bloc__logo {
-//     margin: 16px;
-//     svg {
-//       height: 120px;
-//     }
-//   }
-//   .section-accueil__bloc__plume {
-//     margin: 16px;
-//     animation: plumevent 5s ease-in-out infinite;
-//     svg {
-//       height: 80px;
-//     }
-//   }
-// }
-
-// @keyframes plumevent {
-//   0% {
-//     transform: rotate(30deg);
-//   }
-//   50% {
-//     transform: rotate(-50deg);
-//   }
-//   100% {
-//     transform: rotate(30deg);
-//   }
-// }
-
-// @media screen and (max-width: 800px) {
-//   .section-accueil {
-//     height: 100%;
-//     flex-direction: column-reverse;
-//   }
-//   .section-accueil__bloc1,
-//   .section-accueil__bloc2 {
-//     width: 100%;
-//   }
-//   .section-accueil__bloc1 {
-//     height: 60%;
-//     svg {
-//       height: 100%;
-//       max-width: 100%;
-//       bottom: 0;
-//       left: 0;
-//     }
-//   }
-
-//   .section-accueil__bloc2 {
-//     height: 40%;
-//     justify-content: center;
-//     h1 {
-//       font-size: 2em;
-//       margin: 8px;
-//     }
-
-//     .section-accueil__bloc__location {
-//       margin: 0 0 8px 0;
-//     }
-//     p {
-//       font-size: 1em;
-//       margin: 0 0 8px 0;
-//       em {
-//         font-size: 1em;
-//         margin: 0;
-//       }
-//     }
-
-//     .section-accueil__bloc__logo {
-//       margin: 0;
-//       svg {
-//         height: 70px;
-//       }
-//     }
-
-//     .section-accueil__bloc__plume {
-//       position: absolute;
-//       left: 75%;
-//       top: 105%;
-//       margin: 0;
-//       svg {
-//         height: 40px;
-//       }
-//     }
-//   }
-// }
-
-// // ===========================
-// // Page 2 Cards
-// // ===========================
-
-// .section-cards {
-//   background: $color-bcg2;
-//   @extend %flex-full-start;
-//   flex-direction: column;
-//   position: relative;
-
-//   h2 {
-//     color: $color-white;
-//     font-family: $police-title;
-//     text-align: center;
-//   }
-//   p {
-//     color: $color-white;
-//     font-family: $police-text;
-//     text-align: center;
-//   }
-// }

@@ -92,10 +92,20 @@ section {
 
 .section-accueil {
   height: calc(100vh - 64px);
+  width: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media screen and (min-width: 800px) {
+  .section-accueil {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
 }
 
 .section-accueil__box-text {
@@ -107,6 +117,13 @@ section {
           flex-direction: column;
 }
 
+@media screen and (min-width: 800px) {
+  .section-accueil__box-text {
+    height: 100%;
+    min-width: 50%;
+  }
+}
+
 .section-accueil__box-text h1 {
   text-align: center;
   font-size: 2em;
@@ -115,8 +132,28 @@ section {
   margin: 8px 0 0 0;
 }
 
+@media screen and (min-width: 800px) {
+  .section-accueil__box-text h1 {
+    font-size: 3em;
+    margin: 16px 0;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .section-accueil__box-text h1 {
+    font-size: 4em;
+    margin: 0 0 24px 0;
+  }
+}
+
 .section-accueil__box-text__localisation {
   width: 100%;
+}
+
+@media screen and (min-width: 800px) {
+  .section-accueil__box-text__localisation {
+    margin: 0 0 24px 0;
+  }
 }
 
 .section-accueil__box-text__localisation .localisation-svg-gps {
@@ -133,6 +170,12 @@ section {
   font-family: "Poppins", sans-serif;
 }
 
+@media screen and (min-width: 800px) {
+  .section-accueil__box-text__localisation p {
+    font-size: 1.5em;
+  }
+}
+
 .section-accueil__box-text__logo {
   background-image: url("/images/NJoy Logo.svg");
   background-position: center;
@@ -142,10 +185,28 @@ section {
   margin: 16px;
 }
 
+@media screen and (min-width: 800px) {
+  .section-accueil__box-text__logo {
+    height: 20%;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .section-accueil__box-text__logo {
+    height: 30%;
+  }
+}
+
 .section-accueil__box-text__slogan p {
   font-family: "Lora", serif;
   color: #040f0f;
   letter-spacing: 2px;
+}
+
+@media screen and (min-width: 1100px) {
+  .section-accueil__box-text__slogan p {
+    font-size: 1.5em;
+  }
 }
 
 .section-accueil__box-woman {
@@ -155,6 +216,12 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   margin: 0 8px;
+}
+
+@media screen and (min-width: 800px) {
+  .section-accueil__box-woman {
+    height: 80%;
+  }
 }
 
 .section-cards {
@@ -633,6 +700,49 @@ footer {
   width: 100%;
   position: relative;
   top: 64px;
+}
+
+.container-plume {
+  position: absolute;
+  background-image: url("/images/plume-accueil.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 56px;
+  width: 56px;
+  top: 40%;
+  left: 70%;
+  -webkit-animation: plumevent 5s ease-in-out infinite;
+          animation: plumevent 5s ease-in-out infinite;
+}
+
+@-webkit-keyframes plumevent {
+  0% {
+    -webkit-transform: rotate(10deg) translateX(-15px);
+            transform: rotate(10deg) translateX(-15px);
+  }
+  50% {
+    -webkit-transform: rotate(-40deg) translateX(15px);
+            transform: rotate(-40deg) translateX(15px);
+  }
+  100% {
+    -webkit-transform: rotate(10deg) translateX(-15px);
+            transform: rotate(10deg) translateX(-15px);
+  }
+}
+
+@keyframes plumevent {
+  0% {
+    -webkit-transform: rotate(10deg) translateX(-15px);
+            transform: rotate(10deg) translateX(-15px);
+  }
+  50% {
+    -webkit-transform: rotate(-40deg) translateX(15px);
+            transform: rotate(-40deg) translateX(15px);
+  }
+  100% {
+    -webkit-transform: rotate(10deg) translateX(-15px);
+            transform: rotate(10deg) translateX(-15px);
+  }
 }
 
 .container-palette {
