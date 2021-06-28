@@ -114,6 +114,10 @@ header {
 .header-name {
   opacity: 1;
   transition: opacity 0.4s 0.5s ease-in-out;
+
+  @media screen and (min-width: $break0) {
+    font-size: 2.5em;
+  }
 }
 
 
@@ -268,6 +272,10 @@ header {
   position: relative;
   margin: 0 4px;
   cursor: pointer;
+   
+  @media screen and (min-width: $break0) {
+    margin: 0 8px;
+  }
 
   &::after {
   content: "";
@@ -289,6 +297,11 @@ header {
   text-decoration: none;
   font-family: $police-title;
   font-size: 1em;
+
+  @media screen and (min-width: $break0) {
+    font-size: 1.2em;
+  }
+
 }
 
 

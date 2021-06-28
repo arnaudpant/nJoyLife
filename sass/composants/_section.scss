@@ -49,6 +49,11 @@ section {
     font-size: 4em;
     margin: 0 0 24px 0;
   }
+
+  @media screen and (min-width: $break2) {
+    font-size: 2.5em;
+    margin: 16px 0 8px 0;
+  }
 }
 
 .section-accueil__box-text__localisation {
