@@ -160,6 +160,12 @@ section {
   background: $color-bcg2;
   @extend %flex-center-center;
   flex-direction: column;
+  
+  @media screen and (min-width: $break1) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
 }
 
 // Card génériques
@@ -174,6 +180,11 @@ section {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+
+  @media screen and (min-width: $break2) {
+    width: 330px;
+    margin: 8px 8px;
+  }
 }
 
 // Interieur des cards
