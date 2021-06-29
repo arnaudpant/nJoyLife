@@ -150,10 +150,11 @@ section {
   p {
     font-family: $police-text;
     color: $color-black;
-    padding: 4px 4px 8px;
+    padding: 4px 4px 16px;
   }
 }
 
+// Ensemble des cards
 .section-cards__cards {
   width: 100%;
   background: $color-bcg2;
@@ -161,16 +162,77 @@ section {
   flex-direction: column;
 }
 
+// Card génériques
 .section-cards__card {
-  height: 200px;
+  height: 330px;
   width: 90%;
   background: $color-bcg1;
   border-radius: 16px;
   @extend %boxShadow2;
   margin: 8px 0;
   position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
+// Interieur des cards
+.card__title {
+  width: 100%;
+  height: 56px;
+  text-align: center;
+  background-color: $color-white;
+  @extend %flex-center-center;
+  h3 {
+    font-family: $police-title;
+    color: $color-black;
+    letter-spacing: 2px;
+  }
+}
+
+.card__box-middle {
+  height: 150px;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.card__box-middle-left {
+  height: 100%;
+  width: 70%;
+  position: absolute;
+}
+.card__box-middle-right {
+  height: 100%;
+  width: 60%;
+  clip-path: polygon(60% 0, 100% 0, 100% 100%, 0% 100%);
+  position: absolute;
+  top:0;
+  right: 0;
+  background-color:$color-blue;
+}
+
+.card__btn-action {
+  height: 124px;
+  background-color: $color-white;
+  text-align: center;
+  p {
+    font-family: $police-text;
+    padding: 8px 4px;
+  }
+
+  button {
+    background-color: $color-action;
+    font-family: $police-title;
+    color: $color-white;
+    padding: 4px 8px;
+    border: none;
+    border-radius: 999px;
+    outline: none;
+    @extend %boxShadow2;
+  }
+
+}
 
 // ===========================
 // Section About

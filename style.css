@@ -1,4 +1,4 @@
-.section-accueil, .section-accueil__box-text, .section-accueil__box-text__localisation, .section-cards__cards, .header-mobile__avatar,
+.section-accueil, .section-accueil__box-text, .section-accueil__box-text__localisation, .section-cards__cards, .card__title, .header-mobile__avatar,
 .header-mobile__liens {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -50,7 +50,7 @@ header {
 /* Shadow 0dp */
 /* Shadow 1dp */
 /* Shadow 2dp */
-.section-cards, .section-cards__card, .header-mobile__avatar__photo {
+.section-cards, .section-cards__card, .card__btn-action button, .header-mobile__avatar__photo {
   -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
@@ -256,7 +256,7 @@ section {
 .section-cards__text p {
   font-family: "Lora", serif;
   color: #040f0f;
-  padding: 4px 4px 8px;
+  padding: 4px 4px 16px;
 }
 
 .section-cards__cards {
@@ -269,11 +269,80 @@ section {
 }
 
 .section-cards__card {
-  height: 200px;
+  height: 330px;
   width: 90%;
   background: #d2f7fa;
   border-radius: 16px;
   margin: 8px 0;
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card__title {
+  width: 100%;
+  height: 56px;
+  text-align: center;
+  background-color: #fcfcff;
+}
+
+.card__title h3 {
+  font-family: "Poppins", sans-serif;
+  color: #040f0f;
+  letter-spacing: 2px;
+}
+
+.card__box-middle {
+  height: 150px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.card__box-middle-left {
+  height: 100%;
+  width: 70%;
+  position: absolute;
+}
+
+.card__box-middle-right {
+  height: 100%;
+  width: 60%;
+  -webkit-clip-path: polygon(60% 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(60% 0, 100% 0, 100% 100%, 0% 100%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #32CBFF;
+}
+
+.card__btn-action {
+  height: 124px;
+  background-color: #fcfcff;
+  text-align: center;
+}
+
+.card__btn-action p {
+  font-family: "Lora", serif;
+  padding: 8px 4px;
+}
+
+.card__btn-action button {
+  background-color: #7d3929;
+  font-family: "Poppins", sans-serif;
+  color: #fcfcff;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 999px;
+  outline: none;
 }
 
 .section-about__text {
