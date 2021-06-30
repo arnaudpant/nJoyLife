@@ -327,15 +327,15 @@ section {
 
 .card__box-middle-left {
   height: 100%;
-  width: 70%;
+  width: 60%;
   position: absolute;
 }
 
 .card__box-middle-right {
   height: 100%;
-  width: 60%;
-  -webkit-clip-path: polygon(60% 0, 100% 0, 100% 100%, 0% 100%);
-          clip-path: polygon(60% 0, 100% 0, 100% 100%, 0% 100%);
+  width: 70%;
+  -webkit-clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
   position: absolute;
   top: 0;
   right: 0;
@@ -347,7 +347,6 @@ section {
   background-color: #fcfcff;
   text-align: center;
   position: relative;
-  border: 1px solid red;
 }
 
 .card__btn-action p {
@@ -368,6 +367,48 @@ section {
   bottom: 16px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+.card-1 .card__box-middle-left {
+  background-image: url(/images/card-woman-nutrition.svg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.card-1 .card__box-middle-right {
+  background-image: url(/images/card-nutrition.jpg);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card-2 .card__box-middle-left {
+  background-image: url(/images/card-woman-nutrition.svg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.card-2 .card__box-middle-right {
+  background-image: url(/images/card-nutrition.jpg);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card-3 .card__box-middle-left {
+  background-image: url(/images/card-woman-sport.svg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.card-3 .card__box-middle-right {
+  background-image: url(/images/card-nutrition.jpg);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .section-about__text {
