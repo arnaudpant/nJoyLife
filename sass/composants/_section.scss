@@ -133,13 +133,15 @@ section {
 .section-cards {
   background: $color-bcg2;
   @extend %boxShadow2;
+
+
 }
 
 .section-cards__text {
   text-align: center;
   width: 90%;
   background: $color-bcg1;
-  margin: 16px;
+  margin: 24px;
   @extend %boxShadow4;
   
   h2 {
@@ -164,6 +166,7 @@ section {
   @media screen and (min-width: $break1) {
     flex-direction: row;
     flex-wrap: wrap;
+    margin-bottom: 24px;
   }
 
 }
@@ -268,13 +271,13 @@ section {
 // Card 2 - Stress
 
 .card-2 .card__box-middle-left {
-  background-image: url(/images/card-woman-nutrition.svg);
+  background-image: url(/images/card-woman-stress.svg);
   background-position: left;
   background-repeat: no-repeat;
   background-size: contain;
 }
 .card-2 .card__box-middle-right {
-  background-image: url(/images/card-nutrition.jpg);
+  background-image: url(/images/card-stress.jpg);
   background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
@@ -289,12 +292,26 @@ section {
   background-size: contain;
 }
 .card-3 .card__box-middle-right {
-  background-image: url(/images/card-nutrition.jpg);
-  background-position: right;
+  background-image: url(/images/card-sport.jpg);
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+// Card 3 - Sport
+
+.card-4 .card__box-middle-left {
+  background-image: url(/images/card-woman-vitalite.svg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.card-4 .card__box-middle-right {
+  background-image: url(/images/card-vitalite.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 
 
