@@ -227,6 +227,7 @@ section {
   height: 124px;
   background-color: $color-white;
   text-align: center;
+  position: relative;
   p {
     font-family: $police-text;
     padding: 8px 4px;
@@ -241,6 +242,10 @@ section {
     border-radius: 999px;
     outline: none;
     @extend %boxShadow2;
+    position: absolute;
+    left: 50%;
+    bottom: 16px;
+    transform: translateX(-50%);
   }
 
 }
