@@ -1,4 +1,4 @@
-.section-accueil, .section-accueil__box-text, .section-accueil__box-text__localisation, .section-cards__cards, .card__title, .header-mobile__avatar,
+.section-accueil, .section-accueil__box-text, .section-accueil__box-text__localisation, .section-cards__cards, .card__title, .section-about__part1, .header-mobile__avatar,
 .header-mobile__liens {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -57,7 +57,7 @@ header {
 
 /* Shadow 3dp */
 /* Shadow 4dp */
-.section-cards__text {
+.section-title {
   -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
 }
@@ -86,6 +86,59 @@ body {
   background-color: #d2f7fa;
 }
 
+h1 {
+  text-align: center;
+  font-size: 2em;
+  font-family: "Poppins", sans-serif;
+  color: #040f0f;
+  margin: 8px 0 0 0;
+}
+
+@media screen and (min-width: 350px) {
+  h1 {
+    font-size: 2.5em;
+    margin: 16px 0 8px 0;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 3em;
+    margin: 16px 0;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  h1 {
+    font-size: 4em;
+    margin: 0 0 24px 0;
+  }
+}
+
+h2 {
+  font-family: "Poppins", sans-serif;
+  color: #040f0f;
+  padding: 4px;
+}
+
+@media screen and (min-width: 800px) {
+  h2 {
+    font-size: 2em;
+    padding: 8px;
+  }
+}
+
+h3 {
+  font-family: "Poppins", sans-serif;
+  color: #040f0f;
+  letter-spacing: 2px;
+}
+
+p {
+  text-align: center;
+  font-family: "Lora", serif;
+}
+
 section {
   width: 100%;
   -webkit-box-orient: vertical;
@@ -93,6 +146,23 @@ section {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
+}
+
+.section-title {
+  text-align: center;
+  width: 90%;
+  margin: 24px;
+}
+
+@media screen and (min-width: 800px) {
+  .section-title {
+    width: 80%;
+    margin: 40px;
+  }
+}
+
+.section-title h2 {
+  margin: 8px 0;
 }
 
 .section-accueil {
@@ -129,35 +199,6 @@ section {
   }
 }
 
-.section-accueil__box-text h1 {
-  text-align: center;
-  font-size: 2em;
-  font-family: "Poppins", sans-serif;
-  color: #040f0f;
-  margin: 8px 0 0 0;
-}
-
-@media screen and (min-width: 800px) {
-  .section-accueil__box-text h1 {
-    font-size: 3em;
-    margin: 16px 0;
-  }
-}
-
-@media screen and (min-width: 1100px) {
-  .section-accueil__box-text h1 {
-    font-size: 4em;
-    margin: 0 0 24px 0;
-  }
-}
-
-@media screen and (min-width: 350px) {
-  .section-accueil__box-text h1 {
-    font-size: 2.5em;
-    margin: 16px 0 8px 0;
-  }
-}
-
 .section-accueil__box-text__localisation {
   width: 100%;
 }
@@ -177,15 +218,8 @@ section {
 }
 
 .section-accueil__box-text__localisation p {
-  text-align: center;
-  font-size: 1em;
+  font-size: 1.5em;
   font-family: "Poppins", sans-serif;
-}
-
-@media screen and (min-width: 800px) {
-  .section-accueil__box-text__localisation p {
-    font-size: 1.5em;
-  }
 }
 
 .section-accueil__box-text__logo {
@@ -240,23 +274,22 @@ section {
   background: #36b3a2;
 }
 
-.section-cards__text {
-  text-align: center;
-  width: 90%;
+.section-cards .section-title {
   background: #d2f7fa;
-  margin: 24px;
 }
 
-.section-cards__text h2 {
-  font-family: "Poppins", sans-serif;
-  color: #040f0f;
-  padding: 4px;
-}
-
-.section-cards__text p {
+.section-cards__resume p {
   font-family: "Lora", serif;
-  color: #040f0f;
-  padding: 4px 4px 16px;
+  color: #fcfcff;
+  font-size: 1.5em;
+  padding: 0 8px 16px;
+}
+
+@media screen and (min-width: 800px) {
+  .section-cards__resume p {
+    font-size: 1.5em;
+    padding: 16px;
+  }
 }
 
 .section-cards__cards {
@@ -266,6 +299,7 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 24px;
 }
 
 @media screen and (min-width: 800px) {
@@ -276,7 +310,6 @@ section {
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-bottom: 24px;
   }
 }
 
@@ -309,12 +342,6 @@ section {
   height: 56px;
   text-align: center;
   background-color: #fcfcff;
-}
-
-.card__title h3 {
-  font-family: "Poppins", sans-serif;
-  color: #040f0f;
-  letter-spacing: 2px;
 }
 
 .card__box-middle {
@@ -368,6 +395,22 @@ section {
   bottom: 16px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+.section-cards__plume {
+  background-image: url(/images/plume.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 64px;
+  width: 64px;
+  margin-bottom: 24px;
+  display: none;
+}
+
+@media screen and (min-width: 800px) {
+  .section-cards__plume {
+    display: block;
+  }
 }
 
 .card-1 .card__box-middle-left {
@@ -426,16 +469,89 @@ section {
   background-size: cover;
 }
 
-.section-about__text {
-  height: 800px;
-  width: 90%;
-  background: lightgrey;
+.section-about .section-title {
+  background-color: #36b3a2;
 }
 
-.section-about__diplomes {
-  height: 400px;
-  width: 90%;
-  background: grey;
+.section-about .section-title h2 {
+  color: #fcfcff;
+}
+
+.section-about__part1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 800px) {
+  .section-about__part1 {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .section-about__part1 {
+    width: 80%;
+  }
+}
+
+.section-about__part1__photo {
+  width: 100%;
+}
+
+@media screen and (min-width: 800px) {
+  .section-about__part1__photo {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .section-about__part1__photo {
+    width: 40%;
+  }
+}
+
+.section-about__part1__photo img {
+  width: 100%;
+  max-width: 520px;
+  max-height: 700px;
+}
+
+.section-about__part1__text {
+  margin: 16px 0;
+}
+
+@media screen and (min-width: 800px) {
+  .section-about__part1__text {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .section-about__part1__text {
+    width: 60%;
+  }
+}
+
+.section-about__part1__text p {
+  text-align: justify;
+  padding: 4px 16px;
+}
+
+@media screen and (min-width: 800px) {
+  .section-about__part1__text p {
+    text-align: center;
+    padding: 8px 24px 8px 16px;
+  }
 }
 
 .section-whyme {

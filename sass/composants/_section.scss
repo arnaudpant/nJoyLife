@@ -5,6 +5,23 @@ section {
   position: relative;
 }
 
+.section-title {
+  text-align: center;
+  width: 90%;
+  margin: 24px;
+  @extend %boxShadow4;
+
+  @media screen and (min-width: $break1) {
+    width: 80%;
+    margin: 40px;
+  }
+
+  h2 {
+      margin: 8px 0;
+    }
+}
+  
+  
 // ===========================
 // Section Accueil
 // ===========================
@@ -33,28 +50,6 @@ section {
   }
 }
 
-.section-accueil__box-text h1 {
-  text-align: center;
-  font-size: 2em;
-  font-family: $police-title;
-  color: $color-black;
-  margin: 8px 0 0 0;
-
-  @media screen and (min-width: $break1) {
-    font-size: 3em;
-    margin: 16px 0;
-  }
-
-  @media screen and (min-width: $break0) {
-    font-size: 4em;
-    margin: 0 0 24px 0;
-  }
-
-  @media screen and (min-width: $break2) {
-    font-size: 2.5em;
-    margin: 16px 0 8px 0;
-  }
-}
 
 .section-accueil__box-text__localisation {
   @extend %flex-center-center;
@@ -73,13 +68,8 @@ section {
   }
 
   p{
-    text-align: center;
-    font-size: 1em;
-    font-family: $police-title;
-
-    @media screen and (min-width: $break1) { 
     font-size: 1.5em;
-  }
+    font-family: $police-title;
   }
 }
 
@@ -134,27 +124,23 @@ section {
   background: $color-bcg2;
   @extend %boxShadow2;
 
-
 }
 
-.section-cards__text {
-  text-align: center;
-  width: 90%;
+.section-cards .section-title {
   background: $color-bcg1;
-  margin: 24px;
-  @extend %boxShadow4;
-  
-  h2 {
-    font-family: $police-title;
-    color: $color-black;
-    padding: 4px;
-  }
-  p {
-    font-family: $police-text;
-    color: $color-black;
-    padding: 4px 4px 16px;
-  }
 }
+
+.section-cards__resume p {
+    font-family: $police-text;
+    color: $color-white;
+    font-size: 1.5em;
+    padding: 0 8px 16px;
+
+    @media screen and (min-width: $break1) {
+    font-size: 1.5em;
+    padding: 16px;
+  }
+  }
 
 // Ensemble des cards
 .section-cards__cards {
@@ -162,11 +148,11 @@ section {
   background: $color-bcg2;
   @extend %flex-center-center;
   flex-direction: column;
+  margin-bottom: 24px;
   
   @media screen and (min-width: $break1) {
     flex-direction: row;
     flex-wrap: wrap;
-    margin-bottom: 24px;
   }
 
 }
@@ -197,11 +183,7 @@ section {
   text-align: center;
   background-color: $color-white;
   @extend %flex-center-center;
-  h3 {
-    font-family: $police-title;
-    color: $color-black;
-    letter-spacing: 2px;
-  }
+  
 }
 
 .card__box-middle {
@@ -251,6 +233,20 @@ section {
     transform: translateX(-50%);
   }
 
+}
+
+.section-cards__plume {
+  background-image: url(/images/plume.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 64px;
+  width: 64px;
+  margin-bottom: 24px;
+  display: none;
+
+  @media screen and (min-width: $break1) {
+    display: block;
+  }
 }
 
 // Card 1 - Nutrition
@@ -319,17 +315,79 @@ section {
 // ===========================
 // Section About
 // ===========================
-.section-about__text {
-  height: 800px;
-  width: 90%;
-  background: lightgrey;
+.section-about {
+
+  .section-title {
+    background-color: $color-bcg2;
+
+    h2 {
+      color: $color-white;
+    }
+  }
 }
 
-.section-about__diplomes {
-  height: 400px;
-  width: 90%;
-  background: grey;
+.section-about__part1 {
+  width: 100%;
+  display: flex;
+  @extend %flex-center-center;
+  flex-direction: column;
+
+  @media screen and (min-width: $break1) {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  @media screen and (min-width: $break0) {
+    width: 80%;
+  }
+
 }
+
+.section-about__part1__photo {
+  width: 100%;
+  
+  @media screen and (min-width: $break1) {
+    width: 60%;
+    // height: calc(100vh - 64px);
+  }
+
+  @media screen and (min-width: $break0) {
+    width: 40%;
+  }
+
+  img {
+    width: 100%;
+    max-width: 520px;
+    max-height: 700px;
+  //   @media screen and (min-width: $break1) {
+  //   height: auto;
+  // }
+  }
+}
+
+.section-about__part1__text {
+  margin: 16px 0;
+
+  @media screen and (min-width: $break1) {
+    width: 40%;
+  }
+
+  @media screen and (min-width: $break0) {
+    width: 60%;
+  }
+
+  p{
+    text-align: justify;
+    padding: 4px 16px;
+
+    @media screen and (min-width: $break1) {
+    text-align: center;
+    padding: 8px 24px 8px 16px;
+  }
+  }
+}
+
+
 
 // ===========================
 // Section Why Me
