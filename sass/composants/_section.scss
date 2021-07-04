@@ -21,6 +21,20 @@ section {
       margin: 8px 0;
     }
 }
+
+.section-plume {
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 48px;
+  width: 48px;
+
+  @media screen and (min-width: $break1) {
+    height: 64px;
+    width: 64px;
+  }
+}
+
   
   
 // ===========================
@@ -80,10 +94,11 @@ section {
   background-repeat: no-repeat;
   width: 100%;
   height: 33%;
-  margin: 16px 0 40px 0;
+  margin: 8px 0;
 
   @media screen and (min-width: $break1) {
     height: 20%;
+    margin: 16px 0 40px 0;
   }
 
   @media screen and (min-width: $break0) {
@@ -220,7 +235,8 @@ section {
   position: relative;
   p {
     font-family: $police-text;
-    padding: 8px 4px;
+    padding: 8px 16px;
+    text-align: justify;
   }
 
   button {
@@ -241,16 +257,10 @@ section {
 }
 
 .section-cards__plume {
-  background-image: url(/images/plume.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 48px;
-  width: 48px;
+  background-image: url('/images/plume.svg');
   margin-bottom: 24px;
 
   @media screen and (min-width: $break1) {
-    height: 64px;
-    width: 64px;
     margin-bottom: 40px;
   }
 }
@@ -325,7 +335,6 @@ section {
     flex-direction: row;
     width: 100%;
   }
-
   @media screen and (min-width: $break0) {
     width: 80%;
   }
@@ -348,9 +357,6 @@ section {
     width: 100%;
     max-width: 520px;
     max-height: 700px;
-  //   @media screen and (min-width: $break1) {
-  //   height: auto;
-  // }
   }
 }
 
@@ -372,11 +378,17 @@ section {
     @media screen and (min-width: $break1) {
     text-align: center;
     padding: 8px 24px 8px 16px;
-  }
+    }
   }
 }
 
-
+.section-about__plume {
+  background-image: url('/images/plume-verte.svg');
+  margin-bottom: 24px;
+  @media screen and (min-width: $break1) {
+    display: none;
+  }
+}
 
 // ===========================
 // Section Why Me

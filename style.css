@@ -118,7 +118,6 @@ h1 {
 h2 {
   font-family: "Poppins", sans-serif;
   color: #040f0f;
-  padding: 4px;
 }
 
 @media screen and (min-width: 800px) {
@@ -164,6 +163,20 @@ section {
 
 .section-title h2 {
   margin: 8px 0;
+}
+
+.section-plume {
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 48px;
+  width: 48px;
+}
+
+@media screen and (min-width: 800px) {
+  .section-plume {
+    height: 64px;
+    width: 64px;
+  }
 }
 
 .section-accueil {
@@ -229,12 +242,13 @@ section {
   background-repeat: no-repeat;
   width: 100%;
   height: 33%;
-  margin: 16px 0 40px 0;
+  margin: 8px 0;
 }
 
 @media screen and (min-width: 800px) {
   .section-accueil__box-text__logo {
     height: 20%;
+    margin: 16px 0 40px 0;
   }
 }
 
@@ -385,7 +399,8 @@ section {
 
 .card__btn-action p {
   font-family: "Lora", serif;
-  padding: 8px 4px;
+  padding: 8px 16px;
+  text-align: justify;
 }
 
 .card__btn-action button {
@@ -404,18 +419,12 @@ section {
 }
 
 .section-cards__plume {
-  background-image: url(/images/plume.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 48px;
-  width: 48px;
+  background-image: url("/images/plume.svg");
   margin-bottom: 24px;
 }
 
 @media screen and (min-width: 800px) {
   .section-cards__plume {
-    height: 64px;
-    width: 64px;
     margin-bottom: 40px;
   }
 }
@@ -544,6 +553,17 @@ section {
   .section-about__part1__text p {
     text-align: center;
     padding: 8px 24px 8px 16px;
+  }
+}
+
+.section-about__plume {
+  background-image: url("/images/plume-verte.svg");
+  margin-bottom: 24px;
+}
+
+@media screen and (min-width: 800px) {
+  .section-about__plume {
+    display: none;
   }
 }
 
