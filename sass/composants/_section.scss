@@ -8,6 +8,7 @@ section {
 .section-title {
   text-align: center;
   width: 90%;
+  max-width: 800px;
   margin: 24px;
   @extend %boxShadow4;
 
@@ -79,7 +80,7 @@ section {
   background-repeat: no-repeat;
   width: 100%;
   height: 33%;
-  margin: 16px;
+  margin: 16px 0 40px 0;
 
   @media screen and (min-width: $break1) {
     height: 20%;
@@ -130,15 +131,18 @@ section {
   background: $color-bcg1;
 }
 
+.section-cards__resume {
+  max-width: 800px;
+  text-align: justify;
+  margin: 0;
+}
 .section-cards__resume p {
     font-family: $police-text;
     color: $color-white;
-    font-size: 1.5em;
-    padding: 0 8px 16px;
+    line-height: 1.5em;
 
     @media screen and (min-width: $break1) {
     font-size: 1.5em;
-    padding: 16px;
   }
   }
 
@@ -148,11 +152,12 @@ section {
   background: $color-bcg2;
   @extend %flex-center-center;
   flex-direction: column;
-  margin-bottom: 24px;
+  margin: 24px 0;
   
   @media screen and (min-width: $break1) {
     flex-direction: row;
     flex-wrap: wrap;
+    margin: 40px 0;
   }
 
 }
@@ -239,13 +244,14 @@ section {
   background-image: url(/images/plume.svg);
   background-position: center;
   background-repeat: no-repeat;
-  height: 64px;
-  width: 64px;
+  height: 48px;
+  width: 48px;
   margin-bottom: 24px;
-  display: none;
 
   @media screen and (min-width: $break1) {
-    display: block;
+    height: 64px;
+    width: 64px;
+    margin-bottom: 40px;
   }
 }
 
@@ -293,23 +299,6 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-// Card 3 - Sport
-
-.card-4 .card__box-middle-left {
-  background-image: url(/images/card-woman-vitalite.svg);
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.card-4 .card__box-middle-right {
-  background-image: url(/images/card-vitalite.jpg);
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-
 
 
 // ===========================
