@@ -1,7 +1,22 @@
 footer {
-  height: 250px;
   width: 100%;
-  // position: relative;
-  // top: 64px;
   background: $color-bcg2;
+  padding: 16px 0;
+  display: flex;
+
+.footer-gauche,
+.footer-droit {
+  width: 50%;
+  text-align: center;
+  color: $color-white;
+
+  h3 {
+    color: $color-white;
+  }
+}
+.footer-gauche {
+  border-right: 2px solid $color-white;
+}
+
+
 }

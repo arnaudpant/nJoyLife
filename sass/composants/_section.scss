@@ -3,6 +3,7 @@ section {
   @extend %flex-start-center;
   flex-direction: column;
   position: relative;
+  @extend %boxShadow2;
 }
 
 .section-title {
@@ -45,19 +46,16 @@ section {
   width: 100%;
   @extend %flex-center-center;
   flex-direction: column;
-  // @include border(red);
 
   @media screen and (min-width: $break1) {
     flex-direction: row-reverse;
   }
 }
 .section-accueil__box-text {
-  // height: calc(100vh - 64px);
   height: 40%;
   width: 100%;
   @extend %flex-center-center;
   flex-direction: column;
-  // @include border(red);
   
   @media screen and (min-width: $break1) {
     height: 100%;
@@ -243,6 +241,7 @@ section {
     background-color: $color-action;
     font-family: $police-title;
     color: $color-white;
+    white-space: nowrap;
     padding: 4px 8px;
     border: none;
     border-radius: 999px;
@@ -314,7 +313,9 @@ section {
 // ===========================
 // Section About
 // ===========================
-.section-about-bloc1 {
+
+.section-about-bloc1,
+.section-cta {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -405,9 +406,9 @@ section {
   margin: 16px 0;
   justify-content: left;
   align-items: center;
-  @media screen and (min-width: $break1) {
-    justify-content: center;
-  }
+  // @media screen and (min-width: $break1) {
+  //   justify-content: center;
+  // }
   
   .section-about__diplome {
     display: flex;
@@ -433,9 +434,9 @@ section {
 .section-about__plume {
   background-image: url('/images/plume-verte.svg');
   margin-bottom: 24px;
-  @media screen and (min-width: $break1) {
-    display: none;
-  }
+  // @media screen and (min-width: $break1) {
+  //   display: none;
+  // }
 }
 
 // ===========================
@@ -454,6 +455,12 @@ section {
     color: $color-white;
     text-align: center;
     margin: 16px;
+
+    @media screen and (min-width: $break1) {
+      font-size: 2em;
+      margin: 24px;
+      }
+
   }
 
 
@@ -461,6 +468,11 @@ section {
     font-size: 1.2em;
     color: $color-white;
     margin: 16px;
+
+     @media screen and (min-width: $break1) {
+      font-size: 1.5em;
+      margin: 24px;
+      }
   }
 
 
@@ -473,14 +485,29 @@ section {
 // ===========================
 // Section Call To Action
 // ===========================
-.section-cta__text {
-  height: 200px;
-  width: 90%;
-  background: grey;
+.section-cta {
+  background: $color-bcg1;
 }
 
-.section-cta__icone {
-  height: 100px;
-  width: 90%;
-  background: lightgrey;
+.section-cta-textes {
+
+  a[href^="tel"] {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-family: $police-title;
+    font-weight: bold;
+    color: $color-action;
+    font-size: 1.5em;
+    margin: 16px 0;
+
+    &::before {
+        content: "📞 ";
+    }
+  }
+
+  p{
+    margin: 16px 0;
+  }
+
 }
