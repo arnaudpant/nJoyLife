@@ -1,4 +1,4 @@
-.section-accueil, .section-accueil__box-text, .section-accueil__box-text__localisation, .section-cards__cards, .card__title, .section-about__part1, .header-mobile__avatar,
+.section-accueil, .section-accueil__box-text, .section-accueil__box-text__localisation, .section-cards__cards, .card__title, .header-mobile__avatar,
 .header-mobile__liens {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -471,16 +471,33 @@ section {
   background-size: cover;
 }
 
-.section-about .section-title {
+.section-about-bloc1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-about-bloc1 .section-title {
   background-color: #36b3a2;
 }
 
-.section-about .section-title h2 {
+.section-about-bloc1 .section-title h2 {
   color: #fcfcff;
 }
 
-.section-about__part1 {
-  width: 100%;
+.section-about-bloc1 h2, .section-about-bloc1 h3 {
+  text-align: center;
+}
+
+.section-about-blocs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -491,7 +508,7 @@ section {
 }
 
 @media screen and (min-width: 800px) {
-  .section-about__part1 {
+  .section-about-blocs {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -500,60 +517,122 @@ section {
   }
 }
 
-@media screen and (min-width: 1100px) {
-  .section-about__part1 {
-    width: 80%;
-  }
-}
-
-.section-about__part1__photo {
+.section-about-bloc2__photo {
   width: 100%;
 }
 
 @media screen and (min-width: 800px) {
-  .section-about__part1__photo {
-    width: 60%;
+  .section-about-bloc2__photo {
+    width: 50%;
   }
 }
 
 @media screen and (min-width: 1100px) {
-  .section-about__part1__photo {
+  .section-about-bloc2__photo {
     width: 40%;
   }
 }
 
-.section-about__part1__photo img {
+.section-about-bloc2__photo img {
   width: 100%;
   max-width: 520px;
   max-height: 700px;
 }
 
-.section-about__part1__text {
-  margin: 16px 0;
+.section-about-bloc3 {
+  width: 100%;
 }
 
 @media screen and (min-width: 800px) {
-  .section-about__part1__text {
-    width: 40%;
+  .section-about-bloc3 {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
 @media screen and (min-width: 1100px) {
-  .section-about__part1__text {
+  .section-about-bloc3 {
     width: 60%;
+    margin-right: 24px;
   }
 }
 
-.section-about__part1__text p {
+.section-about-bloc3__text {
+  margin: 8px 0;
+}
+
+.section-about-bloc3__text p {
   text-align: justify;
-  padding: 4px 16px;
+  padding: 8px;
 }
 
 @media screen and (min-width: 800px) {
-  .section-about__part1__text p {
-    text-align: center;
-    padding: 8px 24px 8px 16px;
+  .section-about-bloc3__text p {
+    padding: 8px 16px;
   }
+}
+
+.section-about-bloc3__diplomes {
+  width: 100%;
+}
+
+.section-about-bloc3__diplomes h3 {
+  text-align: center;
+}
+
+.section-about-bloc3__liste-diplomes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 16px 0;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 800px) {
+  .section-about-bloc3__liste-diplomes {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.section-about-bloc3__liste-diplomes .section-about__diplome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 8px;
+}
+
+.section-about-bloc3__liste-diplomes .section-about__diplome h4 {
+  font-family: "Poppins", sans-serif;
+  padding-left: 4px;
+}
+
+.section-about-bloc3__liste-diplomes .logo-diplome {
+  width: 40px;
+  height: 40px;
+  background-image: url("/images/logo-diplome.svg");
 }
 
 .section-about__plume {

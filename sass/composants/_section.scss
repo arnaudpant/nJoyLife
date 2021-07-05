@@ -314,8 +314,11 @@ section {
 // ===========================
 // Section About
 // ===========================
-.section-about {
-
+.section-about-bloc1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   .section-title {
     background-color: $color-bcg2;
 
@@ -323,30 +326,29 @@ section {
       color: $color-white;
     }
   }
+
+  h2, h3 {
+    text-align: center;
+  }
 }
 
-.section-about__part1 {
-  width: 100%;
-  display: flex;
-  @extend %flex-center-center;
-  flex-direction: column;
 
+.section-about-blocs {
+  display: flex;
+  flex-direction: column;
+ 
   @media screen and (min-width: $break1) {
     flex-direction: row;
     width: 100%;
   }
-  @media screen and (min-width: $break0) {
-    width: 80%;
-  }
 
 }
 
-.section-about__part1__photo {
+.section-about-bloc2__photo {
   width: 100%;
-  
+  // @include border(red);
   @media screen and (min-width: $break1) {
-    width: 60%;
-    // height: calc(100vh - 64px);
+    width: 50%;
   }
 
   @media screen and (min-width: $break0) {
@@ -358,29 +360,75 @@ section {
     max-width: 520px;
     max-height: 700px;
   }
+
 }
 
-.section-about__part1__text {
-  margin: 16px 0;
-
+.section-about-bloc3 {
+  width: 100%;
   @media screen and (min-width: $break1) {
-    width: 40%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
-
   @media screen and (min-width: $break0) {
     width: 60%;
+    margin-right: 24px;
   }
+}
 
+.section-about-bloc3__text {
+  margin: 8px 0;
   p{
     text-align: justify;
-    padding: 4px 16px;
-
+    padding: 8px;
     @media screen and (min-width: $break1) {
-    text-align: center;
-    padding: 8px 24px 8px 16px;
+      padding: 8px 16px;
     }
   }
 }
+
+
+.section-about-bloc3__diplomes {
+  width: 100%;
+  h3 {
+    text-align: center;
+  }
+
+}
+
+
+.section-about-bloc3__liste-diplomes {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 16px 0;
+  justify-content: left;
+  align-items: center;
+  @media screen and (min-width: $break1) {
+    justify-content: center;
+  }
+  
+  .section-about__diplome {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 8px;
+
+    h4 {
+      font-family: $police-title;
+      padding-left: 4px;
+    }
+
+  }
+
+  .logo-diplome {
+    width: 40px;
+    height: 40px;
+    background-image: url('/images/logo-diplome.svg');
+  }
+
+}
+
 
 .section-about__plume {
   background-image: url('/images/plume-verte.svg');
