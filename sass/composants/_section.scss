@@ -444,11 +444,31 @@ section {
 .section-whyme {
   background: $color-bcg2;
 }
-.section-whyme__text {
-  height: 400px;
-  width: 90%;
-  background: lightgrey;
+
+.section-whyme .section-title {
+  background: $color-bcg1;
 }
+
+.section-whyme__texte {
+  h3 {
+    color: $color-white;
+    text-align: center;
+    margin: 16px;
+  }
+
+
+  p {
+    font-size: 1.2em;
+    color: $color-white;
+    margin: 16px;
+  }
+
+
+
+}
+
+
+
 
 // ===========================
 // Section Call To Action

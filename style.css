@@ -650,10 +650,20 @@ section {
   background: #36b3a2;
 }
 
-.section-whyme__text {
-  height: 400px;
-  width: 90%;
-  background: lightgrey;
+.section-whyme .section-title {
+  background: #d2f7fa;
+}
+
+.section-whyme__texte h3 {
+  color: #fcfcff;
+  text-align: center;
+  margin: 16px;
+}
+
+.section-whyme__texte p {
+  font-size: 1.2em;
+  color: #fcfcff;
+  margin: 16px;
 }
 
 .section-cta__text {
