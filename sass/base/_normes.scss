@@ -12,6 +12,14 @@ body {
   // border: 2px dotted black;
 }
 
+.container {
+  height: calc(100vh - 64px);
+  width: 100%;
+  // @include border(blue);
+  position: relative;
+  top: $height-header;
+}
+
 
 h1 {
   text-align: center;

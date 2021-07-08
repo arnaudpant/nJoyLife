@@ -1,11 +1,3 @@
-.container {
-  height: calc(100vh - 64px);
-  width: 100%;
-  // @include border(blue);
-  position: relative;
-  top: $height-header;
-}
-
 .container-plume {
   position: absolute;
   background-image: url('/images/plume-accueil.svg');

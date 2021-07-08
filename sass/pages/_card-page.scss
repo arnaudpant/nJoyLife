@@ -1,0 +1,68 @@
+.container-flex {
+  @extend %flex-center-center;
+  flex-direction: column;
+  position: relative;
+  top: 64px;
+}
+
+.box-page-card {
+  width: 90%;
+  margin: 24px 0;
+  border-radius: 16px;
+  @extend %boxShadow2;
+  background-color: $color-bcg2;
+  // color: $color-white;
+}
+
+.page-card-bandeau-haut {
+  height: 80px;
+  width: 100%;
+  border-radius: 16px 16px 0 0;
+  overflow: hidden;
+  position: relative;
+  @extend %boxShadow1;
+  
+  img{
+    width: 100%;
+    position: absolute;
+    top:-110%;
+  }
+  
+}
+
+.page-card-central {
+  text-align: center;
+  
+  
+  h1, h3 {
+    color: $color-white;
+    font-family: $police-title;
+  }
+  
+  h3 {
+    margin: 16px 0;
+  }
+
+  h4 {
+    font-family: $police-title;
+  }
+  
+  p {
+    margin: 8px 0;
+    padding: 0 8px;
+    line-height: 1.5em;
+    letter-spacing: 1px;
+  }
+  
+  p:nth-child(4) {
+    margin-bottom: 16px;
+  }
+
+   p:nth-child(5),
+   p:nth-child(6),
+   p:nth-child(7) {
+    text-align: left;
+    padding: 0 32px;
+  }
+
+}
