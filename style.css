@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.section-accueil, .section-accueil__box-text, .section-accueil__box-text__localisation, .section-cards__cards, .card__title, .header-mobile__avatar,
+.section-accueil, .section-accueil__box-text, .section-accueil__box-text__localisation, .section-cards__cards, .card__title, .section-cta-textes, .header-mobile__avatar,
 .header-mobile__liens, .container-flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -149,6 +149,28 @@ h3 {
 p {
   text-align: center;
   font-family: "Lora", serif;
+}
+
+.btn-call-me {
+  background: #7d3929;
+  width: 250px;
+  border-radius: 999px;
+  margin: 16px 0;
+}
+
+a[href^="tel"] {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  color: #fcfcff;
+  font-size: 1.5em;
+  padding: 8px 0;
+}
+
+a[href^="tel"]::before {
+  content: "📞 ";
 }
 
 section {
@@ -690,19 +712,11 @@ section {
   background: #d2f7fa;
 }
 
-.section-cta-textes a[href^="tel"] {
-  display: block;
-  text-decoration: none;
-  text-align: center;
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
-  color: #7d3929;
-  font-size: 1.5em;
-  margin: 16px 0;
-}
-
-.section-cta-textes a[href^="tel"]::before {
-  content: "📞 ";
+.section-cta-textes {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .section-cta-textes p {

@@ -491,21 +491,23 @@ section {
 }
 
 .section-cta-textes {
+  @extend %flex-center-center;
+  flex-direction: column;
 
-  a[href^="tel"] {
-    display: block;
-    text-decoration: none;
-    text-align: center;
-    font-family: $police-title;
-    font-weight: bold;
-    color: $color-action;
-    font-size: 1.5em;
-    margin: 16px 0;
+  // a[href^="tel"] {
+  //   display: block;
+  //   text-decoration: none;
+  //   text-align: center;
+  //   font-family: $police-title;
+  //   font-weight: bold;
+  //   color: $color-action;
+  //   font-size: 1.5em;
+  //   margin: 16px 0;
 
-    &::before {
-        content: "📞 ";
-    }
-  }
+  //   &::before {
+  //       content: "📞 ";
+  //   }
+  // }
 
   p{
     margin: 16px 0;
