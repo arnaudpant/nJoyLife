@@ -24,7 +24,7 @@
           align-items: flex-start;
 }
 
-section {
+section, .box-page-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1241,14 +1241,20 @@ footer .footer-gauche {
   margin: 24px 0;
   border-radius: 16px;
   background-color: #36b3a2;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .page-card-bandeau-haut {
-  height: 80px;
+  height: 100px;
   width: 100%;
   border-radius: 16px 16px 0 0;
   overflow: hidden;
-  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .page-card-bandeau-haut img {
@@ -1257,21 +1263,31 @@ footer .footer-gauche {
   top: -110%;
 }
 
-.page-card-central {
-  text-align: center;
+.page-card-nutrition .page-card-bandeau-haut {
+  background-image: url("/images/card-nutrition.jpg");
 }
 
-.page-card-central h1, .page-card-central h3 {
+.page-card-stress .page-card-bandeau-haut {
+  background-image: url("/images/card-stress.jpg");
+}
+
+.page-card-sport .page-card-bandeau-haut {
+  background-image: url("/images/card-sport.jpg");
+}
+
+.page-card-central {
+  text-align: center;
+  max-width: 800px;
+}
+
+.page-card-central h1, .page-card-central h2 {
   color: #fcfcff;
   font-family: "Poppins", sans-serif;
+  margin: 16px;
 }
 
 .page-card-central h3 {
   margin: 16px 0;
-}
-
-.page-card-central h4 {
-  font-family: "Poppins", sans-serif;
 }
 
 .page-card-central p {
@@ -1281,15 +1297,13 @@ footer .footer-gauche {
   letter-spacing: 1px;
 }
 
-.page-card-central p:nth-child(4) {
-  margin-bottom: 16px;
+.page-card-central p em {
+  font-size: 1.2em;
 }
 
-.page-card-central p:nth-child(5),
-.page-card-central p:nth-child(6),
-.page-card-central p:nth-child(7) {
+.page-card-central .p-align-left {
   text-align: left;
-  padding: 0 32px;
+  padding-left: 16px;
 }
 
 .container-palette {

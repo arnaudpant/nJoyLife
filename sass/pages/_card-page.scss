@@ -11,15 +11,18 @@
   border-radius: 16px;
   @extend %boxShadow2;
   background-color: $color-bcg2;
-  // color: $color-white;
+  @extend %flex-start-center;
+  flex-direction: column;
 }
 
 .page-card-bandeau-haut {
-  height: 80px;
+  height: 100px;
   width: 100%;
   border-radius: 16px 16px 0 0;
   overflow: hidden;
-  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   @extend %boxShadow1;
   
   img{
@@ -30,21 +33,32 @@
   
 }
 
+.page-card-nutrition .page-card-bandeau-haut {
+  background-image: url('/images/card-nutrition.jpg');
+}
+
+.page-card-stress .page-card-bandeau-haut {
+  background-image: url('/images/card-stress.jpg');
+}
+
+.page-card-sport .page-card-bandeau-haut {
+  background-image: url('/images/card-sport.jpg');
+}
+
+
 .page-card-central {
   text-align: center;
+  max-width: 800px;
   
   
-  h1, h3 {
+  h1, h2 {
     color: $color-white;
     font-family: $police-title;
+    margin: 16px;
   }
   
   h3 {
     margin: 16px 0;
-  }
-
-  h4 {
-    font-family: $police-title;
   }
   
   p {
@@ -52,17 +66,26 @@
     padding: 0 8px;
     line-height: 1.5em;
     letter-spacing: 1px;
+    em {
+      font-size: 1.2em;
+    }
   }
   
-  p:nth-child(4) {
-    margin-bottom: 16px;
-  }
-
-   p:nth-child(5),
-   p:nth-child(6),
-   p:nth-child(7) {
+  .p-align-left {
     text-align: left;
-    padding: 0 32px;
+    padding-left: 16px;
+
   }
+  
+  // p:nth-child(4) {
+  //   margin-bottom: 16px;
+  // }
+
+  //  p:nth-child(5),
+  //  p:nth-child(6),
+  //  p:nth-child(7) {
+  //   text-align: left;
+  //   padding: 0 32px;
+  // }
 
 }
