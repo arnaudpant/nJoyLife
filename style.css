@@ -174,7 +174,7 @@ a[href^="tel"]::before {
 }
 
 .section-cards__card {
-  height: 330px;
+  height: 340px;
   width: 90%;
   background: #d2f7fa;
   border-radius: 16px;
@@ -240,7 +240,7 @@ a[href^="tel"]::before {
 }
 
 .card__btn-action {
-  height: 124px;
+  height: 134px;
   background-color: #fcfcff;
   text-align: center;
   position: relative;
