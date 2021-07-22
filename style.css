@@ -1334,6 +1334,11 @@ footer .footer-gauche {
   padding-left: 16px;
 }
 
+.page-temporaire {
+  text-align: center;
+  margin: 24px;
+}
+
 .container-palette {
   display: -webkit-box;
   display: -ms-flexbox;
