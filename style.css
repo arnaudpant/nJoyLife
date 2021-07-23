@@ -1041,7 +1041,8 @@ header {
 }
 
 .header-mobile__avatar__photo {
-  background-image: url(/images/img-profil-joelle.jpg);
+  background-color: #d2f7fa;
+  background-image: url(/images/img-about-joelle-head.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
