@@ -137,7 +137,6 @@ section {
 .section-cards {
   background: $color-bcg2;
   @extend %boxShadow2;
-
 }
 
 .section-cards .section-title {
@@ -173,141 +172,6 @@ section {
     margin: 40px 0;
   }
 
-}
-
-// Card génériques
-.section-cards__card {
-  height: 330px;
-  width: 90%;
-  background: $color-bcg1;
-  border-radius: 16px;
-  @extend %boxShadow2;
-  margin: 8px 0;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-
-  @media screen and (min-width: $break2) {
-    width: 330px;
-    margin: 8px 8px;
-  }
-}
-
-// Interieur des cards
-.card__title {
-  width: 100%;
-  height: 56px;
-  text-align: center;
-  background-color: $color-white;
-  @extend %flex-center-center;
-  
-}
-
-.card__box-middle {
-  height: 150px;
-  width: 100%;
-  display: flex;
-  position: relative;
-}
-
-.card__box-middle-left {
-  height: 100%;
-  width: 60%;
-  position: absolute;
-}
-.card__box-middle-right {
-  height: 100%;
-  width: 70%;
-  clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
-  position: absolute;
-  top:0;
-  right: 0;
-  background-color:$color-blue;
-}
-
-.card__btn-action {
-  height: 124px;
-  background-color: $color-white;
-  text-align: center;
-  position: relative;
-  p {
-    font-family: $police-text;
-    padding: 8px 16px;
-    text-align: justify;
-  }
-
-  button {
-    background-color: $color-action;
-    font-family: $police-title;
-    color: $color-white;
-    white-space: nowrap;
-    cursor: pointer;
-    padding: 4px 8px;
-    border: none;
-    border-radius: 999px;
-    outline: none;
-    @extend %boxShadow2;
-    position: absolute;
-    left: 50%;
-    bottom: 16px;
-    transform: translateX(-50%);
-  }
-
-}
-
-.section-cards__plume {
-  background-image: url('/images/plume.svg');
-  margin-bottom: 24px;
-
-  @media screen and (min-width: $break1) {
-    margin-bottom: 40px;
-  }
-}
-
-// Card 1 - Nutrition
-
-.card-1 .card__box-middle-left {
-  background-image: url(/images/card-woman-nutrition.svg);
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.card-1 .card__box-middle-right {
-  background-image: url(/images/card-nutrition.jpg);
-  background-position: right;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-// Card 2 - Stress
-
-.card-2 .card__box-middle-left {
-  background-image: url(/images/card-woman-stress.svg);
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.card-2 .card__box-middle-right {
-  background-image: url(/images/card-stress.jpg);
-  background-position: right;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-// Card 3 - Sport
-
-.card-3 .card__box-middle-left {
-  background-image: url(/images/card-woman-sport.svg);
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.card-3 .card__box-middle-right {
-  background-image: url(/images/card-sport.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 
@@ -475,9 +339,6 @@ section {
       margin: 24px;
       }
   }
-
-
-
 }
 
 

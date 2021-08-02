@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.section-accueil, .section-accueil__box-text, .section-accueil__box-text__localisation, .section-cards__cards, .card__title, .section-cta-textes, .header-mobile__avatar,
+.card__title, .section-accueil, .section-accueil__box-text, .section-accueil__box-text__localisation, .section-cards__cards, .section-cta-textes, .header-mobile__avatar,
 .header-mobile__liens, .container-flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -56,7 +56,7 @@ header {
 }
 
 /* Shadow 2dp */
-section, .section-cards, .section-cards__card, .card__btn-action button, .header-mobile__avatar__photo, .box-page-card {
+.btn-call-me, .section-cards__card, .card__btn-action button, section, .section-cards, .header-mobile__avatar__photo, .box-page-card {
   -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
@@ -171,6 +171,155 @@ a[href^="tel"] {
 
 a[href^="tel"]::before {
   content: "📞 ";
+}
+
+.section-cards__card {
+  height: 340px;
+  width: 90%;
+  background: #d2f7fa;
+  border-radius: 16px;
+  margin: 8px 0;
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 350px) {
+  .section-cards__card {
+    width: 330px;
+    margin: 8px 8px;
+  }
+}
+
+.card__title {
+  width: 100%;
+  height: 56px;
+  text-align: center;
+  background-color: #fcfcff;
+}
+
+.card__box-middle {
+  height: 150px;
+  width: 100%;
+  position: relative;
+}
+
+.card__box-middle img {
+  width: 100%;
+}
+
+.card__box-middle-woman {
+  position: absolute;
+  height: 170px;
+  width: 170px;
+  top: 0px;
+  left: 4px;
+}
+
+.card__box-middle-left {
+  height: 100%;
+  width: 60%;
+  position: absolute;
+}
+
+.card__box-middle-right {
+  height: 100%;
+  width: 70%;
+  -webkit-clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #32CBFF;
+}
+
+.card__btn-action {
+  height: 134px;
+  background-color: #fcfcff;
+  text-align: center;
+  position: relative;
+}
+
+.card__btn-action p {
+  font-family: "Lora", serif;
+  padding: 8px 16px;
+  text-align: center;
+}
+
+.card__btn-action button {
+  background-color: #7d3929;
+  font-family: "Poppins", sans-serif;
+  color: #fcfcff;
+  white-space: nowrap;
+  cursor: pointer;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 999px;
+  outline: none;
+  position: absolute;
+  left: 50%;
+  bottom: 16px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.section-cards__plume {
+  background-image: url("/images/plume.svg");
+  margin-bottom: 24px;
+}
+
+@media screen and (min-width: 800px) {
+  .section-cards__plume {
+    margin-bottom: 40px;
+  }
+}
+
+.card-1 .card__box-middle-left {
+  background-image: url(/images/card-woman-nutrition.svg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.card-1 .card__box-middle-right {
+  background-image: url(/images/card-nutrition.jpg);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card-2 .card__box-middle-left {
+  background-image: url(/images/card-woman-stress.svg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.card-2 .card__box-middle-right {
+  background-image: url(/images/card-stress.jpg);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card-3 .card__box-middle-left {
+  background-image: url(/images/card-woman-sport.svg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.card-3 .card__box-middle-right {
+  background-image: url(/images/card-sport.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 section {
@@ -366,146 +515,6 @@ section {
         flex-wrap: wrap;
     margin: 40px 0;
   }
-}
-
-.section-cards__card {
-  height: 330px;
-  width: 90%;
-  background: #d2f7fa;
-  border-radius: 16px;
-  margin: 8px 0;
-  position: relative;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-@media screen and (min-width: 350px) {
-  .section-cards__card {
-    width: 330px;
-    margin: 8px 8px;
-  }
-}
-
-.card__title {
-  width: 100%;
-  height: 56px;
-  text-align: center;
-  background-color: #fcfcff;
-}
-
-.card__box-middle {
-  height: 150px;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-}
-
-.card__box-middle-left {
-  height: 100%;
-  width: 60%;
-  position: absolute;
-}
-
-.card__box-middle-right {
-  height: 100%;
-  width: 70%;
-  -webkit-clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
-          clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: #32CBFF;
-}
-
-.card__btn-action {
-  height: 124px;
-  background-color: #fcfcff;
-  text-align: center;
-  position: relative;
-}
-
-.card__btn-action p {
-  font-family: "Lora", serif;
-  padding: 8px 16px;
-  text-align: justify;
-}
-
-.card__btn-action button {
-  background-color: #7d3929;
-  font-family: "Poppins", sans-serif;
-  color: #fcfcff;
-  white-space: nowrap;
-  cursor: pointer;
-  padding: 4px 8px;
-  border: none;
-  border-radius: 999px;
-  outline: none;
-  position: absolute;
-  left: 50%;
-  bottom: 16px;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-.section-cards__plume {
-  background-image: url("/images/plume.svg");
-  margin-bottom: 24px;
-}
-
-@media screen and (min-width: 800px) {
-  .section-cards__plume {
-    margin-bottom: 40px;
-  }
-}
-
-.card-1 .card__box-middle-left {
-  background-image: url(/images/card-woman-nutrition.svg);
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.card-1 .card__box-middle-right {
-  background-image: url(/images/card-nutrition.jpg);
-  background-position: right;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.card-2 .card__box-middle-left {
-  background-image: url(/images/card-woman-stress.svg);
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.card-2 .card__box-middle-right {
-  background-image: url(/images/card-stress.jpg);
-  background-position: right;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.card-3 .card__box-middle-left {
-  background-image: url(/images/card-woman-sport.svg);
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.card-3 .card__box-middle-right {
-  background-image: url(/images/card-sport.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .section-about-bloc1,
@@ -835,6 +844,11 @@ header {
   z-index: 110;
 }
 
+.header-burger a img {
+  height: 56px;
+  width: 56px;
+}
+
 @media screen and (min-width: 800px) {
   .header-burger {
     display: none;
@@ -1027,7 +1041,8 @@ header {
 }
 
 .header-mobile__avatar__photo {
-  background-image: url(/images/img-profil-joelle.jpg);
+  background-color: #d2f7fa;
+  background-image: url(/images/img-about-joelle-head.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1318,6 +1333,11 @@ footer .footer-gauche {
 .page-card-central .p-align-left {
   text-align: left;
   padding-left: 16px;
+}
+
+.page-temporaire {
+  text-align: center;
+  margin: 24px;
 }
 
 .container-palette {
