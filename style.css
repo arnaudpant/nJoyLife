@@ -216,10 +216,10 @@ a[href^="tel"]::before {
 
 .card__box-middle-woman {
   position: absolute;
-  height: 170px;
-  width: 170px;
-  top: 0px;
-  left: 4px;
+  height: 140px;
+  width: 140px;
+  top: 8px;
+  left: 6px;
 }
 
 .card__box-middle-left {
@@ -639,8 +639,26 @@ section {
   width: 100%;
 }
 
-.section-about-bloc3__diplomes h3 {
+.section-about-bloc3__titre-diplomes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.section-about-bloc3__titre-diplomes h3 {
   text-align: center;
+  margin: 0 8px;
+}
+
+.section-about-bloc3__titre-diplomes .logo-diplome {
+  width: 40px;
+  height: 40px;
+  background-image: url("/images/logo-diplome.svg");
 }
 
 .section-about-bloc3__liste-diplomes {
@@ -658,24 +676,12 @@ section {
           align-items: center;
 }
 
-.section-about-bloc3__liste-diplomes .section-about__diplome {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: 8px;
+.section-about-bloc3__liste-diplomes ul {
+  margin: 0 32px;
 }
 
-.section-about-bloc3__liste-diplomes .section-about__diplome h4 {
+.section-about-bloc3__liste-diplomes li {
   font-family: "Poppins", sans-serif;
-  padding-left: 4px;
-}
-
-.section-about-bloc3__liste-diplomes .logo-diplome {
-  width: 40px;
-  height: 40px;
-  background-image: url("/images/logo-diplome.svg");
 }
 
 .section-about__plume {

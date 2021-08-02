@@ -256,12 +256,28 @@ section {
 }
 
 
+// Partie diplome
 .section-about-bloc3__diplomes {
   width: 100%;
+
+  
+}
+
+.section-about-bloc3__titre-diplomes {
+  display: flex;
+  // align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   h3 {
     text-align: center;
+    margin: 0 8px;
   }
 
+  .logo-diplome {
+      width: 40px;
+      height: 40px;
+      background-image: url('/images/logo-diplome.svg');
+    }
 }
 
 
@@ -271,37 +287,31 @@ section {
   margin: 16px 0;
   justify-content: left;
   align-items: center;
-  // @media screen and (min-width: $break1) {
-  //   justify-content: center;
-  // }
+
+  ul  {
+    margin: 0 32px;
+  }
+
+  li {
+    font-family: $police-title;
+  }
   
-  .section-about__diplome {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 8px;
-
-    h4 {
-      font-family: $police-title;
-      padding-left: 4px;
-    }
-
-  }
-
-  .logo-diplome {
-    width: 40px;
-    height: 40px;
-    background-image: url('/images/logo-diplome.svg');
-  }
+  // .section-about__diplome {
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   margin: 8px;
+    
+  //   h4 {
+  //     font-family: $police-title;
+  //     padding-left: 4px;
+  //   }
+  // }
 
 }
-
 
 .section-about__plume {
   background-image: url('/images/plume-verte.svg');
   margin-bottom: 24px;
-  // @media screen and (min-width: $break1) {
-  //   display: none;
-  // }
 }
 
 // ===========================
