@@ -63,4 +63,7 @@ h3 {
 p{
     text-align: center;
     font-family: $police-text;
-  }
+    // @media screen and (min-width: $break1) {
+    // font-size: 1.2em;
+    // }
+}
