@@ -684,6 +684,7 @@ section {
 
 .section-about-bloc3__liste-diplomes li {
   font-family: "Poppins", sans-serif;
+  margin: 16px 0;
 }
 
 .section-about-bloc3__logo-diplomes {
