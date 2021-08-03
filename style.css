@@ -487,6 +487,8 @@ section {
   font-family: "Lora", serif;
   color: #fcfcff;
   line-height: 1.5em;
+  letter-spacing: 2px;
+  padding: 8px;
 }
 
 @media screen and (min-width: 800px) {
@@ -684,9 +686,35 @@ section {
   font-family: "Poppins", sans-serif;
 }
 
+.section-about-bloc3__logo-diplomes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.logo-diplome {
+  height: 150px;
+  margin: 8px;
+}
+
+@media screen and (min-width: 800px) {
+  .logo-diplome {
+    height: 200px;
+  }
+}
+
+.logo-diplome img {
+  height: 100%;
+}
+
 .section-about__plume {
   background-image: url("/images/plume-verte.svg");
-  margin-bottom: 24px;
+  margin: 24px 0;
 }
 
 .section-whyme {
@@ -734,8 +762,13 @@ section {
           flex-direction: column;
 }
 
+.section-cta-textes h3 {
+  padding: 8px;
+}
+
 .section-cta-textes p {
   margin: 16px 0;
+  padding: 8px;
 }
 
 .navbar-mobile {
@@ -1339,6 +1372,22 @@ footer .footer-gauche {
 .page-card-central .p-align-left {
   text-align: left;
   padding-left: 16px;
+}
+
+.page-card-central-btn-return {
+  height: 80px;
+  margin: 8px;
+  display: none;
+}
+
+@media screen and (min-width: 800px) {
+  .page-card-central-btn-return {
+    display: block;
+  }
+}
+
+.page-card-central-btn-return img {
+  height: 100%;
 }
 
 .page-temporaire {

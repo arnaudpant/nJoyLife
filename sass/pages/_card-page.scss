@@ -77,19 +77,22 @@
     padding-left: 16px;
 
   }
-  
-  // p:nth-child(4) {
-  //   margin-bottom: 16px;
-  // }
-
-  //  p:nth-child(5),
-  //  p:nth-child(6),
-  //  p:nth-child(7) {
-  //   text-align: left;
-  //   padding: 0 32px;
-  // }
-
 }
+
+.page-card-central-btn-return {
+  height: 80px;
+  margin: 8px;
+  display: none;
+
+  @media screen and (min-width: $break1) {
+      display: block;
+      }
+
+  img {
+    height: 100%;
+  }
+}
+
 
 .page-temporaire {
   text-align: center;

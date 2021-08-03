@@ -152,6 +152,8 @@ section {
     font-family: $police-text;
     color: $color-white;
     line-height: 1.5em;
+    letter-spacing: 2px;
+    padding: 8px;
 
     @media screen and (min-width: $break1) {
     font-size: 1.5em;
@@ -259,13 +261,10 @@ section {
 // Partie diplome
 .section-about-bloc3__diplomes {
   width: 100%;
-
-  
 }
 
 .section-about-bloc3__titre-diplomes {
   display: flex;
-  // align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   h3 {
@@ -295,23 +294,29 @@ section {
   li {
     font-family: $police-title;
   }
-  
-  // .section-about__diplome {
-  //   display: flex;
-  //   flex-wrap: wrap;
-  //   margin: 8px;
-    
-  //   h4 {
-  //     font-family: $police-title;
-  //     padding-left: 4px;
-  //   }
-  // }
+}
 
+.section-about-bloc3__logo-diplomes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.logo-diplome {
+  height: 150px;
+  margin: 8px;
+  @media screen and (min-width: $break1) {
+    height: 200px;
+  }
+
+  img {
+    height: 100%;
+  }
 }
 
 .section-about__plume {
   background-image: url('/images/plume-verte.svg');
-  margin-bottom: 24px;
+  margin: 24px 0;
 }
 
 // ===========================
@@ -365,23 +370,12 @@ section {
   @extend %flex-center-center;
   flex-direction: column;
 
-  // a[href^="tel"] {
-  //   display: block;
-  //   text-decoration: none;
-  //   text-align: center;
-  //   font-family: $police-title;
-  //   font-weight: bold;
-  //   color: $color-action;
-  //   font-size: 1.5em;
-  //   margin: 16px 0;
-
-  //   &::before {
-  //       content: "📞 ";
-  //   }
-  // }
-
+  h3 {
+    padding: 8px;
+  }
   p{
     margin: 16px 0;
+    padding: 8px;
   }
 
 }
