@@ -1320,8 +1320,7 @@ footer .footer-gauche {
 }
 
 .page-card__box-title h1 {
-  margin: 0;
-  padding: 4px 0;
+  padding: 4px 8px;
 }
 
 .page-card__box-img {
