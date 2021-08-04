@@ -1,114 +1,108 @@
 .container-flex {
-  @extend %flex-center-center;
-  background-color: $color-bcg2;
-  flex-direction: column;
-  position: relative;
-  top: 64px;
+    @extend %flex-center-center;
+    background-color: $color-bcg2;
+    flex-direction: column;
+    position: relative;
+    top: 64px;
 }
 
 .box-page-card {
-  @extend %flex-start-center;
-  flex-direction: column;
-  width: 90%;
-  max-width: 800px;
-  margin: 24px 0;
-  border-radius: 16px;
-  @extend %boxShadow2;
-  background-color: $color-bcg1;
-  overflow: hidden;
+    @extend %flex-start-center;
+    flex-direction: column;
+    width: 90%;
+    max-width: 800px;
+    margin: 24px 0;
+    border-radius: 16px;
+    @extend %boxShadow2;
+    background-color: $color-bcg1;
+    overflow: hidden;
 }
 
 .page-card__box-title {
-  width: 100%;
-  background: $color-white;
-  h1 {
-    // margin: 0 8px;
-    padding: 4px 8px;
-  }
+    width: 100%;
+    background: $color-white;
+    h1 {
+        // margin: 0 8px;
+        padding: 4px 8px;
+    }
 }
 
 .page-card__box-img {
-  height: 150px;
-  width: 100%;
-  overflow: hidden;
-  margin-bottom: 8px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-
+    height: 150px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 8px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #page-card-nutrition-img {
-  background-image: url("/images/card-nutrition.jpg");
+    background-image: url("/images/card-nutrition.jpg");
 }
 
 #page-card-stress-img {
-  background-image: url("/images/card-stress.jpg");
+    background-image: url("/images/card-stress.jpg");
 }
 
 #page-card-sport-img {
-  background-image: url("/images/card-sport2.jpg");
+    background-image: url("/images/card-sport2.jpg");
 }
-
-
 
 .page-card__box-text {
-  width: 100%;
-  padding: 8px;
-  h2, h3 {
-    text-align: center;
-    margin: 24px 0;
-  }
-  p {
-    margin: 16px 0;
-  }
-  ul {
-    margin: 8px 4px 8px 24px;
-    
+    width: 100%;
+    padding: 8px;
+    h2,
+    h3 {
+        text-align: center;
+        margin: 24px 0;
+    }
+    p {
+        margin: 16px 0;
+    }
+    ul {
+        margin: 8px 4px 8px 24px;
+
+        @media screen and (min-width: $break1) {
+            margin: 8px 24px;
+        }
+    }
+
+    li {
+        margin: 8px 0;
+        font-family: $police-text;
+    }
+
     @media screen and (min-width: $break1) {
-      margin: 8px 24px;
+        padding: 16px;
     }
-  }
-  
-  li {
-    margin: 8px 0;
-    font-family: $police-text;
-  }
-  
-  @media screen and (min-width: $break1) {
-    padding: 16px;
-    }
-
 }
-
-
 
 .page-card__box-woman {
-  @extend %flex-center-center;
-  height: 120px;
-  margin: 16px 0;
-  img {
-    height: 100%;
-  }
+    @extend %flex-center-center;
+    height: 120px;
+    margin: 16px 0;
+    img {
+        height: 100%;
+    }
 }
- 
 
 .page-card-central-btn-return {
-  height: 80px;
-  margin: 8px;
-  display: none;
+    height: 80px;
+    margin: 8px;
+    display: none;
 
-  @media screen and (min-width: $break1) {
-      display: block;
-      }
+    @media screen and (min-width: $break1) {
+        display: block;
+    }
 
-  img {
-    height: 100%;
-  }
+    img {
+        height: 100%;
+    }
 }
 
 // =========================================
 .page-temporaire {
-  text-align: center;
-  margin: 24px;
+    text-align: center;
+    margin: 24px;
 }

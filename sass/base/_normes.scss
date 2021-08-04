@@ -1,47 +1,45 @@
 *,
 ::before,
 ::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  // min-height: 100vh;
-  background-color: $color-bcg1;
-  // border: 2px dotted black;
+    // min-height: 100vh;
+    background-color: $color-bcg1;
+    // border: 2px dotted black;
 }
 
 .container {
-  height: calc(100vh - 64px);
-  width: 100%;
-  // @include border(blue);
-  position: relative;
-  top: $height-header;
+    height: calc(100vh - 64px);
+    width: 100%;
+    // @include border(blue);
+    position: relative;
+    top: $height-header;
 }
 
-
 h1 {
-  text-align: center;
-  font-size: 2em;
-  font-family: $police-title;
-  color: $color-black;
-  margin: 8px 0 0 0;
+    text-align: center;
+    font-size: 2em;
+    font-family: $police-title;
+    color: $color-black;
+    margin: 8px 0 0 0;
 
-  @media screen and (min-width: $break2) {
-    font-size: 2.5em;
-    margin: 16px 0 8px 0;
-  }
-  @media screen and (min-width: $break1) {
-    font-size: 3em;
-    margin: 16px 0;
-  }
+    @media screen and (min-width: $break2) {
+        font-size: 2.5em;
+        margin: 16px 0 8px 0;
+    }
+    @media screen and (min-width: $break1) {
+        font-size: 3em;
+        margin: 16px 0;
+    }
 
-  @media screen and (min-width: $break0) {
-    font-size: 4em;
-    margin: 0 0 24px 0;
-  }
-
+    @media screen and (min-width: $break0) {
+        font-size: 4em;
+        margin: 0 0 24px 0;
+    }
 }
 
 h2 {
@@ -49,18 +47,18 @@ h2 {
     color: $color-black;
 
     @media screen and (min-width: $break1) {
-    font-size: 2em;
-    padding: 8px;
-  }
+        font-size: 2em;
+        padding: 8px;
+    }
 }
 
 h3 {
     font-family: $police-title;
     color: $color-black;
     letter-spacing: 2px;
-  }
+}
 
-p{
+p {
     text-align: center;
     font-family: $police-text;
     // @media screen and (min-width: $break1) {

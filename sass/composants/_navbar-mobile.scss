@@ -1,75 +1,75 @@
 // Navbar mobile
 
 .navbar-mobile {
-  position: absolute;
-  z-index: 4;
-  width: 100%;
-  top: -490px;
-  left: 0;
-  background: $color-bcg2;
-  transition: all 1s 0.4s ease-out;
-  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.14);
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    top: -490px;
+    left: 0;
+    background: $color-bcg2;
+    transition: all 1s 0.4s ease-out;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.14);
 }
 
 .navbar-mobile__container {
-  // @extend %flex-full-center;
-  flex-direction: column;
-  opacity: 0;
-  transition: opacity 0.4s ease-in-out;
-  // @include border(red);
+    // @extend %flex-full-center;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    // @include border(red);
 }
 
 .navbar-mobile__bloc1,
 .navbar-mobile__ul {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 .navbar-mobile__photo {
-  min-width: 132px;
-  min-height: 132px;
-  margin: 16px;
-  border-radius: 50%;
-  background-image: url(/images/img-profil-joelle.jpg);
-  background-position: center;
-  background-size: cover;
+    min-width: 132px;
+    min-height: 132px;
+    margin: 16px;
+    border-radius: 50%;
+    background-image: url(/images/img-profil-joelle.jpg);
+    background-position: center;
+    background-size: cover;
 }
 
 .navbar-mobile__name {
-  font-family: $police-title;
-  font-size: 2em;
-  color: $color-white;
-  text-align: center;
-  // margin-right: 16px;
+    font-family: $police-title;
+    font-size: 2em;
+    color: $color-white;
+    text-align: center;
+    // margin-right: 16px;
 }
 
 .navbar-mobile__ul {
-  flex-direction: column;
+    flex-direction: column;
 }
 .navbar-mobile__li a {
-  text-align: center;
-  display: block;
-  color: $color-white;
-  text-decoration: none;
-  font-family: $police-title;
-  font-size: 1.5em;
-  margin: 0.5em 0;
+    text-align: center;
+    display: block;
+    color: $color-white;
+    text-decoration: none;
+    font-family: $police-title;
+    font-size: 1.5em;
+    margin: 0.5em 0;
 }
 
 .navbar-mobile__plume {
-  height: 56px;
-  width: 56px;
-  margin: 8px 0 16px 0;
+    height: 56px;
+    width: 56px;
+    margin: 8px 0 16px 0;
 }
 
 // Menu qui apparait
 .navbar-mobile.active-menu-deroulant {
-  transition: all 1s 0.6s ease-in-out;
-  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 4px 0 rgba(0, 0, 0, 0.12),
-    0 2px 4px -1px rgba(0, 0, 0, 0.2);
-  transform: translateY(554px);
+    transition: all 1s 0.6s ease-in-out;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 4px 0 rgba(0, 0, 0, 0.12),
+        0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    transform: translateY(554px);
 }
 
 .navbar-mobile__container.active-menu-deroulant {
-  opacity: 1;
-  transition: opacity 0.4s 1.4s ease-in-out;
+    opacity: 1;
+    transition: opacity 0.4s 1.4s ease-in-out;
 }

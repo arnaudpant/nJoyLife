@@ -1,13 +1,10 @@
-
 .btn-call-me {
-  background: $color-action;
-  width: 250px;
-  border-radius: 999px;
-  margin: 16px 0;
-  @extend %boxShadow2;
+    background: $color-action;
+    width: 250px;
+    border-radius: 999px;
+    margin: 16px 0;
+    @extend %boxShadow2;
 }
-
-
 
 a[href^="tel"] {
     display: block;
@@ -22,5 +19,4 @@ a[href^="tel"] {
     &::before {
         content: "📞 ";
     }
-  }
-
+}
