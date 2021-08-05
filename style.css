@@ -231,7 +231,7 @@ a[href^="tel"]::before {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #32CBFF;
+  background-color: #32cbff;
 }
 
 .card__btn-action {
@@ -539,7 +539,8 @@ section {
   color: #fcfcff;
 }
 
-.section-about-bloc1 h2, .section-about-bloc1 h3,
+.section-about-bloc1 h2,
+.section-about-bloc1 h3,
 .section-cta h2,
 .section-cta h3 {
   text-align: center;
@@ -1342,7 +1343,7 @@ footer .footer-gauche {
 }
 
 #page-card-sport-img {
-  background-image: url("/images/card-sport2.jpg");
+  background-image: url("/images/card-sport.jpg");
 }
 
 .page-card__box-text {
@@ -1350,7 +1351,8 @@ footer .footer-gauche {
   padding: 8px;
 }
 
-.page-card__box-text h2, .page-card__box-text h3 {
+.page-card__box-text h2,
+.page-card__box-text h3 {
   text-align: center;
   margin: 24px 0;
 }
@@ -1550,7 +1552,7 @@ footer .footer-gauche {
 }
 
 .box3 .box__big-circle {
-  background: #32CBFF;
+  background: #32cbff;
 }
 
 .box3 a {
@@ -1571,7 +1573,7 @@ footer .footer-gauche {
 }
 
 .box4 .box__big-circle {
-  background: #32CBFF;
+  background: #32cbff;
 }
 
 .box4 a {
