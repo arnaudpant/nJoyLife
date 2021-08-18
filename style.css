@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.card__title, .section-accueil, .section-accueil__box-text, .section-accueil__box-text__localisation, .section-cards__cards, .section-cta-textes, .header-mobile__avatar,
+.card__title, .page-presta-container-pack, .presta-pack__bas, .section-accueil, .section-accueil__box-text, .section-accueil__box-text__localisation, .section-cards__cards, .section-cta-textes, .header-mobile__avatar,
 .header-mobile__liens, .container-flex, .page-card__box-woman {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -51,7 +51,7 @@ header {
 /* Shadow 0dp */
 /* Shadow 1dp */
 /* Shadow 2dp */
-.btn-call-me, .section-cards__card, .card__btn-action button, section, .section-cards, .header-mobile__avatar__photo, .box-page-card {
+.btn-call-me, .section-cards__card, .card__btn-action button, .page-presta-pack, .presta-pack__bas button, section, .section-cards, .header-mobile__avatar__photo, .box-page-card {
   -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
@@ -315,6 +315,94 @@ a[href^="tel"]::before {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.page-presta-container-pack {
+  width: 100%;
+  padding: 16px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.page-presta-pack {
+  width: 300px;
+  height: 320px;
+  background-color: #36b3a2;
+  margin: 8px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.presta-pack__haut {
+  height: 80px;
+}
+
+.presta-pack__milieu {
+  height: 170px;
+}
+
+.presta-pack__milieu h4,
+.presta-pack__milieu h5,
+.presta-pack__milieu p {
+  font-family: "Poppins", sans-serif;
+  color: #fcfcff;
+  text-align: center;
+}
+
+.presta-pack__milieu h4 {
+  margin-top: 16px;
+  font-size: 2em;
+}
+
+.presta-pack__milieu h5 {
+  font-size: 1.5em;
+}
+
+.presta-pack__milieu p {
+  font-size: 2.5em;
+  letter-spacing: 4px;
+}
+
+.presta-pack__bas {
+  height: 40px;
+}
+
+.presta-pack__bas button {
+  background-color: #7d3929;
+  font-family: "Poppins", sans-serif;
+  color: #fcfcff;
+  white-space: nowrap;
+  cursor: pointer;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 999px;
+  outline: none;
+}
+
+.presta-pack__haut {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.pack1 .presta-pack__haut:nth-child(1) {
+  background-image: url("images/card-nutrition.jpg");
+}
+
+.pack2 .presta-pack__haut:nth-child(1) {
+  background-image: url("images/card-stress.jpg");
+}
+
+.pack3 .presta-pack__haut:nth-child(1) {
+  background-image: url("images/card-sport.jpg");
+}
+
+.packm1 .presta-pack__haut:nth-child(1) {
+  background-image: url("images/img-massage-californien.jpg");
+}
+
+.packm2 .presta-pack__haut:nth-child(1) {
+  background-image: url("images/img-massage-infini.jpg");
 }
 
 section {
@@ -1346,38 +1434,39 @@ footer .footer-gauche {
   background-image: url("/images/card-sport.jpg");
 }
 
-.page-card__box-text {
+.page-card__box-text, .page-presta__box-text {
   width: 100%;
   padding: 8px;
 }
 
-.page-card__box-text h2,
-.page-card__box-text h3 {
+.page-card__box-text h2, .page-presta__box-text h2,
+.page-card__box-text h3,
+.page-presta__box-text h3 {
   text-align: center;
   margin: 24px 0;
 }
 
-.page-card__box-text p {
+.page-card__box-text p, .page-presta__box-text p {
   margin: 16px 0;
 }
 
-.page-card__box-text ul {
+.page-card__box-text ul, .page-presta__box-text ul {
   margin: 8px 4px 8px 24px;
 }
 
 @media screen and (min-width: 800px) {
-  .page-card__box-text ul {
+  .page-card__box-text ul, .page-presta__box-text ul {
     margin: 8px 24px;
   }
 }
 
-.page-card__box-text li {
+.page-card__box-text li, .page-presta__box-text li {
   margin: 8px 0;
   font-family: "Lora", serif;
 }
 
 @media screen and (min-width: 800px) {
-  .page-card__box-text {
+  .page-card__box-text, .page-presta__box-text {
     padding: 16px;
   }
 }
@@ -1410,5 +1499,34 @@ footer .footer-gauche {
 .page-temporaire {
   text-align: center;
   margin: 24px;
+}
+
+.page-presta__box-title {
+  width: 100%;
+  background-color: #fcfcff;
+}
+
+.page-presta__box-text h2 {
+  background-color: #32cbff;
+  border-radius: 16px;
+}
+
+.page-presta-gift {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.page-presta-plume {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=style.css.map */

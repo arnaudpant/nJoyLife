@@ -1,0 +1,23 @@
+.page-presta__box-title {
+    width: 100%;
+    background-color: $color-white;
+}
+
+.page-presta__box-text {
+    @extend .page-card__box-text;
+    h2 {
+        background-color: $color-blue;
+        border-radius: 16px;
+    }
+}
+
+.page-presta-gift {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.page-presta-plume {
+    display: flex;
+    justify-content: center;
+}
+
