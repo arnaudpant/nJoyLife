@@ -21,3 +21,74 @@
     justify-content: center;
 }
 
+// ===============================================
+// PAGE PRESTATION
+// ===============================================
+
+.section-pack {
+    background-color: $color-bcg1;
+    padding: 32px 0;
+}
+
+.section-pack--text {
+    text-align: center;
+    h2 {
+        font-size: 3em;
+    }
+    h3 {
+        margin-top: 16px;
+    }
+}
+
+.section-pack--packs {
+    @extend %flex-center-center;
+    flex-wrap: wrap;
+}
+
+// Packs
+.pack {
+    @extend %flex-center-center;
+    flex-direction: column;
+    width: 300px;
+    height: 150px;
+    background-color: $color-bcg2;
+    margin: 8px;
+    border-radius: 16px;
+    overflow: hidden;
+    @extend %boxShadow2;
+    background-repeat: no-repeat;
+    background-size: cover;
+    a {
+        text-decoration: none;
+    }
+    h3 {
+        background-color: $color-action;
+        text-align: center;
+        color: $color-white;
+        padding: 8px;
+        border-radius: 16px;
+    }
+}
+
+.pack button {
+    background-color: $color-action;
+    font-family: $police-title;
+    color: $color-white;
+    white-space: nowrap;
+    cursor: pointer;
+    padding: 4px 8px;
+    border: none;
+    border-radius: 999px;
+    outline: none;
+    @extend %boxShadow2;
+}
+
+.pack-nutrition {
+    background-image: url("/images/card-nutrition.jpg");
+}
+.pack-stress {
+    background-image: url("/images/card-stress.jpg");
+}
+.pack-sport {
+    background-image: url("/images/card-sport.jpg");
+}

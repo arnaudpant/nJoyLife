@@ -6,7 +6,8 @@
     @extend %boxShadow2;
 }
 
-a[href^="tel"] {
+a[href^="tel"],
+a[href^="mailto"] {
     display: block;
     text-decoration: none;
     text-align: center;
@@ -16,7 +17,10 @@ a[href^="tel"] {
     font-size: 1.5em;
     padding: 8px 0;
 
-    &::before {
-        content: "📞 ";
-    }
+    // &::before {
+    //     content: "📞 ";
+    // }
+}
+a[href^="tel"]::before {
+    content: "📞 ";
 }
