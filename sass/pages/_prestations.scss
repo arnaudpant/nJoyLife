@@ -27,7 +27,15 @@
 
 .section-pack {
     background-color: $color-bcg1;
-    padding: 32px 0;
+    padding: 16px 0;
+
+    h3 {
+        margin: 0 0 8px 0;
+        text-align: center;
+    }
+    p {
+        padding: 8px 16px;
+    }
 }
 
 .section-pack--text {
@@ -36,7 +44,8 @@
         font-size: 3em;
     }
     h3 {
-        margin-top: 16px;
+        margin: 16px 0;
+        text-align: center;
     }
 }
 
@@ -51,7 +60,7 @@
     flex-direction: column;
     width: 300px;
     height: 150px;
-    background-color: $color-bcg2;
+    background-color: $color-white;
     margin: 8px;
     border-radius: 16px;
     overflow: hidden;
@@ -67,20 +76,8 @@
         color: $color-white;
         padding: 8px;
         border-radius: 16px;
+        @extend %boxShadow2;
     }
-}
-
-.pack button {
-    background-color: $color-action;
-    font-family: $police-title;
-    color: $color-white;
-    white-space: nowrap;
-    cursor: pointer;
-    padding: 4px 8px;
-    border: none;
-    border-radius: 999px;
-    outline: none;
-    @extend %boxShadow2;
 }
 
 .pack-nutrition {
@@ -91,4 +88,65 @@
 }
 .pack-sport {
     background-image: url("/images/card-sport.jpg");
+}
+.packs-massage {
+    @extend %flex-center-center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 8px;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.box-pack-massage {
+    width: 200px;
+    height: 68px;
+    background-color: $color-action;
+    margin: 8px;
+    padding: 4px 8px;
+    border-radius: 16px;
+    @extend %boxShadow2;
+    h4,
+    h2 {
+        font-family: $police-title;
+        text-align: center;
+        color: $color-white;
+        letter-spacing: 1px;
+    }
+    @media screen and (min-width: $break1) {
+        width: 240px;
+        height: 88px;
+    }
+}
+
+// Pages explicatives
+
+.page-massage-img {
+    width: 100%;
+    height: 120px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    @media screen and (min-width: $break2) {
+        height: 180px;
+    }
+    @media screen and (min-width: $break1) {
+        height: 200px;
+    }
+    @media screen and (min-width: $break0) {
+        height: 300px;
+    }
+}
+
+.page-massage-img.calif {
+    background-image: url("/images/img-massage-infini.jpg");
+}
+
+.page-massage-img.infini {
+    background-image: url("/images/img-massage-californien.jpg");
+}
+.page-massage-img.kansu {
+    background-image: url("/images/img-massage-kansu.jpg");
 }
