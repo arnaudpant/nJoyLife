@@ -71,7 +71,7 @@ section {
     .localisation-svg-gps {
         height: 24px;
         width: 24px;
-        background-image: url("/images/gps.svg");
+        background-image: url("images/gps.svg");
         background-position: center;
         background-repeat: no-repeat;
     }
@@ -83,7 +83,7 @@ section {
 }
 
 .section-accueil__box-text__logo {
-    background-image: url("/images/NJoy\ Logo.svg");
+    background-image: url("images/NJoy\ Logo.svg");
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
@@ -116,7 +116,7 @@ section {
     // height: calc(100vh - 64px);
     height: 60%;
     width: 100%;
-    background-image: url("/images/Accueil-woman.svg");
+    background-image: url("images/Accueil-woman.svg");
     background-position: center;
     background-repeat: no-repeat;
     margin: 0 8px;
@@ -265,7 +265,7 @@ section {
     .logo-diplome {
         width: 40px;
         height: 40px;
-        background-image: url("/images/logo-diplome.svg");
+        background-image: url("images/logo-diplome.svg");
     }
 }
 
@@ -305,7 +305,7 @@ section {
 }
 
 .section-about__plume {
-    background-image: url("/images/plume-verte.svg");
+    background-image: url("images/plume-verte.svg");
     margin: 24px 0;
 }
 

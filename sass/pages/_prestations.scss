@@ -81,13 +81,16 @@
 }
 
 .pack-nutrition {
-    background-image: url("/images/card-nutrition.jpg");
+    background-image: url("images/card-nutrition.jpg");
 }
 .pack-stress {
-    background-image: url("/images/card-stress.jpg");
+    background-image: url("images/card-stress.jpg");
 }
 .pack-sport {
-    background-image: url("/images/card-sport.jpg");
+    background-image: url("images/card-sport.jpg");
+}
+.pack-vitalite {
+    background-image: url("images/card-vitalite.jpg");
 }
 .packs-massage {
     @extend %flex-center-center;
@@ -101,7 +104,7 @@
 }
 
 .box-pack-massage {
-    width: 200px;
+    width: 240px;
     height: 68px;
     background-color: $color-action;
     margin: 8px;
@@ -141,12 +144,12 @@
 }
 
 .page-massage-img.calif {
-    background-image: url("/images/img-massage-infini.jpg");
+    background-image: url("images/img-massage-infini.jpg");
 }
 
 .page-massage-img.infini {
-    background-image: url("/images/img-massage-californien.jpg");
+    background-image: url("images/img-massage-californien.jpg");
 }
 .page-massage-img.kansu {
-    background-image: url("/images/img-massage-kansu.jpg");
+    background-image: url("images/img-massage-kansu.jpg");
 }

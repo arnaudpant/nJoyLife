@@ -90,7 +90,7 @@
 }
 
 .section-cards__plume {
-    background-image: url("/images/plume.svg");
+    background-image: url("images/plume.svg");
     margin-bottom: 24px;
 
     @media screen and (min-width: $break1) {
@@ -101,13 +101,13 @@
 // Card 1 - Nutrition
 
 .card-1 .card__box-middle-left {
-    background-image: url(/images/card-woman-nutrition.svg);
+    background-image: url("images/card-woman-nutrition.svg");
     background-position: left;
     background-repeat: no-repeat;
     background-size: contain;
 }
 .card-1 .card__box-middle-right {
-    background-image: url(/images/card-nutrition.jpg);
+    background-image: url("images/card-nutrition.jpg");
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
@@ -116,13 +116,13 @@
 // Card 2 - Stress
 
 .card-2 .card__box-middle-left {
-    background-image: url(/images/card-woman-stress.svg);
+    background-image: url("images/card-woman-stress.svg");
     background-position: left;
     background-repeat: no-repeat;
     background-size: contain;
 }
 .card-2 .card__box-middle-right {
-    background-image: url(/images/card-stress.jpg);
+    background-image: url("images/card-stress.jpg");
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
@@ -131,13 +131,13 @@
 // Card 3 - Sport
 
 .card-3 .card__box-middle-left {
-    background-image: url(/images/card-woman-sport.svg);
+    background-image: url("images/card-woman-sport.svg");
     background-position: left;
     background-repeat: no-repeat;
     background-size: contain;
 }
 .card-3 .card__box-middle-right {
-    background-image: url(/images/card-sport.jpg);
+    background-image: url("images/card-sport.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
