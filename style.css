@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .card__title, .section-accueil, .section-accueil__box-text, .section-accueil__box-text__localisation, .section-cards__cards, .section-cta-textes, .header-mobile__avatar,
-.header-mobile__liens, .container-flex, .page-card__box-woman, .section-pack--packs, .pack, .packs-massage {
+.header-mobile__liens, .container-flex, .page-card__box-woman, .section-pack, .section-pack--text, .section-pack--packs, .pack, .packs-massage {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -58,7 +58,7 @@ header {
 
 /* Shadow 3dp */
 /* Shadow 4dp */
-.section-title {
+.section-title, .section-pack--title {
   -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
 }
@@ -1449,7 +1449,15 @@ footer .footer-gauche {
 
 .section-pack {
   background-color: #d2f7fa;
-  padding: 16px 0;
+  padding: 16px 8px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.section-pack h2 {
+  text-align: center;
 }
 
 .section-pack h3 {
@@ -1462,16 +1470,35 @@ footer .footer-gauche {
 }
 
 .section-pack--text {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
+  width: 100%;
 }
 
 .section-pack--text h2 {
-  font-size: 3em;
+  font-size: 2.5em;
 }
 
 .section-pack--text h3 {
   margin: 16px 0;
   text-align: center;
+}
+
+.section-pack--title {
+  text-align: center;
+  margin: 24px;
+  width: 90%;
+  max-width: 800px;
+  background-color: #36b3a2;
+}
+
+.section-pack--title h1 {
+  color: #fcfcff;
+  margin: 0;
+  font-size: 2.5em;
 }
 
 .section-pack--packs {
@@ -1520,6 +1547,7 @@ footer .footer-gauche {
 
 .pack-vitalite {
   background-image: url("images/card-vitalite.jpg");
+  background-position: top;
 }
 
 .packs-massage {
@@ -1593,5 +1621,6 @@ footer .footer-gauche {
 
 .page-massage-img.kansu {
   background-image: url("images/img-massage-kansu.jpg");
+  background-position: top;
 }
 /*# sourceMappingURL=style.css.map */

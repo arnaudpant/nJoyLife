@@ -27,8 +27,12 @@
 
 .section-pack {
     background-color: $color-bcg1;
-    padding: 16px 0;
-
+    padding: 16px 8px;
+    @extend %flex-center-center;
+    flex-direction: column;
+    h2 {
+        text-align: center;
+    }
     h3 {
         margin: 0 0 8px 0;
         text-align: center;
@@ -39,13 +43,30 @@
 }
 
 .section-pack--text {
+    @extend %flex-center-center;
+    flex-direction: column;
     text-align: center;
+    width: 100%;
     h2 {
-        font-size: 3em;
+        font-size: 2.5em;
     }
     h3 {
         margin: 16px 0;
         text-align: center;
+    }
+}
+
+.section-pack--title {
+    text-align: center;
+    margin: 24px;
+    width: 90%;
+    max-width: 800px;
+    @extend %boxShadow4;
+    background-color: $color-bcg2;
+    h1 {
+        color: $color-white;
+        margin: 0;
+        font-size: 2.5em;
     }
 }
 
@@ -91,6 +112,7 @@
 }
 .pack-vitalite {
     background-image: url("images/card-vitalite.jpg");
+    background-position: top;
 }
 .packs-massage {
     @extend %flex-center-center;
@@ -152,4 +174,5 @@
 }
 .page-massage-img.kansu {
     background-image: url("images/img-massage-kansu.jpg");
+    background-position: top;
 }
