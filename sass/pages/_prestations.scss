@@ -1,25 +1,50 @@
-.page-presta__box-title {
-    width: 100%;
-    background-color: $color-white;
-}
+// .page-presta__box-title {
+//     width: 100%;
+//     background-color: $color-white;
+// }
 
-.page-presta__box-text {
-    @extend .page-card__box-text;
-    h2 {
-        background-color: $color-blue;
-        border-radius: 16px;
-    }
-}
+// .page-presta__box-text {
+//     width: 100%;
+//     padding: 8px;
+//     h2,
+//     h3 {
+//         text-align: center;
+//         margin: 24px 0;
+//     }
+//     p {
+//         margin: 16px 0;
+//     }
+//     ul {
+//         margin: 8px 4px 8px 24px;
 
-.page-presta-gift {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-.page-presta-plume {
-    display: flex;
-    justify-content: center;
-}
+//         @media screen and (min-width: $break1) {
+//             margin: 8px 24px;
+//         }
+//     }
+
+//     li {
+//         margin: 8px 0;
+//         font-family: $police-text;
+//     }
+
+//     @media screen and (min-width: $break1) {
+//         padding: 16px;
+//     }
+//     h2 {
+//         background-color: $color-blue;
+//         border-radius: 16px;
+//     }
+// }
+
+// .page-presta-gift {
+//     width: 100%;
+//     display: flex;
+//     justify-content: center;
+// }
+// .page-presta-plume {
+//     display: flex;
+//     justify-content: center;
+// }
 
 // ===============================================
 // PAGE PRESTATION
@@ -143,16 +168,16 @@
     padding: 4px 8px;
     border-radius: 16px;
     @extend %boxShadow2;
+    @media screen and (min-width: $break1) {
+        width: 240px;
+        height: 88px;
+    }
     h4,
     h2 {
         font-family: $police-title;
         text-align: center;
         color: $color-white;
         letter-spacing: 1px;
-    }
-    @media screen and (min-width: $break1) {
-        width: 240px;
-        height: 88px;
     }
 }
 

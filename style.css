@@ -1351,39 +1351,38 @@ footer .footer-gauche {
   background-image: url("images/card-vitalite.jpg");
 }
 
-.page-card__box-text, .page-presta__box-text {
+.page-card__box-text {
   width: 100%;
   padding: 8px;
 }
 
-.page-card__box-text h2, .page-presta__box-text h2,
-.page-card__box-text h3,
-.page-presta__box-text h3 {
+.page-card__box-text h2,
+.page-card__box-text h3 {
   text-align: center;
   margin: 24px 0;
 }
 
-.page-card__box-text p, .page-presta__box-text p {
+.page-card__box-text p {
   margin: 16px 0;
 }
 
-.page-card__box-text ul, .page-presta__box-text ul {
+.page-card__box-text ul {
   margin: 8px 4px 8px 24px;
 }
 
 @media screen and (min-width: 800px) {
-  .page-card__box-text ul, .page-presta__box-text ul {
+  .page-card__box-text ul {
     margin: 8px 24px;
   }
 }
 
-.page-card__box-text li, .page-presta__box-text li {
+.page-card__box-text li {
   margin: 8px 0;
   font-family: "Lora", serif;
 }
 
 @media screen and (min-width: 800px) {
-  .page-card__box-text, .page-presta__box-text {
+  .page-card__box-text {
     padding: 16px;
   }
 }
@@ -1416,35 +1415,6 @@ footer .footer-gauche {
 .page-temporaire {
   text-align: center;
   margin: 24px;
-}
-
-.page-presta__box-title {
-  width: 100%;
-  background-color: #fcfcff;
-}
-
-.page-presta__box-text h2 {
-  background-color: #32cbff;
-  border-radius: 16px;
-}
-
-.page-presta-gift {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.page-presta-plume {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .section-pack {
@@ -1579,19 +1549,19 @@ footer .footer-gauche {
   border-radius: 16px;
 }
 
+@media screen and (min-width: 800px) {
+  .box-pack-massage {
+    width: 240px;
+    height: 88px;
+  }
+}
+
 .box-pack-massage h4,
 .box-pack-massage h2 {
   font-family: "Poppins", sans-serif;
   text-align: center;
   color: #fcfcff;
   letter-spacing: 1px;
-}
-
-@media screen and (min-width: 800px) {
-  .box-pack-massage {
-    width: 240px;
-    height: 88px;
-  }
 }
 
 .page-massage-img {
