@@ -63,9 +63,12 @@
     max-width: 800px;
     @extend %boxShadow4;
     background-color: $color-bcg2;
-    h1 {
+    h1,
+    h2 {
         color: $color-white;
         margin: 0;
+    }
+    h1 {
         font-size: 2.5em;
     }
 }
