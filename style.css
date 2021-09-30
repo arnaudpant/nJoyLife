@@ -153,6 +153,17 @@ p {
   margin: 16px 0;
 }
 
+.btn-call-me a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  color: #fcfcff;
+  font-size: 1em;
+  padding: 8px 0;
+}
+
 a[href^="tel"],
 a[href^="mailto"] {
   display: block;
@@ -167,6 +178,10 @@ a[href^="mailto"] {
 
 a[href^="tel"]::before {
   content: "📞 ";
+}
+
+a[href^="mailto"]::before {
+  content: "📧 ";
 }
 
 .section-cards__card {
@@ -1465,9 +1480,14 @@ footer .footer-gauche {
   background-color: #36b3a2;
 }
 
-.section-pack--title h1 {
+.section-pack--title h1,
+.section-pack--title h2 {
   color: #fcfcff;
   margin: 0;
+  font-size: 1.5em;
+}
+
+.section-pack--title h1 {
   font-size: 2.5em;
 }
 
