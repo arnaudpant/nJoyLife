@@ -90,6 +90,7 @@ body {
 .container {
   height: calc(100vh - 64px);
   width: 100%;
+  border: 1px solid blue;
   position: relative;
   top: 64px;
 }
@@ -144,6 +145,10 @@ h3 {
 p {
   text-align: center;
   font-family: "Lora", serif;
+}
+
+a {
+  text-decoration: none;
 }
 
 .btn-call-me {
