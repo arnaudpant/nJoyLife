@@ -1262,6 +1262,11 @@ footer.flex-column p {
   margin: 8px 0;
 }
 
+footer address {
+  text-align: center;
+  font-size: 1.2em;
+}
+
 .container-plume {
   position: absolute;
   background-image: url("images/plume-accueil.svg");
