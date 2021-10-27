@@ -35,3 +35,10 @@ a[href^="tel"]::before {
 a[href^="mailto"]::before {
     content: "📧 ";
 }
+
+audio {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
