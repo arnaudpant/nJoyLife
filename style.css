@@ -90,7 +90,6 @@ body {
 .container {
   height: calc(100vh - 64px);
   width: 100%;
-  border: 1px solid blue;
   position: relative;
   top: 64px;
 }
@@ -187,6 +186,13 @@ a[href^="tel"]::before {
 
 a[href^="mailto"]::before {
   content: "📧 ";
+}
+
+audio {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .section-cards__card {
@@ -1234,13 +1240,13 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  color: #fcfcff;
 }
 
 footer .footer-gauche,
 footer .footer-droit {
   width: 50%;
   text-align: center;
-  color: #fcfcff;
 }
 
 footer .footer-gauche h3,
@@ -1250,6 +1256,22 @@ footer .footer-droit h3 {
 
 footer .footer-gauche {
   border-right: 2px solid #fcfcff;
+}
+
+footer.flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer.flex-column p {
+  margin: 8px 0;
+}
+
+footer address {
+  text-align: center;
+  font-size: 1.2em;
 }
 
 .container-plume {
