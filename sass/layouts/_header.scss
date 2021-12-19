@@ -1,43 +1,80 @@
-header {
-    height: $height-header;
-    width: 100%;
-    background: $color-bcg2;
-    position: fixed;
-    z-index: 100;
-    @extend %flex-between-center;
-    @extend %boxShadow6;
+/* ================================
+* Généralités
+=================================*/
 
-    @media screen and (min-width: $break1) {
-        justify-content: space-around;
+header {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background: $color-bcg-fonce;
+    width: 100%;
+    height: $header-height;
+    transition: all 0.4s 0.4s ease-in-out;
+
+     @media screen and (min-width: $break-point-tablet) {
+         justify-content: space-between;
     }
 }
 
-// ===========================
-// Bouton burger
-// ===========================
-.header-burger {
-    height: 48px;
-    min-width: 48px;
-    margin-left: 8px;
-    cursor: pointer;
-    position: relative;
-    z-index: 110;
+// *** ANIMATIONS ***
+header.active-menu-deroulant {
+    height: 600px;
+    transition: all 0.4s ease-in-out;
+}
 
-    a img {
-        height: 56px;
-        width: 56px;
-    }
+/* ================================
 
-    @media screen and (min-width: $break1) {
+        * Navbar mobile *
+
+=================================*/
+
+.mobil-navbar {
+    @extend %flex-between-center;
+    height: $header-height;
+    width: 100%;
+    @media screen and (min-width: $break-point-tablet) {
         display: none;
     }
 }
 
+/* ================================
+
+        * Header scroll *
+
+=================================*/
+
+.header-scroll {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    transition: all 100ms ease-in-out;
+  }
+
+
+
+
+/* ------------------
+** Bouton Burger **
+------------------ */
+
+.mobil-burger,
+.mobil-plume {
+    position: relative;
+    z-index: 110;
+    margin-left: 8px;
+    width: 48px;
+    min-width: 48px;
+    height: 48px;
+}
+
+.mobil-burger {
+    margin-left: 8px;
+    cursor: pointer;
+}
+
 .burger-tiret {
-    width: 100%;
-    height: 100%;
     position: absolute;
     top: 50%;
+    width: 100%;
+    height: 100%;
     transform: translate(0%, -50%);
     pointer-events: none;
     transition: transform 0.4s ease-in-out;
@@ -45,10 +82,10 @@ header {
 
 .burger-tiret__ligne {
     position: absolute;
+    border-radius: 4px;
+    background: $color-white;
     width: 100%;
     height: 8px;
-    background: $color-action;
-    border-radius: 4px;
 }
 
 .burger-tiret .burger-tiret__ligne:nth-child(1) {
@@ -63,7 +100,7 @@ header {
     top: 36px;
 }
 
-// *** ANIMATIONS ***
+// *** ANIMATIONS burger menu***
 
 .burger-tiret.burger-tiret--anim {
     transition: transform 0.4s 0.4s ease-in-out;
@@ -98,207 +135,205 @@ header {
     transition: top 0.4s ease-in-out, transform 0.4s 0.4s ease-in-out;
 }
 
-// ===========================
-// NOM ou Profession
-// ===========================
-
-.header-name,
-.header-profession {
-    font-size: 2em;
-    color: $color-white;
-    font-family: $police-title;
+/* ------------------
+** Nom ou Profession **
+------------------- */
+.mobil-name,
+.mobil-profession {
+    width: 100%;
     white-space: nowrap;
-    z-index: 110;
-    @media screen and (max-width: $break2) {
-        font-size: 1.5em;
-    }
 }
-.header-name {
+
+.mobil-name {
     opacity: 1;
     transition: opacity 0.4s 0.5s ease-in-out;
-
-    @media screen and (min-width: $break0) {
-        font-size: 2.5em;
-    }
 }
 
-// *** ANIMATION ***
-.header-name.active-menu-deroulant {
+.mobil-profession {
+    position: absolute;
+    left: 50%;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: opacity 0.4s ease-in-out;
+}
+
+// *** ANIMATIONS Affichage NOM / Profession***
+.mobil-name.active-menu-deroulant {
     opacity: 0;
     transition: all 0.4s ease-in-out;
 }
 
-.header-profession {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
-
-    @media screen and (min-width: $break1) {
-        display: none;
-    }
-}
-.header-profession.active-menu-deroulant {
+.mobil-profession.active-menu-deroulant {
     opacity: 1;
     transition: opacity 0.4s 0.5s ease-in-out;
 }
 
-// ===========================
-// Logo plume
-.header-plume,
-.header-mobile-plume {
-    background-image: url(/images/plume.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.header-plume {
-    width: 40px;
-    height: 40px;
-    margin-right: 8px;
-    z-index: 110;
+/* ------------------
+** Plume **
+------------------ */
 
-    @media screen and (min-width: $break1) {
+.mobil-plume {
+    margin-right: 8px;
+}
+
+
+
+
+/* ================================
+* Navbar mobile deroulant *
+=================================*/
+
+.mobil-menu-deroulant {
+    position: absolute;
+    top: -800px;
+    @extend %flex-start-center;
+    flex-direction: column;
+    visibility: hidden;
+    opacity: 0;
+    background: $color-bcg-fonce;
+    width: 100%;
+    box-shadow: none;
+    transition: opacity 0.3s linear;
+    transition: top 1s 0.4s ease-out;
+
+    @media screen and (min-width: $break-point-tablet) {
         display: none;
     }
 }
 
-// ===========================
-// MENU DEROULANT
-// ===========================
-.header-mobile {
-    position: absolute;
-    width: 100%;
-    background: $color-bcg2;
-    top: -500px;
-    z-index: 50;
-    @extend %flex-center-start;
-    flex-direction: column;
-    box-shadow: none;
-    transition: all 1s 0.4s ease-out;
+// *** ANIMATIONS ***
+
+.mobil-menu-deroulant.active-menu-deroulant {
+    visibility: visible;
+    opacity: 1;
+    top: 64px;
+    transition: top 0.1s linear;
+    transition: opacity 1s 0.4s ease-in-out;
 }
 
-.header-mobile__avatar,
-.header-mobile__liens {
-    width: 100%;
-    @extend %flex-center-center;
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
-}
 
-.header-mobile__avatar__photo {
-    background-color: $color-bcg1;
-    background-image: url(/images/img-about-joelle-head.png);
+
+
+
+/* ------------------
+** Photo profil **
+------------------- */
+.menu-deroulant__photo {
+    background-color: $color-bcg-clair;
+    background-image: url("images/photos/img-navbar-joelle-head.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 120px;
-    min-width: 120px;
+    margin: $marge-double 0;
     border-radius: 50%;
-    margin: 8px 8px 16px 16px;
+    height: 120px;
+    width: 120px;
     @extend %boxShadow2;
 
-    @media screen and (min-width: $break2) {
-        height: 140px;
-        min-width: 140px;
+    @media screen and (min-width: $break-point-mobile) {
+        height: 160px;
+        width: 160px;
     }
 }
 
-.header-mobile__avatar__infos h3 {
-    text-align: center;
-    font-size: 2em;
-    color: $color-white;
-    font-family: $police-title;
-    margin-right: 8px;
-    letter-spacing: 3px;
-    font-weight: normal;
 
-    @media screen and (min-width: $break2) {
-        font-size: 3em;
-    }
+/* ------------------
+** Nom profil **
+------------------- */
+
+.menu-deroulant__name,
+.menu-deroulant__liens 
+ {
+    margin: 0 0 $marge-double;
 }
 
-.header-mobile__liens li {
+
+
+
+
+/* ------------------
+** Liens cliquables **
+------------------- */
+
+
+.menu-deroulant__liens-li {
     display: block;
     text-align: center;
-    margin: 8px 0;
+    margin: $marge-double 0;
+
+    a {
+        color: $color-white;
+    }
 }
 
-.header-mobile__liens li a {
-    color: $color-white;
-    text-decoration: none;
-    font-family: $police-title;
-    font-size: 1.5em;
-}
 
-.header-mobile-plume {
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
-    width: 56px;
-    height: 56px;
-    margin: 24px auto;
-}
 
-// *** Animation ***
 
-.header-mobile.active-menu-deroulant {
-    transition: all 1s 0.6s ease-in-out;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-        0 3px 1px -2px rgba(0, 0, 0, 0.12);
-    transform: translateY(564px);
-}
+/* ================================
 
-.header-mobile.active-menu-deroulant .header-mobile__avatar,
-.header-mobile.active-menu-deroulant .header-mobile__liens,
-.header-mobile.active-menu-deroulant .header-mobile-plume {
-    opacity: 1;
-    transition: opacity 0.4s 1.4s ease-in-out;
-}
+        * Navbar Desktop *
 
-// ===========================
-// MENU VERSION DESKTOP
-// ===========================
+=================================*/
 
-.header-menu {
+.desktop-navbar {
     display: none;
-
-    @media screen and (min-width: $break1) {
+    height: $header-height;
+    
+    @media screen and (min-width: $break-point-tablet) {
         display: block;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
     }
 }
 
-.header-menu li {
-    display: inline-block;
-    position: relative;
-    margin: 0 4px;
-    cursor: pointer;
-
-    @media screen and (min-width: $break0) {
-        margin: 0 8px;
+.desktop-name {
+    margin: 0 $marge-double;
+    h2 {
+        color: $color-white;
+        //font-size: 40px;
     }
 
-    &::after {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 1px;
-        background-color: $color-white;
-        transform: scale(0);
-        transition: transform 0.3s ease-in-out;
+    @media screen and (min-width: $break-point-mobile) {
+        h2 {
+        color: $color-white;
+        font-size: 40px;
     }
-    &:hover::after {
-        transform: scale(1);
     }
 }
 
-.header-menu a {
-    color: $color-white;
-    text-decoration: none;
-    font-family: $police-title;
-    font-size: 1em;
+.desktop-menu {
+    margin-right: $marge-double;
 
-    @media screen and (min-width: $break0) {
-        font-size: 1.2em;
+    ul {
+        margin: 0 0 0 $marge-double;
+    }
+
+    li {
+        display: inline-block;
+        position: relative;
+        margin: 0 $marge-small;
+        cursor: pointer;
+        
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            background-color: $color-white;
+            width: 100%;
+            height: 1px;
+            transform: scale(0);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        &:hover::after {
+            transform: scale(1);
+        }
+        
+    }
+    
+    a {
+        color: $color-white;
     }
 }

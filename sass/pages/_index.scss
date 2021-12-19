@@ -1,37 +1,268 @@
-.container-plume {
-    position: absolute;
-    background-image: url("images/plume-accueil.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 56px;
-    width: 56px;
-    top: 40%;
-    left: 70%;
-    animation: plumevent 5s ease-in-out infinite;
+/* ====================================
+#           Loader
+=====================================*/
+.loader {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-bcg-clair;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
 
-    @media screen and (min-width: $break1) {
-        height: 64px;
-        width: 64px;
-        top: 20%;
-        left: 40%;
-    }
+  .plume--verte {
+    width: 20%;
+    height: 20%;
+    animation: plumerotate 2s linear infinite;
+  }
+}
 
-    @media screen and (min-width: $break0) {
-        height: 80px;
-        width: 80px;
-        top: 15%;
-        left: 40%;
+@keyframes plumerotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(90deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(270deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader-out {
+  display: none;
+}
+
+/* ====================================
+#           Section Accueil
+=====================================*/
+
+.section-accueil {
+  @extend %flex-center-center;
+  height: calc(100vh - 64px);
+
+    @media screen and (min-width: $break-point-tablet) {
+        flex-direction: row-reverse;
     }
 }
 
-@keyframes plumevent {
-    0% {
-        transform: rotate(10deg) translateX(-15px);
+// ------------------------------------
+// ## Partie textes et info
+// ------------------------------------
+
+.accueil-box-text {
+  height: 45%;
+  width: 100%;
+
+  @media screen and (min-width: $break-point-tablet) {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+.accueil-box-text__localisation {
+  @extend %flex-center-center;
+}
+
+.localisation-svg-gps {
+  height: 24px;
+  width: 24px;
+  background-image: url("images/logo/logo-gps.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.localisation-ville,
+.accueil-box-text__slogan {
+  color: $color-black;
+  text-align: center;
+  font-size: 1.2em;
+  font-family: $police-title;
+  @media screen and (min-width: $break-point-tablet) {
+    font-size: 1.5em; 
+  }
+
+}
+
+.accueil-box-text__slogan {
+  font-family: $police-text;
+}
+
+
+.accueil-box-text__logo {
+  background-image: url("images/logo/logo-njoy.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: $marge-small 0;
+  width: 100%;
+  height: 33%;  
+
+  @media screen and (min-width: $break-point-tablet) {
+    width: 80%; 
+    margin: $marge-double 0;
+  }
+}
+
+
+// ------------------------------------
+// ## Partie svg de femme
+// ------------------------------------
+.accueil-box-woman {
+  background-image: url("images/woman/Accueil-woman-small.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 55%;
+  
+  @media screen and (min-width: $break-point-tablet) {
+    width: 50%;
+    height: 100%; 
+  }
+  
+  @media screen and (min-width: $break-point-desktop) {
+    background-image: url("images/woman/Accueil-woman-big.png");
+    max-height: 700px;
+  }
+  
+ 
+}
+
+
+
+
+/* ====================================
+#           Section Card
+=====================================*/
+
+.bloc-cards {
+  @extend %flex-center-center;
+  flex-direction: column;
+  margin: $marge-double 0;
+
+  @media screen and (min-width: $break-point-tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.box-resume.text-align-center p{
+  font-family: $police-title;
+  text-align: center;
+}
+
+
+
+/* ====================================
+#           Section About
+=====================================*/
+
+.section-about {
+  margin: 0 auto;
+}
+
+.box-about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  @media screen and (min-width: $break-point-tablet) {
+    flex-direction: row;
+    max-width: 1086px;
+  }
+}
+
+.box-about-me__photo {
+  overflow: hidden;
+  width: 90%;
+  img {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 408px;
+  }
+
+  @media screen and (min-width: $break-point-tablet) {
+    width: 33%;
+  }
+
+}
+
+.box-about-me__text {
+  width: 100%;
+
+  p{
+    margin: $marge-double;
+    text-align: justify;
+  }
+
+  @media screen and (min-width: $break-point-tablet) {
+    width: 66%;
+  }
+}
+
+
+.box-about-diplome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-diplome {
+        margin: $marge-small;
+        width: 40px;
+        height: 40px;
+        background-image: url("images/logo/logo-diplome.svg");
+  }
+
+  .diplomes-liste ul{
+    margin: 0 $marge-double;
+
+    li {
+      margin: $marge-double 24px;
+      font-family: $police-title;
     }
-    50% {
-        transform: rotate(-40deg) translateX(15px);
+  }
+
+  .diplomes-certif {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .certificat {
+    height: 150px;
+    margin: 8px;
+
+    img {
+      height: 100%;
+      @extend %boxShadow2;
     }
-    100% {
-        transform: rotate(10deg) translateX(-15px);
-    }
+  }
+
+/* ====================================
+#           Section CTA
+=====================================*/
+
+.section-cta-text p {
+  margin: $marge-double;
+  text-align: center;
+  font-family: $police-title;
 }

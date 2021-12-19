@@ -1,0 +1,26 @@
+#card-image-massage-calif {
+    background-image: url("images/photos/pack-massage-infini.jpg");
+    background-position: bottom;
+
+    @media screen and (min-width: $break-point-tablet) {
+        background-position: center;
+    }
+
+
+}
+
+#card-image-massage-infini {
+    background-image: url("images/photos/pack-massage-californien.jpg");
+    background-position: bottom;
+    @media screen and (min-width: $break-point-tablet) {
+        background-position: center;
+    }
+}
+
+#card-image-massage-kansu {
+    background-image: url("images/photos/pack-massage-kansu.jpg");
+    background-position: bottom;
+    @media screen and (min-width: $break-point-tablet) {
+        background-position: top;
+    }
+}

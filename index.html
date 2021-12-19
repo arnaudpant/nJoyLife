@@ -1,43 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <!-- Google Tag Manager -->
-        <script>
-            (function (w, d, s, l, i) {
-                w[l] = w[l] || [];
-                w[l].push({"gtm.start": new Date().getTime(), event: "gtm.js"});
-                var f = d.getElementsByTagName(s)[0],
-                    j = d.createElement(s),
-                    dl = l != "dataLayer" ? "&l=" + l : "";
-                j.async = true;
-                j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-                f.parentNode.insertBefore(j, f);
-            })(window, document, "script", "dataLayer", "GTM-NKKVRBZ");
-        </script>
-        <!-- End Google Tag Manager -->
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-B0R9GY2KC8"
-        ></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag("js", new Date());
-
-            gtag("config", "G-B0R9GY2KC8");
-        </script>
-        <meta
-            name="description"
-            content="Retrouvez votre poids de forme, apprennez à gérer vos stress et retrouvez une activité physique grace à la naturopathie. Je suis Joelle Corda, naturopathe, nutritionniste, coach sportif et praticienne en massages à Chabeuil dans la Drôme 26, près de Valence."
-        />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" type="text/css" href="style.css" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link rel="stylesheet" href="style.css" />
         <link
             href="https://fonts.googleapis.com/css2?family=Lora&family=Poppins&display=swap"
             rel="stylesheet"
@@ -47,274 +14,364 @@
             Romans sur Isère 26000
         </title>
     </head>
-
     <body>
-        <!-- Google Tag Manager (noscript) -->
-        <noscript
-            ><iframe
-                src="https://www.googletagmanager.com/ns.html?id=GTM-NKKVRBZ"
-                height="0"
-                width="0"
-                style="display: none; visibility: hidden"
-            ></iframe
-        ></noscript>
-        <!-- End Google Tag Manager (noscript) -->
-        <!-- --------------------------------------------- -->
-        <!--                  NAVBAR                       -->
-        <!-- --------------------------------------------- -->
-
         <header>
-            <div class="header-mobile">
-                <div class="header-mobile__avatar">
-                    <div class="header-mobile__avatar__photo"></div>
-                    <div class="header-mobile__avatar__infos">
-                        <h3>Jo&euml;lle Corda</h3>
-                    </div>
-                </div>
-                <div class="header-mobile__liens">
-                    <ul>
-                        <li class="header-mobile__liens__li">
-                            <a href="prestations.html">Tarifs & Prestations</a>
-                        </li>
-
-                        <!-- <li><a href="#ancre-massage">Toucher détente</a></li> -->
-
-                        <li><a href="evenements.html">Cours collectifs</a></li>
-
-                        <li><a href="audio.html">Relax guidées</a></li>
-
-                        <li class="header-mobile__liens__li">
-                            <a href="#section-about-ancre">A propos</a>
-                        </li>
-
-                        <li class="header-mobile__liens__li">
-                            <a href="#section-contact-ancre">Contact</a>
-                        </li>
+        
+        <!-- -----------------------------------------------------
+                * NAVBAR MOBILE
+        ------------------------------------------------------- -->
+                <!-- Display block sur mobile - none sur desktop -->
+                <div class="mobil-navbar">
+                    
+                    <!-- Bouton burger -->
+                    <div class="mobil-burger">
                         
+                        <div class="burger-tiret">
+                            <div class="burger-tiret__ligne"></div>
+                            <div class="burger-tiret__ligne"></div>
+                            <div class="burger-tiret__ligne"></div>
+                        </div>
+                        
+                    </div>
+                    
+                    <!-- Affichage du nom ou profession quand menu déroulé -->
+                    <div class="mobil-name">
+                        <h2 class="text--white">Jo&euml;lle Corda</h2>
+                    </div>
+                    
+                    
+                    <div class="mobil-profession">
+                        <h2 class="text--white">NATUROPATHE</h2>
+                    </div>
+                    
+                    <!-- Plume blanche -->
+                    <div class="mobil-plume">
+                        <div class="plume--blanche"></div>
+                    </div>
+                    
+                </div>
+            
+                
+        <!-- -----------------------------------------------
+                * NAVBAR MOBILE - MENU DEROULANT
+        ------------------------------------------------- -->    
+                
+                <div class="mobil-menu-deroulant">
+
+                    <div class="menu-deroulant__photo"></div>
+
+
+                    <div class="menu-deroulant__name">
+                        <h2 class="text--white">Jo&euml;lle Corda</h2>
+                    </div>
+                
+
+
+                    <div class="menu-deroulant__liens">
+                        <ul>
+
+                            <li class="menu-deroulant__liens-li ">
+                                <a href="pages/tarifs.html">Tarifs & Prestations</a>
+                            </li>
+
+                            <li class="menu-deroulant__liens-li">
+                                <a href="pages/evenements.html">Cours</a>
+                            </li>
+
+                            <li class="menu-deroulant__liens-li">
+                                <a href="#">Relax guidées</a>
+                            </li>
+
+                            <li class="menu-deroulant__liens-li">
+                                <a href="#section-about-ancre">A propos</a>
+                            </li>
+
+                            <li class="menu-deroulant__liens-li">
+                                <a href="#section-contact-ancre">Contact</a>
+                            </li>
+
                     </ul>
                 </div>
-                <div class="header-mobile-plume"></div>
-            </div>
 
-            <div class="header-burger">
-                <div class="burger-tiret">
-                    <div class="burger-tiret__ligne"></div>
-                    <div class="burger-tiret__ligne"></div>
-                    <div class="burger-tiret__ligne"></div>
+
+                <div class="mobil-plume">
+                        <div class="plume--blanche"></div>
                 </div>
+   
+                </div>
+            
+            
+            
+            
+            <!-- ---------------------------------
+                * NAVBAR DESKTOP
+                --------------------------------- -->
+
+            <div class="desktop-navbar">
+
+                <div class="desktop-name">
+                    <h2>Jo&euml;lle Corda</h2>
+                </div>
+
+
+                <nav class="desktop-menu">
+                    <ul>
+                        <li><a href="pages/tarifs.html">Tarifs & Prestations</a></li>
+                        <li><a href="pages/evenements.html">Cours</a></li>
+                        <li><a href="pages/audio.html">Relax guidées</a></li>
+                        <li><a href="#section-contact-ancre">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
 
-            <div class="header-name">Jo&euml;lle Corda</div>
-            <div class="header-profession">NATUROPATHE</div>
 
-            <div class="header-plume"></div>
-
-            <!-- Menu version desktop -->
-            <div class="header-menu">
-                <ul>
-                    <li><a href="prestations.html">Tarifs & Prestations</a></li>
-                    <!-- <li>
-                        <a href="prestations.html#ancre-massage"
-                            >Toucher détente</a
-                        >
-                    </li> -->
-                    <li><a href="evenements.html">Cours</a></li>
-                    <li><a href="audio.html">Relax guidées</a></li>
-                    <li><a href="#section-about-ancre">A propos</a></li>
-                    <li><a href="#section-contact-ancre">Contact</a></li>
-                </ul>
-            </div>
         </header>
-        <!-- --------------------------------------------- -->
-        <!--                 CONTAINER                     -->
-        <!-- --------------------------------------------- -->
+
+        <!-- ---------------------------------
+            * LOADER
+         --------------------------------- -->
+            <div class="loader">
+                <div class="plume--verte"></div>
+            </div>
+
+
 
         <div class="container">
-            <div class="container-plume"></div>
-
-            <!-- ===   
-											Section 1 - Accueil   
-			=== -->
-
+            <!-- ---------------------------------
+            * SECTION 1
+            * ACCUEIL
+         --------------------------------- -->
+            
             <section class="section-accueil">
-                <div class="section-accueil__box-text">
+
+
+                <div class="accueil-box-text">
+
                     <h1>NATUROPATHE</h1>
-                    <div class="section-accueil__box-text__localisation">
+
+
+                    <div class="accueil-box-text__localisation">
                         <div class="localisation-svg-gps"></div>
-                        <p>Romans sur Isère <small>(26)</small></p>
+                        <div class="localisation-ville">Romans sur Isère <small>(26)</small></div>
                     </div>
-                    <div class="section-accueil__box-text__logo"></div>
-                    <div class="section-accueil__box-text__slogan">
-                        <p>"Osez devenir qui vous Etes"</p>
+
+
+                    <div class="accueil-box-text__logo"></div>
+
+
+                    <div class="accueil-box-text__slogan">
+                        "Osez devenir qui vous Etes"
                     </div>
                 </div>
 
-                <div class="section-accueil__box-woman"></div>
+
+
+                <div class="plume-mouvement"></div>
+                <div class="accueil-box-woman"></div>
+
+
             </section>
 
-            <!-- ===   
-											Section 2 - 3x Cartes   
-			=== -->
 
-            <section class="section-cards">
-                <div class="section-title">
-                    <h2>Coaching Global</h2>
-                </div>
 
-                <div class="section-cards__resume" id="ancre-cards-piliers">
-                    <p>
-                        Retrouvez votre bien-être grace à mon
-                        <b>concept 3 piliers</b>, qui vous guide vers
-                        <b>l’autonomie</b> par la gestion de votre alimentation,
-                        de vos stress et de vos capacités physiques !
-                    </p>
-                </div>
 
-                <div class="section-cards__cards">
-                    <!-- Card Nutrition -->
-                    <div class="section-cards__card card-1">
-                        <div class="card__title">
-                            <h3>NUTRITION</h3>
-                        </div>
 
-                        <div class="card__box-middle">
-                            <img
-                                src="images/card-nutrition.jpg"
-                                alt="fruits, légumes alimentation saine. Fraise, orange fruits secs et brocolis"
-                            />
-                            <div class="card__box-middle-woman">
-                                <img
-                                    src="images/card-woman-nutrition.svg"
-                                    alt="naturopathe tenant une pasteque"
-                                />
-                            </div>
-                        </div>
+            <!-- ---------------------------------
+            * SECTION 2
+            * CARDS
+         --------------------------------- -->
+            
+            <section class="section-card">
 
-                        <div class="card__btn-action">
-                            <p>
-                                Vous voulez perdre du poids, en reprendre ?
-                                Rééquilibrer votre flore intestinale ? Retrouver
-                                la santé ?
-                            </p>
-                            <a href="card-nutrition.html"
-                                ><button
-                                    class="card__btn-action__btn"
-                                    id="btn-action-nutrition"
-                                >
-                                    Cliquez pour en savoir plus
-                                </button></a
-                            >
+
+            <div class="box-title">
+                <h2>Coaching Global</h2>
+            </div>
+
+
+            <div class="box-resume">
+                <p>
+                    Retrouvez votre bien-être grace à mon
+                    <b>concept 3 piliers</b>, qui vous guide vers
+                    <b>l’autonomie</b> par la gestion de votre alimentation,
+                    de vos stress et de vos capacités physiques!
+                </p>
+            </div>
+
+
+
+
+            <div class="bloc-cards">
+
+                
+                <div class="card card-1">
+
+                    <div class="card-title">
+                        <h2>NUTRITION</h2>
+                    </div>
+
+
+                    <div class="card-image">
+                        <img src="images/photos/card-nutrition.jpg" alt="fruits, légumes alimentation saine. Fraise, orange fruits secs et brocolis">
+                        <div class="card-image__woman">
+                            <img src="images/woman/card-nutrition-woman.png" alt="naturopathe tenant une pasteque">
                         </div>
                     </div>
 
-                    <!-- Card Stress -->
-                    <div class="section-cards__card card-2">
-                        <div class="card__title">
-                            <h3>
-                                GESTION des STRESS<br />
-                                et des EMOTIONS
-                            </h3>
-                        </div>
 
-                        <div class="card__box-middle">
-                            <img
-                                src="images/card-stress.jpg"
-                                alt="femme assise sur le sable d'une plage en méditation, se relaxant devant la mer"
-                            />
-                            <div class="card__box-middle-woman">
-                                <img
-                                    src="images/card-woman-stress.svg"
-                                    alt="naturopathe en méditation"
-                                />
-                            </div>
-                        </div>
+                    <div class="card-resume">
+                        <p>Vous voulez:</p>
+                        <ul>
+                            <li>Perdre du poids ou en reprendre.</li>
+                            <li>Rééquilibrer votre flore intestinale.</li>
+                            <li>Retrouver la santé.</li>
+                        </ul>
 
-                        <div class="card__btn-action">
-                            <p>
-                                Vous souffrez d'anxiétés, angoisses, insomnies,
-                                contractures, ulcère, migraines, spasmophilie,
-                                acouphènes ?
-                            </p>
-                            <a href="card-stress.html"
-                                ><button
-                                    class="card__btn-action__btn"
-                                    id="btn-action-stress"
-                                >
-                                    Cliquez pour en savoir plus
-                                </button></a
-                            >
+                    </div>
+                    
+                    <div class="card-btn-action">
+                        <a href="pages/card-nutition.html">
+                            <button
+                                id="btn-action-nutrition">
+                                Cliquez pour en savoir plus
+                            </button>
+                        </a>
+                    </div>
+
+
+                </div>
+
+
+
+
+                
+                <div class="card card-2">
+
+                    <div class="card-title">
+                        <h2>GESTION des STRESS<br />
+                                et des EMOTIONS</h2>
+                    </div>
+
+                    <div class="card-image">
+                        <img src="images/photos/card-stress.jpg" alt="femme assise sur le sable d'une plage en méditation, se relaxant devant la mer">
+                        <div class="card-image__woman">
+                            <img src="images/woman/card-stress-woman.png" alt="naturopathe en méditation">
                         </div>
                     </div>
 
-                    <div class="section-cards__card card-3">
-                        <div class="card__title">
-                            <h3>SPORT pour TOUS</h3>
-                        </div>
 
-                        <div class="card__box-middle">
-                            <img
-                                src="images/card-sport.jpg"
-                                alt="groupe de personnes en exterieur et pleine nature pratiquant le yoga et activité sportive"
-                            />
-                            <div class="card__box-middle-woman">
-                                <img
-                                    src="images/card-woman-sport.svg"
-                                    alt="naturopathe tenant une haltere"
-                                />
-                            </div>
-                        </div>
+                    <div class="card-resume">
+                        <p>
+                            Vous souffrez:
+                        </p>
+                        <ul>
+                            <li>Anxiétés, angoisses, insomnies.</li>
+                            <li>Migraines, acouphènes.</li>
+                            <li>Ulcère, contractures, spasmophilies.</li>
+                        </ul>
 
-                        <div class="card__btn-action">
-                            <p>
-                                Vous sortez d’une longue période sans activité
-                                physique ? D'une opération, un burn-out,
-                                maladie, autre ?
-                            </p>
-                            <a href="card-sport.html"
-                                ><button
-                                    class="card__btn-action__btn"
-                                    id="btn-action-sport"
-                                >
-                                    Cliquez pour en savoir plus
-                                </button></a
-                            >
+                    </div>
+                    
+                    <div class="card-btn-action">
+                        <a href="pages/card-stress.html">
+                            <button
+                                id="btn-action-stress">
+                                Cliquez pour en savoir plus
+                            </button>
+                        </a>
+                    </div>
+                
+                </div>
+
+
+
+
+
+                
+                <div class="card card-3">
+
+                    <div class="card-title">
+                        <h2>SPORT pour TOUS</h2>
+                    </div>
+
+                    <div class="card-image">
+                        <img src="images/photos/card-sport.jpg" alt="groupe de personnes en exterieur et pleine nature pratiquant le yoga et activité sportive">
+                        <div class="card-image__woman">
+                            <img src="images/woman/card-sport-woman.png" alt="naturopathe tenant une haltere">
                         </div>
                     </div>
-                </div>
 
-                <div class="section-cards__resume">
-                    <p>
-                        Une hygiène de vie globale favorise le processus naturel
-                        de guérison existant en chacun de nous
-                    </p>
-                </div>
 
-                <div class="section-plume section-cards__plume"></div>
+                    <div class="card-resume">
+                        <p>
+                            Vous sortez: 
+                        </p>
+                        <ul>
+                            <li>D’une longue période sans activité
+                                physique.</li>
+                            <li>D'une opération.</li>
+                            <li>D'un burn-out, maladie, autre ...</li>
+                        </ul>
+
+                    </div>
+                    
+                    <div class="card-btn-action">
+                        <a href="pages/card-sport.html">
+                            <button
+                                id="btn-action-sport">
+                                Cliquez pour en savoir plus
+                            </button>
+                        </a>
+                    </div>
+                
+                </div> 
+
+            </div>
+
+
+            <div class="box-resume text-align-center">
+                <p>
+                    Une hygiène de vie globale favorise le processus naturel
+                    de guérison existant en chacun de nous
+                </p>  
+            </div>
+
+
+            <div class="box-plume">
+                <div class="plume--verte"></div>
+            </div>
+
             </section>
 
-            <!-- ===   
-															Section 3  - A propos 
-			=== -->
+                
+
+
+
+            <!-- ---------------------------------
+            * SECTION 3
+            * A PROPOS
+         --------------------------------- -->
+            
+            
             <section class="section-about" id="section-about-ancre">
-                <div class="section-about-bloc1">
-                    <div class="section-title">
-                        <h2>A Propos de moi</h2>
-                    </div>
 
-                    <h2>Je suis Jo&euml;lle Corda</h2>
-                    <h3><em>Naturopathe</em></h3>
+                <div class="box-title">
+                    <h2>A Propos de moi</h2>
                 </div>
 
-                <div class="section-about-blocs">
-                    <div class="section-about-bloc2__photo">
-                        <img
-                            src="images/img-about-joelle.png"
-                            alt="Portrait de Joelle CORDA Naturopathe"
-                        />
-                    </div>
 
-                    <div class="section-about-bloc3">
-                        <div class="section-about-bloc3__text">
+                <h2>Je suis Jo&euml;lle Corda</h2>
+
+                <h3><em>Naturopathe</em></h3>
+
+
+                    <div class="box-about-me">
+
+                        <div class="box-about-me__photo">
+                            <img src="images/photos/img-about-joelle.png" alt="Portrait de Joelle CORDA Naturopathe">
+                        </div>
+
+                        <div class="box-about-me__text">
                             <p>
                                 Le bien-être est le fil d’argent de mon parcours
                                 professionnel depuis 30 ans.
@@ -346,14 +403,20 @@
                             </p>
                         </div>
 
-                        <div class="section-about-bloc3__diplomes">
-                            <div class="section-about-bloc3__titre-diplomes">
-                                <h3>Mes diplômes</h3>
-                                <div class="logo-diplome"></div>
-                            </div>
+                    </div>
+                    
 
-                            <div class="section-about-bloc3__liste-diplomes">
-                                <ul>
+
+                    <div class="box-about-diplome">
+
+                        <h3>Mes diplômes</h3>
+
+
+                        <div class="logo-diplome"></div>
+
+
+                        <div class="diplomes-liste">
+                            <ul>
                                     <li class="liste-diplome">Naturopathe</li>
                                     <li class="liste-diplome">
                                         Conseillère en Nutrition et Diététique
@@ -373,50 +436,68 @@
                                     </li>
                                     <li class="liste-diplome">
                                         Membre de l’Organisation de la Médecine
-                                        Naturelle et de l'Education Sanitaire
+                                        Naturelle et de l'Education Sanitaire<br>
                                         ainsi que du Registre des Naturopathes
                                     </li>
-                                </ul>
+                            </ul>
+                        </div>
+
+
+                        <div class="diplomes-certif">
+
+                            <div class="certificat">
+                                <img
+                                    src="images/logo/logo-diplome1.png"
+                                        alt="logo du Registre des Naturopathes (FENAHMAN)"
+                                />
                             </div>
 
-                            <div class="section-about-bloc3__logo-diplomes">
-                                <div class="logo-diplome">
-                                    <img
-                                        src="images/logo-diplome1.png"
-                                        alt="logo du Registre des Naturopathes (FENAHMAN)"
-                                    />
-                                </div>
-                                <div class="logo-diplome">
-                                    <img
-                                        src="images/logo-diplome2.png"
+                            <div class="certificat">
+                                <img
+                                    src="images/logo/logo-diplome2.png"
                                         alt="logo de l’Organisation de la Médecine Naturelle et de l'Education Sanitaire (OMNES)"
-                                    />
-                                </div>
-                                <div class="logo-diplome">
-                                    <img
-                                        src="images/logo-diplome3.png"
-                                        alt="logo du Répertoire National des Certifications Professionnelles (RNCP)"
-                                    />
-                                </div>
+                                />
                             </div>
+
+                            <div class="certificat">
+                                <img
+                                    src="images/logo/logo-diplome3.png"
+                                        alt="logo du Répertoire National des Certifications Professionnelles (RNCP)"
+                                />
+                            </div>
+
                         </div>
+
+
                     </div>
+
+                
+
+                <!-- div -->
+
+                <div class="box-plume">
+                    <div class="plume--verte"></div>
                 </div>
 
-                <div class="section-plume section-about__plume"></div>
+
             </section>
 
-            <!-- 
-												Section 4 - Pourquoi moi
-			-->
 
+
+
+            <!-- ---------------------------------
+            * SECTION 4
+            * POURQUOI MOI
+         --------------------------------- -->
             <section class="section-whyme">
-                <div class="section-title">
+
+                <div class="box-title bcg-fonce">
                     <h2>Pourquoi me choisir ?</h2>
                 </div>
 
-                <div class="section-whyme__texte">
-                    <h3>Naturopathe et aussi ...</h3>
+                <h3>Naturopathe et aussi ...</h3>
+
+                <div class="box-resume">
 
                     <p>
                         Je fais partie des naturopathes à être diplomée d'Etat
@@ -448,49 +529,71 @@
                         de devenir qui vous êtes profondément et consciemment
                         dans toutes vos infinies possibilités !
                     </p>
+
                 </div>
 
-                <div class="section-plume section-cards__plume"></div>
+                <div class="box-plume">
+                    <div class="plume--verte"></div>
+                </div>
+
+
             </section>
 
-            <!-- 
-											Section 5 - Appelle a action
-			-->
+
+
+
+            <!-- ---------------------------------
+            * SECTION 5
+            * CALL TO ACTION
+         --------------------------------- -->
 
             <section class="section-cta" id="section-contact-ancre">
-                <div class="section-title">
+
+                <div class="box-title bcg-fonce">
                     <h2>Contactez moi</h2>
                 </div>
 
-                <div class="section-cta-textes">
-                    <h3>JE VOUS OFFRE VOTRE 1er RENDEZ-VOUS !</h3>
-                    <div class="btn-call-me">
-                        <a href="tel:+33651486895">06 51 48 68 95</a>
-                    </div>
-                    <div class="btn-call-me">
-                        <a href="mailto:cordajoelle@gmail.com">EMAIL</a>
-                    </div>
+                <h3>JE VOUS OFFRE<br>VOTRE 1er RENDEZ-VOUS !</h3>
 
+                <div class="btn-call-me">
+                        <a href="tel:+33651486895">06 51 48 68 95</a>
+                </div>
+
+                <div class="btn-call-me">
+                    <a href="mailto:cordajoelle@gmail.com">EMAIL</a>
+                </div>
+
+                <div class="section-cta-text">
+                    
                     <p>
-                        Je vous accompagne en cabinet, à domicile et à distance.
+                        Je vous accompagne en cabinet, <br>à domicile et à distance.
                     </p>
                     <p>
                         Tarifs adaptés pour les étudiants, demandeurs d’emploi
                         et personnes en difficultés financières.
                     </p>
+
                 </div>
 
-                <div class="section-plume section-about__plume"></div>
-            </section>
+                <div class="box-plume">
+                    <div class="plume--verte"></div>
+                </div>
 
-            <footer class="flex-column">
+            </section>    
+
+
+            <footer>
                 <p>Mar, mer, sam:</p>
                 <address>
                     Madame de Sévigné<br /> 
                     26300 Bourg de Péage
                 </address>
+                
             </footer>
+            <p id="designer-copyright">Site créé par Arnaud P. 2021</p>
+
         </div>
+
 
         <script src="app.js"></script>
     </body>

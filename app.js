@@ -1,37 +1,74 @@
+// ======================================================
+// Material design header
+// ======================================================
+let headerAnimElt = document.querySelector('header');
+
+window.addEventListener('scroll', () => {
+
+  if (window.scrollY > 16){
+
+    headerAnimElt.classList.add("header-scroll");
+  }else{
+    headerAnimElt.classList.remove("header-scroll");
+
+  }
+
+})
+
+// ======================================================
+// Loader
+// ======================================================
+const loaderElt = document.querySelector('.loader');
+window.addEventListener('load', () => {
+  loaderElt.classList.add('loader-out');
+})
+
+
 // *********************************
-// HEADER
+// HEADER MENU
 // *********************************
 
-// Affichage menu sur mobile
-const btnBurgerElt = document.querySelector(".header-burger");
-const navbarMobileElt = document.querySelector(".header-mobile");
+// # Affichage menu sur mobile
+// ## Header
+const headerMenuDeroulantElt = document.querySelector("header")
+
+// ## Burger menu
+const btnBurgerElt = document.querySelector(".mobil-burger");
 const burgerTiretElt = document.querySelector(".burger-tiret");
 
-const lienNavbarAboutElt = document.querySelectorAll(".header-mobile__liens__li")
+//  ## Nom ou profession
+const headerNameElt = document.querySelector(".mobil-name");
+const headerProfessionElt = document.querySelector(".mobil-profession");
 
-const headerNameElt = document.querySelector(".header-name");
-const headerProfessionElt = document.querySelector(".header-profession");
+//  ## Menu deroulant
+const navbarMobileElt = document.querySelector(".mobil-menu-deroulant");
 
-btnBurgerElt.addEventListener("click", () => {
-  burgerTiretElt.classList.toggle("burger-tiret--anim");
-  navbarMobileElt.classList.toggle("active-menu-deroulant");
-  headerNameElt.classList.toggle("active-menu-deroulant");
-  headerProfessionElt.classList.toggle("active-menu-deroulant");
-});
+//  ## Tous les li
+const lienNavbarAboutElt = document.querySelectorAll(
+    ".menu-deroulant__liens-li"
+);
 
-for (let i = 0; i < lienNavbarAboutElt.length; i++) {
-    lienNavbarAboutElt[i].addEventListener ('click', () => {
-      burgerTiretElt.classList.toggle("burger-tiret--anim");
-      navbarMobileElt.classList.toggle("active-menu-deroulant");
-      headerNameElt.classList.toggle("active-menu-deroulant");
-      headerProfessionElt.classList.toggle("active-menu-deroulant");
-  })
+
+// # Fonction toggle
+
+function toggleMenu() {
+    headerMenuDeroulantElt.classList.toggle("active-menu-deroulant");
+    burgerTiretElt.classList.toggle("burger-tiret--anim");
+    headerNameElt.classList.toggle("active-menu-deroulant");
+    headerProfessionElt.classList.toggle("active-menu-deroulant");
+    navbarMobileElt.classList.toggle("active-menu-deroulant");
 }
 
 
-// lienNavbarAboutElt[0].addEventListener ('click', ()=>{
-//   navbarMobileElt.classList.toggle("active-menu-deroulant");
-// });
+
+// # Clic pour dérouler le menu
+btnBurgerElt.addEventListener("click", toggleMenu);
+
+//  # Clic sur un li => disparition du menu
+for (let i = 0; i < lienNavbarAboutElt.length; i++) {
+    lienNavbarAboutElt[i].addEventListener("click", toggleMenu);
+}
+
 
 
 // *********************************

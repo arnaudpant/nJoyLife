@@ -1,0 +1,118 @@
+.tarifs-infos__prix {
+    margin: $marge-double;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: $color-bcg-fonce;
+    font-family: $police-title;
+    font-size: 4em;
+    text-align: center;
+    line-height: 150px;
+    color: $color-white;
+    @extend %boxShadow4;
+}
+
+.box-packs {
+    @extend %flex-center-center;
+    flex-direction: column;
+    margin: $marge-double;
+    
+    @media screen and (min-width: $break-point-tablet) {
+        max-width: 1086px;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+}
+
+.pack,
+.card-massage {
+    position: relative;
+    background-color: $color-white;
+    width: 300px;
+    height: 150px;
+    border-radius: 16px;
+    @extend %boxShadow2;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.pack {
+    margin: $marge-normal;
+    overflow: hidden;
+    
+    h3 {
+        position: absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%, -70%);
+        display: inline-block;
+        margin: 0;
+        padding: 8px;
+        min-width: 180px;
+        background-color: $color-action;
+        color: $color-white;
+        border-radius: 16px;
+        @extend %boxShadow2;
+    }
+}
+
+.pack-nutrition {
+    background-image: url("images/photos/card-nutrition.jpg");
+}
+.pack-stress {
+    background-image: url("images/photos/card-stress.jpg");
+}
+.pack-sport {
+    background-image: url("images/photos/card-sport.jpg");
+}
+.pack-vitalite {
+    background-image: url("images/photos/card-vitalite.jpg");
+    background-position: top;
+}
+
+.massage-calif {
+    background-image: url("images/photos/pack-massage-californien.jpg");
+    background-position: bottom;
+}
+.massage-inf {
+    background-image: url("images/photos/pack-massage-infini.jpg");
+    background-position: bottom;
+}
+.massage-kan {
+    background-image: url("images/photos/pack-massage-kansu.jpg");
+    background-position: top;
+}
+
+.card-massage {
+    margin: $marge-double $marge-normal;
+}
+
+.massage-title {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: $marge-small $marge-normal;
+    width: 240px;
+    border-radius: 999px;
+    background-color: $color-action;
+    color: $color-white;
+    @extend %boxShadow2;
+}
+
+
+.pack__tarif {
+    position: absolute;
+    top: -16px;
+    left: 16px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: $color-bcg-fonce;
+    color: $color-white;
+    font-size: 30px;
+    text-align: center;
+    line-height: 80px;
+    @extend %boxShadow2;
+}
