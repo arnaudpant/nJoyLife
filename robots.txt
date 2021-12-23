@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.joelle-corda-naturopathe.fr/sitemap.xml
