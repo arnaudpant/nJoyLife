@@ -1,0 +1,30 @@
+@charset 'utf-8';
+
+@import "sass/base/reset";
+
+@import "sass/abstracts/variables";
+@import "sass/abstracts/mixins";
+@import "sass/abstracts/placeholders";
+@import "sass/abstracts/fonts";
+@import "sass/abstracts/color";
+
+@import "sass/base/base";
+@import "sass/base/typography";
+
+@import "sass/vendor/flexbox";
+@import "sass/vendor/material";
+
+@import "sass/components/button";
+@import "sass/components/input";
+
+@import "sass/layouts/header";
+@import "sass/layouts/navbar";
+@import "sass/layouts/footer";
+
+@import "sass/pages/index";
+@import "sass/pages/tarifs";
+@import "sass/pages/evenements";
+@import "sass/pages/cards";
+@import "sass/pages/massages";
+@import "sass/pages/audio"
+

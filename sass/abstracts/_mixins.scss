@@ -1,0 +1,32 @@
+/* ==================================
+* @include
+* Ajout d'une bordure
+* Couleur noire par défaut
+====================================*/
+@mixin border($borderColor: black) {
+    border: 1px solid $borderColor;
+}
+
+
+/* ==================================
+* @include
+* Centrage des elements
+* en position absolute
+====================================*/
+
+@mixin absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ==================================
+* @include
+* Pour définir une size à un element
+* par défaut la hauteur = largeur (carré)
+====================================*/
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+  }
