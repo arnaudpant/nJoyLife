@@ -72,9 +72,7 @@ for (let i = 0; i < lienNavbarAboutElt.length; i++) {
 
 
 // *********************************
-// SECTION 1
+// FOOTER
 // *********************************
-
-// const accueilPlumeMoveElt = document.querySelector(
-//   ".section-accueil__bloc__plume"
-// );
+const dateFooterElt = document.getElementById('date-footer');
+dateFooterElt.innerHTML = new Date().getFullYear();
