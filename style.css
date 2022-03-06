@@ -1,14 +1,52 @@
 @charset "UTF-8";
-*,
-::before,
-::after {
+html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
 
-
+/* =================================
+* Marges
+==================================*/
+/* =================================
+* Break points
+==================================*/
+/* =================================
+* Tailles
+==================================*/
+/* ==================================
+* @include
+* Ajout d'une bordure
+* Couleur noire par défaut
+====================================*/
+/* ==================================
+* @include
+* Centrage des elements
+* en position absolute
+====================================*/
+/* ==================================
+* @include
+* Pour définir une size à un element
+* par défaut la hauteur = largeur (carré)
+====================================*/
+/* =================================
+* Polices
+==================================*/
+/* =================================
+* Couleurs
+==================================*/
+/* ================================
+* Balises HTML
+=================================*/
 .text--white {
   color: #fcfcff;
 }
@@ -994,7 +1032,7 @@ footer address {
 @media screen and (min-width: 1200px) {
   .accueil-box-woman {
     background-image: url("images/woman/Accueil-woman-big.png");
-    max-height: 700px;
+    max-height: 620px;
   }
 }
 
@@ -1389,7 +1427,7 @@ li {
 }
 
 #card-image-massage-calif {
-  background-image: url("images/photos/pack-massage-californien.jpg");
+  background-image: url("images/photos/pack-massage-infini.jpg");
   background-position: bottom;
 }
 
@@ -1400,7 +1438,7 @@ li {
 }
 
 #card-image-massage-infini {
-  background-image: url("images/photos/pack-massage-infini.jpg");
+  background-image: url("images/photos/pack-massage-californien.jpg");
   background-position: bottom;
 }
 

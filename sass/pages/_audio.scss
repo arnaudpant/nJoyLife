@@ -1,0 +1,16 @@
+#card-image-audio {
+    background-image: url("images/photos/card-audio.jpg");
+    background-position: bottom;
+}
+
+.box-audio {
+  width: 296px;
+  margin: 0 0 $marge-double 0;
+  padding: 0 $marge-normal;
+  border-radius: 8px;
+  @extend %boxShadow2; 
+}
+
+audio {
+  max-width: 280px;
+}
