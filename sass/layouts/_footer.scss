@@ -6,9 +6,20 @@ footer {
   background-color: $color-bcg-fonce;
   color: $color-white;
 
+    h3 {
+      color: $color-white;
+      margin: 16px;
+    }
     address {
         padding: $marge-small 0;
         text-align: center;
         font-size: 1.2em;
+    }
+    p{
+      margin: 0;
+    }
+     @media screen and (min-width: $break-point-tablet) {
+         flex-direction: row;
+         justify-content: space-around;
     }
 }
