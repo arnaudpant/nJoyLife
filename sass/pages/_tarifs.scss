@@ -25,7 +25,8 @@
 }
 
 .pack,
-.card-massage {
+.card-massage,
+.card-temporaire {
     position: relative;
     background-color: $color-white;
     width: 300px;
@@ -37,7 +38,8 @@
     
 }
 
-.pack {
+.pack,
+.card-temporaire {
     margin: $marge-normal;
     overflow: hidden;
     
@@ -55,6 +57,30 @@
         border-radius: 16px;
         @extend %boxShadow2;
     }
+}
+
+.card-temporaire {
+    
+    h3 {
+        top: 50%;
+        left:50%;
+        transform: translate(-50%, -160%);
+        display: inline-block;
+        margin: 0;
+        padding: 8px;
+        min-width: 160px;
+        background-color: $color-action;
+        color: $color-white;
+        border-radius: 16px;
+        @extend %boxShadow2;
+    }
+}
+
+.card-vacances {
+    background-image: url("images/photos/card-vacances.jpg");
+}
+.card-seminaire {
+    background-image: url("images/photos/card-seminaire.jpg");
 }
 
 .pack-nutrition {
