@@ -212,7 +212,9 @@ section, .mobil-menu-deroulant, .big-card {
 /* Shadow 1dp */
 /* Shadow 2dp */
 .btn-call-me, .card-btn-action button, .menu-deroulant__photo, .certificat img, .pack,
-.card-massage, .pack h3, .massage-title, .pack__tarif, .big-card, .box-audio {
+.card-massage,
+.card-temporaire, .pack h3,
+.card-temporaire h3, .massage-title, .pack__tarif, .big-card, .box-audio {
   -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
@@ -1243,7 +1245,8 @@ footer p {
 }
 
 .pack,
-.card-massage {
+.card-massage,
+.card-temporaire {
   position: relative;
   background-color: #fcfcff;
   width: 300px;
@@ -1253,12 +1256,14 @@ footer p {
   background-size: cover;
 }
 
-.pack {
+.pack,
+.card-temporaire {
   margin: 8px;
   overflow: hidden;
 }
 
-.pack h3 {
+.pack h3,
+.card-temporaire h3 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1271,6 +1276,28 @@ footer p {
   background-color: #7d3929;
   color: #fcfcff;
   border-radius: 16px;
+}
+
+.card-temporaire h3 {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -160%);
+          transform: translate(-50%, -160%);
+  display: inline-block;
+  margin: 0;
+  padding: 8px;
+  min-width: 160px;
+  background-color: #7d3929;
+  color: #fcfcff;
+  border-radius: 16px;
+}
+
+.card-vacances {
+  background-image: url("images/photos/card-vacances.jpg");
+}
+
+.card-seminaire {
+  background-image: url("images/photos/card-seminaire.jpg");
 }
 
 .pack-nutrition {
