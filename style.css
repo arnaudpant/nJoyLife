@@ -134,7 +134,7 @@ ul li {
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 960px) {
   .accueil-box-text h1 {
     font-size: 3em;
   }
@@ -307,7 +307,7 @@ a[href^="mailto"]::before {
           animation: plumevent 5s ease-in-out infinite;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 960px) {
   .plume-mouvement {
     top: 10%;
     left: 40%;
@@ -398,7 +398,7 @@ a[href^="mailto"]::before {
   overflow: hidden;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 960px) {
   .card {
     margin: 16px;
     width: 330px;
@@ -482,7 +482,7 @@ header {
   transition: all 0.4s 0.4s ease-in-out;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 960px) {
   header {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -491,7 +491,7 @@ header {
 }
 
 header.active-menu-deroulant {
-  height: 600px;
+  height: 700px;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
@@ -506,7 +506,7 @@ header.active-menu-deroulant {
   width: 100%;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 960px) {
   .mobil-navbar {
     display: none;
   }
@@ -693,7 +693,7 @@ header.active-menu-deroulant {
   transition: top 1s 0.4s ease-out;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 960px) {
   .mobil-menu-deroulant {
     display: none;
   }
@@ -762,7 +762,7 @@ header.active-menu-deroulant {
   height: 64px;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 960px) {
   .desktop-navbar {
     display: block;
     display: -webkit-box;
@@ -863,7 +863,7 @@ footer p {
   margin: 0;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 960px) {
   footer {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -958,7 +958,7 @@ footer p {
   height: calc(100vh - 64px);
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 960px) {
   .section-accueil {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
@@ -972,7 +972,7 @@ footer p {
   width: 100%;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 960px) {
   .accueil-box-text {
     height: 100%;
     width: 50%;
@@ -1008,7 +1008,7 @@ footer p {
   font-family: "Poppins", sans-serif;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 960px) {
   .localisation-ville,
   .accueil-box-text__slogan {
     font-size: 1.5em;
@@ -1028,7 +1028,7 @@ footer p {
   height: 33%;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 960px) {
   .accueil-box-text__logo {
     width: 80%;
     margin: 16px 0;
@@ -1044,7 +1044,7 @@ footer p {
   height: 55%;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 960px) {
   .accueil-box-woman {
     width: 50%;
     height: 100%;
@@ -1069,7 +1069,7 @@ footer p {
   margin: 16px 0;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 960px) {
   .bloc-cards {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1108,7 +1108,7 @@ footer p {
           justify-content: center;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 960px) {
   .box-about-me {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1129,7 +1129,7 @@ footer p {
   max-width: 408px;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 960px) {
   .box-about-me__photo {
     width: 33%;
   }
@@ -1144,7 +1144,7 @@ footer p {
   text-align: justify;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 960px) {
   .box-about-me__text {
     width: 66%;
   }
@@ -1232,7 +1232,7 @@ footer p {
   margin: 16px;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 960px) {
   .box-packs {
     max-width: 1086px;
     -webkit-box-orient: horizontal;
@@ -1408,7 +1408,7 @@ footer p {
   background-repeat: no-repeat;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 960px) {
   .big-card__image {
     height: 300px;
   }
@@ -1443,7 +1443,7 @@ footer p {
   padding: 8px;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 960px) {
   .big-card__text {
     max-width: 80%;
   }
@@ -1480,7 +1480,7 @@ li {
   background-position: bottom;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 960px) {
   #card-image-massage-calif {
     background-position: center;
   }
@@ -1491,7 +1491,7 @@ li {
   background-position: bottom;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 960px) {
   #card-image-massage-infini {
     background-position: center;
   }
@@ -1502,7 +1502,7 @@ li {
   background-position: bottom;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 960px) {
   #card-image-massage-kansu {
     background-position: top;
   }
