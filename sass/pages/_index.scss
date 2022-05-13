@@ -257,6 +257,24 @@
     }
   }
 
+  .box-resume__photos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+  }
+  .photos {
+    max-width: 500px;
+    margin: 8px;
+
+    img {
+      width: 100%;
+      @extend %boxShadow2;
+    }
+  }
+
 /* ====================================
 #           Section CTA
 =====================================*/

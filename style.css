@@ -211,7 +211,7 @@ section, .mobil-menu-deroulant, .big-card {
 /* Shadow 0dp */
 /* Shadow 1dp */
 /* Shadow 2dp */
-.btn-call-me, .card-btn-action button, .menu-deroulant__photo, .certificat img, .pack,
+.btn-call-me, .card-btn-action button, .menu-deroulant__photo, .certificat img, .photos img, .pack,
 .card-massage,
 .card-temporaire, .pack h3,
 .card-temporaire h3, .massage-title, .pack__tarif, .big-card, .box-audio {
@@ -1200,6 +1200,33 @@ footer p {
 
 .certificat img {
   height: 100%;
+}
+
+.box-resume__photos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.photos {
+  max-width: 500px;
+  margin: 8px;
+}
+
+.photos img {
+  width: 100%;
 }
 
 /* ====================================
