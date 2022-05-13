@@ -1203,6 +1203,7 @@ footer p {
 }
 
 .box-resume__photos {
+  max-width: 1086px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
