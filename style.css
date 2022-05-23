@@ -1457,6 +1457,11 @@ footer p {
   background-position: center;
 }
 
+#card-image-vitalite {
+  background-image: url("images/photos/card-vitalite.jpg");
+  background-position: center;
+}
+
 .big-card__text {
   display: -webkit-box;
   display: -ms-flexbox;

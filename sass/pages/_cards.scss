@@ -16,6 +16,7 @@
 
 .big-card__title {
     width: 100%;
+
     h1 {
         padding: $marge-small $marge-normal;
     }
@@ -50,6 +51,11 @@
     background-position: center;
 }
 
+#card-image-vitalite {
+    background-image: url("images/photos/card-vitalite.jpg");
+    background-position: center;
+}
+
 
 
 .big-card__text {
@@ -64,31 +70,29 @@
     }
 }
 
-    h3 {
-        margin: $marge-triple 0;
-    }
+h3 {
+    margin: $marge-triple 0;
+}
 
-    p {
-        margin: $marge-double 0;
-    }
+p {
+    margin: $marge-double 0;
+}
 
-    ul {
-        margin: $marge-normal $marge-small $marge-normal $marge-triple;
-    }
+ul {
+    margin: $marge-normal $marge-small $marge-normal $marge-triple;
+}
 
-    li {
-        margin: $marge-normal 0;
-    }
+li {
+    margin: $marge-normal 0;
+}
 
-    .box-title {
-        margin: $marge-double auto;
-        @media screen and (max-width: $break-point-mobile) {
-            h2 {
-                font-size: 1em;
-            }
+.box-title {
+    margin: $marge-double auto;
+
+    @media screen and (max-width: $break-point-mobile) {
+        h2 {
+            font-size: 1em;
         }
-
     }
 
-    
-
+}
