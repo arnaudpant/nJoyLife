@@ -16,12 +16,12 @@
     @extend %flex-center-center;
     flex-direction: column;
     margin: $marge-double;
-    
+
     @media screen and (min-width: $break-point-tablet) {
         max-width: 1086px;
         flex-direction: row;
         flex-wrap: wrap;
-      }
+    }
 }
 
 .pack,
@@ -35,18 +35,18 @@
     @extend %boxShadow2;
     background-repeat: no-repeat;
     background-size: cover;
-    
+
 }
 
 .pack,
 .card-temporaire {
     margin: $marge-normal;
     overflow: hidden;
-    
+
     h3 {
         position: absolute;
         top: 50%;
-        left:50%;
+        left: 50%;
         transform: translate(-50%, -70%);
         display: inline-block;
         margin: 0;
@@ -60,10 +60,10 @@
 }
 
 .card-temporaire {
-    
+
     h3 {
         top: 50%;
-        left:50%;
+        left: 50%;
         transform: translate(-50%, -160%);
         display: inline-block;
         margin: 0;
@@ -79,6 +79,7 @@
 .card-vacances {
     background-image: url("images/photos/card-vacances.jpg");
 }
+
 .card-seminaire {
     background-image: url("images/photos/card-seminaire.jpg");
 }
@@ -86,12 +87,15 @@
 .pack-nutrition {
     background-image: url("images/photos/card-nutrition.jpg");
 }
+
 .pack-stress {
     background-image: url("images/photos/card-stress.jpg");
 }
+
 .pack-sport {
     background-image: url("images/photos/card-sport.jpg");
 }
+
 .pack-vitalite {
     background-image: url("images/photos/card-vitalite.jpg");
     background-position: top;
@@ -101,13 +105,20 @@
     background-image: url("images/photos/pack-massage-californien.jpg");
     background-position: bottom;
 }
+
 .massage-inf {
     background-image: url("images/photos/pack-massage-infini.jpg");
     background-position: bottom;
 }
+
 .massage-kan {
     background-image: url("images/photos/pack-massage-kansu.jpg");
     background-position: top;
+}
+
+.massage-chinei {
+    background-image: url("images/photos/chi-nei-tsang 2.jpg");
+    background-position: bottom;
 }
 
 .card-massage {

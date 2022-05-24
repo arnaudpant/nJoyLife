@@ -1360,6 +1360,11 @@ footer p {
   background-position: top;
 }
 
+.massage-chinei {
+  background-image: url("images/photos/chi-nei-tsang 2.jpg");
+  background-position: bottom;
+}
+
 .card-massage {
   margin: 16px 8px;
 }
@@ -1460,6 +1465,11 @@ footer p {
 #card-image-vitalite {
   background-image: url("images/photos/card-vitalite.jpg");
   background-position: center;
+}
+
+#card-image-chi-nei {
+  background-image: url("images/photos/chi-nei-tsang 1.jpg");
+  background-position: bottom;
 }
 
 .big-card__text {
